@@ -29,3 +29,9 @@
 - 산출물: research/papers.md, 새 reference 18건 (papers-- 15건, tech-- 2건, hapticvla 포함) + 기존 reference 2건 정정
 - 다음: 새로 열리는 작업 없음. B1은 A4 완료 대기 (A3는 A4, A6와 무관)
 - 이슈(확인필요): ForceVLA 23.2%, Sparsh-X 63%, T-Rex 30%, EgoScale 54%, Diffusion Policy 46.9%의 상대/%p 구분 미확인(WebFetch 요약이 같은 수치를 상반되게 답함) / ABEJA×村田製作所의 N1.7 사용, 일본 3사 VTLA는 기사 기준 / Industrial Dexterity Benchmark는 v3(2026-09-21) 개정 후 수치 변동 미확인 / researcher WebFetch 약 22건(한도 15건 초과)
+
+## 2026-10-06 17:21 | researcher | A4
+- 한 일: 다관절 손(Shadow, Allegro, Inspire, Tesollo, Sharpa, ORCA, Figure, Tesla), 산업용 그리퍼, 촉각 센서(DIGIT 360, GelSight, FingerVision, XELA), 깊이 카메라(RealSense, Orbbec, Zivid) 사양·가격·내구성 비교와 end-effector 선정 프레임(공정 특징별 우선 후보) 정리. fact-checker 검증 결과 수치는 원문 7건 모두 일치했고, 인용 번호 오류(Optimus 25 액추에이터 등), Tesla 현행 사양 충돌 미표기, Inspire 리셀러 가격 상한 오류, "면접에서" 표현 등 11건을 researcher 수정 모드로 반영함
+- 산출물: research/hardware.md, 새 reference 18건 (hardware-- 15건, papers-- 3건)
+- 다음: B1 시작 가능 (A1, A4, A5 완료). 단 공정 선정은 사용자 결정(4-1 단계) 필요
+- 이슈(확인필요): Inspire RH56DFX 공식 $24,399.99의 구성 미확인, 리셀러 $4,500~10,500 이상(일부는 코디네이터 확인분) / 대부분 손 가격이 리셀러·제품 DB 기준 `추정` / Sharpa 1,000시간·payload 40 kg 대 파지력 150 N 정합 미확인 / Tesla 현행 손 사양 미확정(Musk 4월 발언 대 Tech Times 9월) / 내구성은 제조사 자체 시험 수준 / researcher WebFetch 약 24건(한도 초과)

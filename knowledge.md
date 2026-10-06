@@ -31,6 +31,9 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | HIL-SERL | Human-in-the-Loop Sample-Efficient Robotic RL | 시연, 사람 교정, 표본 효율 RL을 합친 실로봇 학습. 학습 1~2.5시간, 베이스라인 대비 평균 2배 성공률 | reference/papers--hil-serl.md |
 | UMI | Universal Manipulation Interface | 손에 쥐는 그리퍼로 로봇 없이 현장 시연을 모으는 데이터 수집 방식 | reference/papers--umi.md |
 | FVLMoE | Force-aware VLA Mixture-of-Experts | ForceVLA에서 힘 신호를 단계별로 융합하는 MoE 모듈 | reference/papers--forcevla.md |
+| 시각 기반 촉각 센서 | Vision-Based Tactile Sensor (VBTS) | 탄성 겔과 카메라로 접촉 변형을 영상으로 읽는 촉각 센서. GelSight, DIGIT, FingerVision 방식 | reference/papers--vbts-survey.md |
+| 텐던 구동 | Tendon-driven | 와이어로 손가락을 당기는 방식. 모터를 전완에 둘 수 있으나 신장과 마모로 수명 문제가 있음 | reference/papers--orca-hand.md |
+| Taxel | Tactile pixel | 촉각 센서의 감지 단위. Digit 360은 약 830만 | reference/papers--digit360.md |
 | 상대 향상 대 %p 향상 | Relative vs absolute (percentage points) improvement | "N% 향상"이 기준선의 N% 증가인지 성공률이 N%p 오른 것인지의 구분 | reference/papers--forcevla.md |
 
 ## 핵심 인사이트
@@ -50,6 +53,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 산업 시나리오(케이블 하니스, 커넥터 삽입, 기어박스)를 명시한 공개 평가는 구성당 48회 시행 수준이고 78% 대 36%는 가동률이 아니다. B1 와이어 하니스 후보의 근거는 "확장 단계" 참고로만 쓴다 [reference/papers--industrial-dexterity-benchmark.md]
 - 일본에서는 GR00T 계열 PoC(ABEJA×村田製作所, 기사 기준)와 대형 로봇 3사의 VTLA 내재화가 함께 보인다. 일본 고객 제안에서 경쟁 또는 내재화 변수로 본다 [reference/tech--robotstart-abeja-murata.md, reference/tech--xtech-visuotactile-japan.md]
 - NVIDIA GR00T N1.7(2026-04)이 EgoScale과 같은 20,854시간 에고센트릭 데이터로 공개됐다. RLDX-1 벤치마크의 비교 상대(N1.6)는 이보다 한 세대 앞서므로 N1.7에는 적용되지 않는다 [reference/competitors--nvidia-groot-n17.md, A6 fact-check]
+- 다관절 손은 가격과 DoF가 비례하지 않고(20 DoF급에서 Allegro 약 $15,000 대 Shadow 약 $65,000~110,000, 모두 `추정`), 내구성 수치는 대부분 제조사 자체 시험이다. PoC 시험 항목에 "연속 N시간 가동"을 넣고 B3 ROI에서는 손·겔 교체 주기 비용을 변수로 둔다 [research/hardware.md, reference/papers--orca-hand.md]
+- 한·일 부품사가 손과 촉각을 조합하는 사례(Tesollo+XELA, Wonik+DIGIT 360)가 있어 한·일 고객 제안의 조달 가능성 근거가 된다. 일본 FA 3사 VTLA(NEDO 최대 20억 엔)는 경쟁인지 협력 가능성인지 따져야 한다 [reference/hardware--xela-tesollo-integration.md, reference/hardware--sbbit-kawasaki-fanuc-yaskawa-vtla.md]
+- 로봇용 깊이 카메라 공급망이 재편 중이다(RealSense 2025-07 Intel 분사, 2026-09 Cognex 인수 발표, 마감 2026 Q4 예정). PoC 하드웨어 선정 시 대체 공급사를 함께 둔다(`추정`) [reference/hardware--calcalist-realsense-cognex.md]
+- 한 소스의 수치를 다른 소스 번호에 붙이는 인용 번호 오류가 반복된다. 단일 소스 수치는 그 소스를 직접 단다(Tesla Optimus 25 액추에이터 사례) [A4 fact-check]
 - WebFetch 요약 모델은 초록에 근거가 없어도 "상대/%p"를 단정한다(같은 ForceVLA 23.2%를 페이지별로 상반되게 답함). 구분은 논문 표의 절대값으로만 확정한다 [A6 fact-check]
 - IFR World Robotics는 매년 9월 말에 나온다. 시장 문서 최신성은 이 시점을 기준으로 점검한다. 통계는 집계 범위(회원사만 vs 회원+비회원)가 섞이기 쉬우니 성장률 역산으로 대조한다 [A5 fact-check]
 
@@ -75,3 +82,9 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] ForceVLA 23.2%와 EgoScale 54%는 본문 표에서 상대 향상인가 %p 향상인가? (A6)
 - [ ] ForceVLA 이후 RLDX-1의 Physics 모듈을 같은 조건(ALLEX 또는 동일 작업)에서 비교한 결과가 있는가? (A6)
 - [ ] Industrial Dexterity Benchmark v3(2026-09-21) 개정에서 수치가 바뀌었는가? (A6)
+- [ ] 평행 그리퍼로 풀리지 않는 공정의 경계는 어디인가? B1에서 공정별 end-effector 후보를 매핑 (A4)
+- [ ] Shadow, Sharpa, Allegro, Tesollo, Inspire의 공식 가격과 리드타임은? Inspire 공식 $24,399.99는 어떤 구성의 값인가? B3 가정값에 필요 (A4)
+- [ ] 다관절 손의 연속 가동 신뢰성(MTBF 등)에 현장 데이터가 있는가? Sharpa 40 kg payload와 150 N 파지력은 어떤 조건에서 정합하는가? (A4)
+- [ ] RLDX-1은 손 종류를 바꿀 때 재학습이 얼마나 필요한가? (A4, A1)
+- [ ] 일본·한국 산업용 그리퍼 업체(SMC, 로보티스 등)와 대면적 전자피부의 상용 제품은? (A4)
+- [ ] Tesla Optimus 현행 손 사양: Musk 4월 발언(설계 변경)과 Tech Times 9월 서술(22 DoF)을 가를 1차 소스가 있는가? (A4, A3)
