@@ -53,10 +53,10 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 **에이전트** (`.claude/agents/`)
 | 이름 | 담당 | 프리로드 스킬 |
 |------|------|---------------|
-| researcher | A1~A5, 리서치 갱신 | research-format |
-| case-analyst | B1, B2 | process-analysis |
-| roi-modeler | B3 | roi-model |
-| fact-checker | 모든 산출물 검증 (보고만, 수정 안 함) | - |
+| researcher | A1~A5, 리서치 갱신 | research-format, reference |
+| case-analyst | B1, B2 | process-analysis, reference |
+| roi-modeler | B3 | roi-model, reference |
+| fact-checker | 모든 산출물 검증 (보고만, 수정 안 함) | reference |
 
 **커맨드** (`.claude/skills/rx-*`, 사용자가 직접 호출)
 | 커맨드 | 동작 |
@@ -71,6 +71,7 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 **방법론 스킬** (`.claude/skills/`, 필요할 때 자동으로 불러옴)
 | 스킬 | 내용 |
 |------|------|
+| reference | `reference/` 조사 자료 찾기·저장 (`/reference find 키워드`로 직접 호출도 가능) |
 | research-format | 리서치 문서 템플릿, 출처 규칙, 주제별 본문 구성 |
 | process-analysis | 후보 공정 점수표, 작업 동작 분해, RFM 적합성 판단 |
 | roi-model | ROI 엑셀 시트 구성, 계산식, 민감도 |
@@ -84,7 +85,8 @@ progress.md          # 작업 기록, 추가만 함 (어디까지 했는지)
 .claude/
   agents/            # 서브에이전트 정의
   skills/            # 커맨드(rx-*)와 방법론 스킬
-research/            # A. 리서치 결과
+reference/           # 조사 원자료. 소스 1건당 파일 1개 (<태그>--<슬러그>.md)
+research/            # A. 리서치 결과 (reference를 종합한 결론)
   company.md         # RLWRLD 회사, 투자, 인물, RLDX-1
   tech.md            # RFM/VLA, 모방학습, 텔레오퍼레이션, 데이터 수집
   competitors.md     # 경쟁사 비교표
@@ -98,6 +100,7 @@ case/                # B. 미니 RX 케이스
 ```
 
 ## 규칙
+- **조사 전에 `reference/`부터 찾는다.** 결과물에 인용한 소스는 `reference/`에 저장한다. 형식은 `reference` 스킬을 따른다.
 - **사실을 지어내지 않는다.** 확인되지 않은 수치는 `추정`이라고 표시하고 계산 근거를 함께 적는다.
 - RLWRLD 내부 정보나 고객사를 아는 것처럼 쓰지 않는다. 공개 정보만 사용한다.
 - 숫자에는 단위, 기준 연도, 통화를 명시한다.
