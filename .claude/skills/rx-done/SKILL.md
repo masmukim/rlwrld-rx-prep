@@ -4,6 +4,8 @@ description: 작업 하나를 완료 처리한다. plan.md 상태를 바꾸고 p
 argument-hint: "[작업 ID] [한 줄 요약]"
 arguments: [task_id]
 disable-model-invocation: true
+model: sonnet
+effort: low
 allowed-tools: Bash(git add *) Bash(git commit *) Bash(git push*) Bash(git status*) Bash(date*)
 ---
 

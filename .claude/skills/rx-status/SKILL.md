@@ -2,6 +2,8 @@
 name: rx-status
 description: plan.md와 progress.md를 읽고 완료, 진행 중, 다음에 할 일을 3줄로 보고한다. 세션을 시작할 때 사용한다.
 disable-model-invocation: true
+model: haiku
+effort: low
 ---
 
 ## 현재 계획
