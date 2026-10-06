@@ -18,5 +18,8 @@
       "Bash(date *)",
       "Bash(.venv/bin/python *)"
     ]
+  },
+  "enabledPlugins": {
+    "ponytail@ponytail": false
   }
 }

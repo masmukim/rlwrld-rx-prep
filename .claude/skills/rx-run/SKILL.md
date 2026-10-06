@@ -4,6 +4,7 @@ description: plan.md의 작업 하나를 담당 에이전트에게 맡겨 실행
 argument-hint: "[작업 ID, 예: A1]"
 arguments: [task_id]
 disable-model-invocation: true
+model: sonnet
 ---
 
 ## 실행할 작업: $task_id
@@ -23,7 +24,7 @@ plan.md에서 $task_id 행의 담당을 에이전트 이름으로, 상태를 `�
 | A1~A5 | `researcher` 에이전트 |
 | B1, B2 | `case-analyst` 에이전트 |
 | B3 | `roi-modeler` 에이전트 |
-| B4 | 메인 에이전트가 직접 `consulting-deck` 스킬로 작성 |
+| B4 | `/rx-run`으로 진행하지 않는다. 장표는 최종 결과물이라 사용자의 기본 모델(Opus) 세션에서 일반 요청으로 `consulting-deck` 스킬을 써서 만든다. B4가 들어오면 이 안내만 하고 멈춘다. |
 | 그 외 | 작업 성격에 가장 가까운 에이전트, 없으면 메인 에이전트 |
 
 ### 3. 실행

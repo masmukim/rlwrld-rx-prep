@@ -2,6 +2,7 @@
 name: rx-parallel
 description: 지금 시작할 수 있는 대기 작업을 모두 찾아 담당 에이전트를 동시에 실행한다.
 disable-model-invocation: true
+model: sonnet
 ---
 
 @plan.md
