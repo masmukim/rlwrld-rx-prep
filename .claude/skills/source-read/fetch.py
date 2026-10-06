@@ -5,6 +5,7 @@ Prints only a short status line; read the file with Grep/Read afterwards.
 """
 import datetime
 import io
+import logging
 import os
 import re
 import sys
@@ -41,6 +42,7 @@ class Text(HTMLParser):
 def to_text(body, ctype):
     if "pdf" in ctype or body[:5] == b"%PDF-":
         from pypdf import PdfReader  # installed in .venv
+        logging.getLogger("pypdf").setLevel(logging.ERROR)  # font warnings only add noise
         return "\n".join(p.extract_text() or "" for p in PdfReader(io.BytesIO(body)).pages)
     charset = re.search(r"charset=([\w-]+)", ctype)
     html = body.decode(charset.group(1) if charset else "utf-8", errors="replace")
@@ -58,7 +60,11 @@ def main(url, out):
     except Exception as e:  # 403, DNS, timeout: report and let the agent fall back
         print(f"FAIL {url} {e}")
         return 1
-    text = to_text(body, ctype)
+    try:
+        text = to_text(body, ctype)
+    except Exception as e:  # encrypted or broken PDF, bad encoding
+        print(f"FAIL {url} could not extract text: {type(e).__name__}")
+        return 1
     if len(text) < 500:
         print(f"FAIL {url} only {len(text)} chars (JS-rendered or blocked page)")
         return 1

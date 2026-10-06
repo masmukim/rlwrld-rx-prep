@@ -19,6 +19,9 @@
       "Bash(date *)",
       "Bash(.venv/bin/python *)",
       "Bash(/Users/mansukim/rlwrld-rx-prep/.venv/bin/python *)"
+    ],
+    "deny": [
+      "Bash(run_in_background:true)"
     ]
   },
   "enabledPlugins": {
