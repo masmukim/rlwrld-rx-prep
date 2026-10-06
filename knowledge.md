@@ -34,6 +34,12 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 시각 기반 촉각 센서 | Vision-Based Tactile Sensor (VBTS) | 탄성 겔과 카메라로 접촉 변형을 영상으로 읽는 촉각 센서. GelSight, DIGIT, FingerVision 방식 | reference/papers--vbts-survey.md |
 | 텐던 구동 | Tendon-driven | 와이어로 손가락을 당기는 방식. 모터를 전완에 둘 수 있으나 신장과 마모로 수명 문제가 있음 | reference/papers--orca-hand.md |
 | Taxel | Tactile pixel | 촉각 센서의 감지 단위. Digit 360은 약 830만 | reference/papers--digit360.md |
+| 구현체 불문 두뇌 | Omni-bodied model | 몸체 형태를 모르고도 사족보행, 휴머노이드, 팔을 모두 제어한다는 Skild Brain의 표현 | reference/competitors--skild-series-funding.md |
+| 전신 제어 3계층 | System 0/1/2 (Helix 02) | S0 1 kHz 균형, S1 200 Hz 감각-관절 변환, S2 추론 | reference/competitors--figure-helix-02.md |
+| 조합 일반화 | Compositional generalization | 서로 다른 맥락의 기술을 조합해 학습에 거의 없던 작업을 푸는 능력(PI π0.7의 주장) | reference/competitors--pi-pi07-techcrunch.md |
+| 데이터 플라이휠 | Data flywheel | 배치된 로봇이 만드는 데이터로 모델을 개선하는 순환 구조(Skild 설명) | reference/competitors--skild-abb-ur-foxconn.md |
+| 월드 파운데이션 모델 | World Foundation Model (WFM) | 물리 세계 변화를 예측하는 모델. 한국 과기정통부 과제에서 LG전자가 개발 담당 | reference/competitors--korea-msit-physical-ai-lg-kt.md |
+| Early Access | Early Access | 일반 공개 전에 파트너나 신청자에게만 모델을 제공하는 단계(GR00T N1.7, Gemini Robotics 2) | reference/competitors--nvidia-groot-n17.md |
 | 상대 향상 대 %p 향상 | Relative vs absolute (percentage points) improvement | "N% 향상"이 기준선의 N% 증가인지 성공률이 N%p 오른 것인지의 구분 | reference/papers--forcevla.md |
 
 ## 핵심 인사이트
@@ -57,6 +63,12 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 한·일 부품사가 손과 촉각을 조합하는 사례(Tesollo+XELA, Wonik+DIGIT 360)가 있어 한·일 고객 제안의 조달 가능성 근거가 된다. 일본 FA 3사 VTLA(NEDO 최대 20억 엔)는 경쟁인지 협력 가능성인지 따져야 한다 [reference/hardware--xela-tesollo-integration.md, reference/hardware--sbbit-kawasaki-fanuc-yaskawa-vtla.md]
 - 로봇용 깊이 카메라 공급망이 재편 중이다(RealSense 2025-07 Intel 분사, 2026-09 Cognex 인수 발표, 마감 2026 Q4 예정). PoC 하드웨어 선정 시 대체 공급사를 함께 둔다(`추정`) [reference/hardware--calcalist-realsense-cognex.md]
 - 한 소스의 수치를 다른 소스 번호에 붙이는 인용 번호 오류가 반복된다. 단일 소스 수치는 그 소스를 직접 단다(Tesla Optimus 25 액추에이터 사례) [A4 fact-check]
+- 해외 경쟁사는 사업 방식이 갈린다: 모델 전문(PI), 풀스택 휴머노이드(Figure, Tesla), 산업용 로봇 내장(Skild), 오픈 모델·플랫폼(NVIDIA), 파트너 조기 접근(DeepMind). RLWRLD는 손 특화 모델과 고객 현장 데이터(RX)로 구분되나 자금은 크게 뒤진다(누적 4,100만 달러 대 Skild 단일 라운드 약 14억 달러, 약 34배, 계산) [research/competitors.md]
+- 에고센트릭 인간 영상 전략은 RLWRLD만의 것이 아니다(GR00T N1.7, 20,854시간, 22-DoF 손, 자체 주장). 해자는 데이터 방식이 아니라 고객 공정의 현장 데이터와 촉각·기억 통합으로 설명한다 [reference/competitors--nvidia-groot-n17.md]
+- DeepMind 블로그는 같은 로봇의 전구 끼우기 36%와 빼기 92%를 함께 보고한다. 손 조작 수치는 같은 작업군의 최고값과 최저값을 같이 적고, 고객에게는 "어떤 작업에서 몇 회 시행한 수치인지"를 먼저 묻는다 [reference/competitors--deepmind-gemini-robotics-2.md, A3 fact-check]
+- 정부 과제 예산은 컨소시엄 전체 금액이고 주관 기업별로 나뉘지 않는 경우가 많다(497억 원은 LG전자 컨소시엄 전체, KT 단독 아님) [reference/competitors--korea-msit-physical-ai-lg-kt.md]
+- 투자자 관계가 경쟁사에 걸쳐 있다(NVIDIA는 Figure와 Skild에, Mirae Asset은 RLWRLD 시드1과 Skild에 이름이 있음). 같은 법인인지는 미확인 [reference/competitors--figure-series-c.md, reference/competitors--skild-series-funding.md]
+- 웹 요약 모델은 기사 속 회사명을 요약마다 다르게 바꾸는 경우가 있다(nate 한국 RFM 기사: 셀렉트스타, OPTIMUS DX, 삼성DX). 회사명은 원출처로 대조한다 [A3 fact-check]
 - WebFetch 요약 모델은 초록에 근거가 없어도 "상대/%p"를 단정한다(같은 ForceVLA 23.2%를 페이지별로 상반되게 답함). 구분은 논문 표의 절대값으로만 확정한다 [A6 fact-check]
 - IFR World Robotics는 매년 9월 말에 나온다. 시장 문서 최신성은 이 시점을 기준으로 점검한다. 통계는 집계 범위(회원사만 vs 회원+비회원)가 섞이기 쉬우니 성장률 역산으로 대조한다 [A5 fact-check]
 
@@ -87,4 +99,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 다관절 손의 연속 가동 신뢰성(MTBF 등)에 현장 데이터가 있는가? Sharpa 40 kg payload와 150 N 파지력은 어떤 조건에서 정합하는가? (A4)
 - [ ] RLDX-1은 손 종류를 바꿀 때 재학습이 얼마나 필요한가? (A4, A1)
 - [ ] 일본·한국 산업용 그리퍼 업체(SMC, 로보티스 등)와 대면적 전자피부의 상용 제품은? (A4)
+- [ ] RLDX-1을 π0.7, GR00T N1.7과 동일 조건으로 비교한 공개 결과가 있는가? π0.7, N1.7, Gemini Robotics 2는 촉각·힘 입력을 쓰는가? (A3)
+- [ ] GR00T N1.7의 정확한 라이선스 조항은? 오픈 모델이 상용 PoC에서 RLDX-1(비상업 가중치)의 대체재가 되는가? (A3, A1)
+- [ ] 일본 국내 경쟁 주체(SoftBank 컨소시엄, NEDO 기반모델 사업, AIRoA)의 1차 소스는? 일본어 소스가 1건뿐 (A3)
+- [ ] 한국 국내 RFM 기업(KT, NC AI 등)의 모델과 손 조작 수준은? nate 기사의 삼성DX 협력과 RLDX-1 개발사 표기를 이데일리 원문으로 확인 (A3)
+- [ ] Telexistence의 Lawson 배치 실적과 RLWRLD-KDDI-Lawson PoC의 경쟁·중복 여부는? (A3, A1)
+- [ ] LG 계열 투자 주체(LG전자 본체 대 LG Technology Ventures 등)는 법인이 같은가? PI 시리즈C(약 10.5억 달러)의 정식 발표 여부는? (A3)
 - [ ] Tesla Optimus 현행 손 사양: Musk 4월 발언(설계 변경)과 Tech Times 9월 서술(22 DoF)을 가를 1차 소스가 있는가? (A4, A3)

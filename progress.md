@@ -35,3 +35,9 @@
 - 산출물: research/hardware.md, 새 reference 18건 (hardware-- 15건, papers-- 3건)
 - 다음: B1 시작 가능 (A1, A4, A5 완료). 단 공정 선정은 사용자 결정(4-1 단계) 필요
 - 이슈(확인필요): Inspire RH56DFX 공식 $24,399.99의 구성 미확인, 리셀러 $4,500~10,500 이상(일부는 코디네이터 확인분) / 대부분 손 가격이 리셀러·제품 DB 기준 `추정` / Sharpa 1,000시간·payload 40 kg 대 파지력 150 N 정합 미확인 / Tesla 현행 손 사양 미확정(Musk 4월 발언 대 Tech Times 9월) / 내구성은 제조사 자체 시험 수준 / researcher WebFetch 약 24건(한도 초과)
+
+## 2026-10-06 17:22 | researcher | A3
+- 한 일: RLWRLD 대 Physical Intelligence, Figure, Skild AI, Google DeepMind, NVIDIA, Tesla 및 한국 국내(삼성, LG, KT 등) 비교. 모델, 하드웨어, 데이터 전략, 타깃 산업, 투자(RLWRLD 누적 4,100만 달러 대 Skild 단일 라운드 약 14억 달러, 약 34배 계산), 한·일 접점 정리. NVIDIA GR00T N1.7(2026-04)이 에고센트릭 20,854시간과 22-DoF 손을 공개해 데이터 전략 자체는 차별점이 아님. fact-checker 검증 결과 핵심 수치는 원문과 일치했고, DeepMind 36% 선택 인용(같은 로봇 92% 병기), KT 예산 귀속 오류, NC AI 협력사 추정 오류, PI 누적 조달 합산 설명 등 9건을 researcher 수정 모드로 반영함
+- 산출물: research/competitors.md, 새 reference 16건 (competitors-- 15건, papers--gemini-robotics 1건) + 기존 reference 정정
+- 다음: 새로 열리는 작업 없음. B1은 이미 시작 가능 (A1, A4, A5 완료), 사용자 결정 필요
+- 이슈(확인필요): 삼성DX 협력과 RLDX-1 개발사 표기는 nate 요약마다 달라 이데일리 원문 재확인 필요 / DeepMind 92%, 삼성DX는 팩트체크 대조 기준이며 researcher 미확인 / KT 단독 예산 미확인 / PI 라운드 금액은 검색 요약 수준 / Tesla V3 공개 여부 미확인 / 일본어 소스 1건뿐이라 일본 경쟁 주체 미조사 / researcher WebFetch 약 20건(한도 초과)
