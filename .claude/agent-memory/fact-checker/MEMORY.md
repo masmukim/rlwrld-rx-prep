@@ -1,0 +1,1 @@
+- [Market doc check method](feedback_market-check-method.md) — basis/rank pitfalls, newer-edition check, sources that open fine

@@ -15,6 +15,6 @@ model: sonnet
    - 기존 파일의 조사일 이후 바뀐 사실만 반영한다.
    - 관련 `reference/` 파일의 `fetched` 날짜를 갱신하고, 새 소스는 저장한다.
    - 바뀐 줄에는 `(YYYY-MM-DD 갱신)` 표시를 붙인다.
-4. `fact-checker`로 바뀐 부분을 검증한다.
+4. `fact-checker`로 바뀐 부분을 검증하고, `오류`와 `누락`은 researcher를 수정 모드로 띄워 고친다.
 5. `.claude/skills/rx-done/SKILL.md`의 절차로 완료 처리한다.
 6. 사용자에게 바뀐 내용만 요약해서 보고한다. 바뀐 게 없으면 없다고 말한다.
