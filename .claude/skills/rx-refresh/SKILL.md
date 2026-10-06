@@ -1,7 +1,7 @@
 ---
 name: rx-refresh
 description: 기존 리서치 파일을 최신 정보로 갱신한다. 지원 직전이나 면접 전에 사용한다.
-argument-hint: "[주제: company | tech | competitors | hardware | market | all]"
+argument-hint: "[주제: company | tech | competitors | hardware | market | papers | all]"
 arguments: [topic]
 disable-model-invocation: true
 ---

@@ -21,8 +21,15 @@ description: research/*.md 리서치 문서의 작성 템플릿과 출처 규칙
 - 면접에서 어떻게 말할 수 있는가
 
 ## 출처
-1. [제목](URL) - 발행처, 발행일 (reference/<파일명>.md)
+1. [제목](URL) - 발행처, 발행일, (en) (reference/<파일명>.md)
 ```
+
+## 언어 규칙
+- 검색어는 한국어와 영어로 각각 만든다. 일본 관련 주제는 일본어도 쓴다.
+- research 문서마다 **영어 1차 소스를 최소 1개** 포함한다. 국내 시장 주제는 한국어 소스도 최소 1개 포함한다.
+- 기술 주제(tech, competitors, hardware)는 paper-search 스킬로 논문을 최소 2편 포함한다.
+- 외국어 소스는 한국어로 요약하되, 고유명사와 기술 용어는 원어를 병기한다.
+- 출처 목록에 언어를 표시한다: `(en)`, `(ko)`, `(ja)`
 
 ## 출처 규칙
 - 조사 전에 reference 스킬로 `reference/`를 먼저 찾고, 인용한 소스는 저장한다.
@@ -39,6 +46,7 @@ description: research/*.md 리서치 문서의 작성 템플릿과 출처 규칙
 | tech.md | RFM / VLA 개념, 학습 방식(모방학습, 강화학습), 데이터 수집(텔레오퍼레이션, 시뮬레이션), 로봇 손 조작이 어려운 이유 |
 | competitors.md | 비교표: 회사 / 국가 / 모델명 / 접근 방식 / 타깃 하드웨어 / 타깃 산업 / 투자 규모 / RLWRLD 대비 차별점 |
 | hardware.md | 로봇 손·그리퍼 제품 비교(자유도, 가반하중, 가격대), 촉각·비전 센서, 공급망 |
+| papers.md | 주제별 핵심 논문 지도: 기반 논문, 최신 동향, 산업 적용 사례, RLWRLD 관련 연구. 논문마다 한 줄 요약과 RX 시사점 |
 | market.md | 산업별 자동화 수요, 인력난 통계, 시장 규모 전망, 국내 정책·지원 사업 |
 
 competitors.md 기본 후보: Physical Intelligence, Figure, Tesla Optimus, NVIDIA GR00T, Google DeepMind Gemini Robotics, Skild AI. 국내 경쟁사도 찾아 추가한다.

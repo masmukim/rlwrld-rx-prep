@@ -21,6 +21,7 @@ published: YYYY-MM-DD      # 모르면 unknown
 fetched: YYYY-MM-DD        # 조사일
 tags: [company, rldx-1]
 source_type: 1차 | 기사 | 논문 | 공식문서 | 보고서
+lang: ko | en | ja
 ---
 
 ## 핵심 사실
@@ -33,7 +34,9 @@ source_type: 1차 | 기사 | 논문 | 공식문서 | 보고서
 - 다른 소스와 다른 점, 해석, 어떤 작업에 쓰였는지 (예: A1, B3 가정값)
 ```
 
-**태그** (첫 태그가 파일명 접두어): `company`, `tech`, `competitors`, `hardware`, `market`, `case`, `claude-code`
+**태그** (첫 태그가 파일명 접두어): `company`, `tech`, `competitors`, `hardware`, `market`, `papers`, `case`, `claude-code`
+
+논문은 paper-search 스킬의 논문 전용 필드(authors, citations)를 추가로 쓴다.
 
 ## 찾기 (find / list)
 웹 검색 **전에** 항상 먼저 찾는다.

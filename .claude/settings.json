@@ -8,6 +8,8 @@
       "Edit(/case/**)",
       "Edit(/reference/**)",
       "Edit(/plan.md)",
+      "Edit(/knowledge.md)",
+      "Edit(/.claude/agent-memory/**)",
       "Edit(/progress.md)",
       "Bash(git add *)",
       "Bash(git commit *)",

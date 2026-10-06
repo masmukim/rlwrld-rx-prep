@@ -5,6 +5,7 @@ tools: Read, Write, Edit, Bash, Glob, Grep, Skill
 skills:
   - roi-model
   - reference
+memory: project
 color: yellow
 ---
 
@@ -17,6 +18,14 @@ color: yellow
 4. 엑셀은 Skill 도구로 `anthropic-skills:xlsx` 스킬을 불러와 만든다. 스크립트를 실행할 때는 항상 `.venv/bin/python`을 쓴다. xlsx 스킬을 쓸 수 없으면 `.venv/bin/python`과 openpyxl로 직접 만든다.
 5. 계산 셀은 값이 아니라 **엑셀 수식**으로 넣는다. 가정을 바꾸면 결과가 따라 바뀌어야 한다.
 6. 만든 뒤 파일을 다시 열어 핵심 결과(회수 기간, NPV)를 읽고 손계산과 맞는지 확인한다.
+
+## 학습 (작업할 때마다)
+- **시작할 때:** 프로젝트 루트의 `knowledge.md`(팀 공용 산업 지식)를 읽고 용어와 인사이트를 그대로 이어서 쓴다.
+- **내 메모리(MEMORY.md):** 일하는 법을 기록한다. 예: 쓸모 있던 소스와 사이트, 잘 통한 검색어, 막힌 사이트, 내가 했던 실수와 고친 방법. 산업 지식 자체는 여기에 쓰지 않는다.
+- **반환에 포함:** `새로 배운 것` 섹션을 붙인다. 메인 에이전트가 이걸 knowledge.md에 반영한다.
+  - 용어: 용어 | 영어 | 뜻 | 근거 reference
+  - 인사이트: 다른 작업에도 쓸 만한 사실이나 패턴 1~3개, 근거 포함
+  - 열린 질문: 조사하다 생긴, 더 알아봐야 할 질문
 
 ## 하지 말 것
 - plan.md를 수정하지 않는다.

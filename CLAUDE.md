@@ -55,14 +55,26 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 4. **끝날 때:** `fact-checker`로 검증한 뒤 `/rx-done` 절차를 따른다. 상태를 `완료`로 바꾸고, progress.md에 기록하고, `[A1] 요약` 형식으로 커밋하고 푸시한다.
 5. **중단될 때:** 상태는 `진행중`으로 두고, progress.md의 `다음:`에 이어서 할 지점을 구체적으로 적는다.
 
+## 학습 구조 (작업할수록 쌓이는 지식)
+| 층 | 파일 | 담는 것 | 쓰는 주체 |
+|----|------|---------|-----------|
+| 원자료 | `reference/` | 소스 1건당 1파일 (기사, 공식문서, 논문) | researcher, case-analyst |
+| 주제별 결론 | `research/`, `case/` | 작업 산출물 | 담당 에이전트 |
+| 팀 공용 산업 지식 | `knowledge.md` | 용어집, 핵심 인사이트, 열린 질문 | 메인 에이전트 (`/rx-done`) |
+| 에이전트별 노하우 | `.claude/agent-memory/<에이전트>/MEMORY.md` | 좋은 소스, 잘 통한 검색어, 실수 | 각 에이전트 (`memory: project`) |
+
+- 모든 에이전트는 작업 전에 `knowledge.md`를 읽고, 작업 후 `새로 배운 것`(용어, 인사이트, 열린 질문)을 반환한다.
+- 열린 질문은 `/rx-status`가 새 리서치 작업(`Q<번호>`)으로 제안한다. 이렇게 작업 → 지식 → 새 질문 → 작업으로 순환한다.
+- **다국어 리서치:** 영어(기술, 경쟁사, 글로벌), 한국어(국내 시장, 정책), 일본어(일본 시장, 로봇 제조사)로 검색한다. 기술 주제는 `paper-search`로 논문(arXiv, OpenAlex, Semantic Scholar)도 찾는다.
+
 ## 에이전트, 커맨드, 스킬
 세부 방법론은 스킬에 있다. 이 파일에는 규칙과 협업 절차만 둔다.
 
 **에이전트** (`.claude/agents/`)
 | 이름 | 담당 | 프리로드 스킬 |
 |------|------|---------------|
-| researcher | A1~A5, 리서치 갱신 | research-format, reference |
-| case-analyst | B1, B2 | process-analysis, reference |
+| researcher | A1~A6, 리서치 갱신 | research-format, reference, paper-search |
+| case-analyst | B1, B2 | process-analysis, reference, paper-search |
 | roi-modeler | B3 | roi-model, reference |
 | fact-checker | 모든 산출물 검증 (보고만, 수정 안 함) | reference |
 
@@ -80,6 +92,7 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 | 스킬 | 내용 |
 |------|------|
 | reference | `reference/` 조사 자료 찾기·저장 (`/reference find 키워드`로 직접 호출도 가능) |
+| paper-search | 영어 논문 검색 (arXiv, OpenAlex, Semantic Scholar), 요약, reference 저장 |
 | research-format | 리서치 문서 템플릿, 출처 규칙, 주제별 본문 구성 |
 | process-analysis | 후보 공정 점수표, 작업 동작 분해, RFM 적합성 판단 |
 | roi-model | ROI 엑셀 시트 구성, 계산식, 민감도 |
@@ -90,9 +103,11 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 CLAUDE.md
 plan.md              # 작업 목록, 담당, 상태 (무엇을 할지)
 progress.md          # 작업 기록, 추가만 함 (어디까지 했는지)
+knowledge.md         # 팀 공용 산업 지식: 용어집, 인사이트, 열린 질문
 .claude/
   settings.json      # 프로젝트 권한 (웹 조사, 산출물 폴더 쓰기, git 커밋·푸시 허용)
   agents/            # 서브에이전트 정의
+  agent-memory/      # 에이전트별 노하우 (MEMORY.md, 커밋함)
   skills/            # 커맨드(rx-*)와 방법론 스킬
 reference/           # 조사 원자료. 소스 1건당 파일 1개 (<태그>--<슬러그>.md)
 requirements.txt     # Python 패키지 (.venv에 설치, .venv는 커밋 제외)
@@ -102,6 +117,7 @@ research/            # A. 리서치 결과 (reference를 종합한 결론)
   competitors.md     # 경쟁사 비교표
   hardware.md        # 로봇 손, 그리퍼, 촉각 및 비전 센서
   market.md          # 산업별 자동화 수요, 인력난, 시장 규모
+  papers.md          # 핵심 논문 지도
 case/                # B. 미니 RX 케이스
   candidates.md      # 후보 공정 비교 및 선정 근거
   analysis.md        # 선정 공정의 심층 분석과 ROI 가정값 표
