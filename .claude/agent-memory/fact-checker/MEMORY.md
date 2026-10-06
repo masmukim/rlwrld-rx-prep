@@ -1,1 +1,4 @@
 - [Market doc check method](feedback_market-check-method.md) — basis/rank pitfalls, newer-edition check, sources that open fine
+- [Competitor doc check method](feedback_competitor-check-method.md) — cherry-picked rates, budget scope, funding sum check
+- [Paper check method](feedback_paper-check-method.md) — arXiv abs fetch works; summarizer %p/relative verdicts unreliable
+- [Hardware doc check method](feedback_hardware-check-method.md) — citation-number vs spec mismatch, reseller price drift, pages that open

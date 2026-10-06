@@ -1,2 +1,4 @@
 - [RLWRLD 조사 노하우](rlwrld-research-notes.md) — 잘 통한 검색어, 막힌 사이트, 소스 신뢰도 패턴
 - [시장 리서치 노하우](market-research-notes.md) — IFR/고용부/TDB 등 잘 열린 소스, 403 사이트, 날짜 혼재 주의
+- [경쟁사 조사 노하우](competitors-research-notes.md) — 경쟁사 1차 소스, businesswire 403 우회, 투자 총액 충돌, 병렬 파일 충돌
+- [하드웨어 리서치 노하우](hardware-research-notes.md) — 손·센서 1차 페이지, 가격 충돌 패턴, 막힌 사이트

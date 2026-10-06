@@ -23,3 +23,9 @@
 - 산출물: research/market.md, 새 reference 13건 (market-- 13건, IFR 2026 1건은 메인 에이전트가 저장)
 - 다음: B1은 A4 완료 대기 (A1, A5 완료). A3, A4, A6 시작 가능
 - 이슈(확인필요): 와이어 하네스 수작업 비중 85~90%·일본 물류 2030년 34.1% 부족 원문 403 / JARA 회원+비회원 기준 수치 원문 미대조 / Goldman 원문, 기획예산처 1차 문서 미확인 / 리크루트웍스 직종별 표는 요약 경유 / IFR 2026판 기준 로봇 밀도 미확인 / 독파모 관련성 1차 소스 없음
+
+## 2026-10-06 17:20 | researcher | A6
+- 한 일: VLA/RFM, 정밀 손 조작, 촉각·힘, 데이터 수집, 산업 적용 5개 주제의 핵심 논문 지도(초록 확인 27편, 추가 후보 7편) 작성. 촉각·힘 입력은 ForceVLA(2025-05), Tactile-VLA(2025-07)가 RLDX-1(2026-05)보다 앞서므로 차별점은 고자유도 손, 데이터 파이프라인, 독립 검증으로 정리. fact-checker 검증 결과 수치 불일치는 없었고, GR00T N1.7 1차 소스 서술 오류, 경쟁 맥락(NVIDIA 동일 20,854시간) 누락, HapticVLA 원문 확인 등 6건을 researcher 수정 모드로 반영함
+- 산출물: research/papers.md, 새 reference 18건 (papers-- 15건, tech-- 2건, hapticvla 포함) + 기존 reference 2건 정정
+- 다음: 새로 열리는 작업 없음. B1은 A4 완료 대기 (A3는 A4, A6와 무관)
+- 이슈(확인필요): ForceVLA 23.2%, Sparsh-X 63%, T-Rex 30%, EgoScale 54%, Diffusion Policy 46.9%의 상대/%p 구분 미확인(WebFetch 요약이 같은 수치를 상반되게 답함) / ABEJA×村田製作所의 N1.7 사용, 일본 3사 VTLA는 기사 기준 / Industrial Dexterity Benchmark는 v3(2026-09-21) 개정 후 수치 변동 미확인 / researcher WebFetch 약 22건(한도 15건 초과)

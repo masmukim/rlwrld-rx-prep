@@ -26,6 +26,12 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | ALLEX | ALLEX humanoid (WIRobotics) | 48-DoF 휴머노이드, 양손 각 15-DoF. RLDX-1 주 실험 플랫폼 | reference/company--rlwrld-rldx1-page.md |
 | GENIAC | Generative AI Accelerator Challenge | 일본 경제산업성의 생성AI 개발 지원 프로그램. KDDI와 RLWRLD 채택 | reference/company--impress-kddi-geniac.md |
 | 에고센트릭 데이터 | Egocentric data | 작업자가 착용한 카메라로 찍은 1인칭 작업 영상 데이터 | reference/company--aws-blog-rlwrld.md |
+| VTLA | Vision-Tactile-Language-Action model | VLA에 촉각 입력을 더한 모델. 일본 川崎重工·FANUC·安川電機 3사가 개발 중이라고 보도됨 | reference/tech--xtech-visuotactile-japan.md |
+| 視触覚 | Visuo-tactile sensing | 카메라 영상으로 촉각 정보를 얻는 방식. 별도 힘·촉각 센서를 쓰지 않음 | reference/tech--xtech-visuotactile-japan.md |
+| HIL-SERL | Human-in-the-Loop Sample-Efficient Robotic RL | 시연, 사람 교정, 표본 효율 RL을 합친 실로봇 학습. 학습 1~2.5시간, 베이스라인 대비 평균 2배 성공률 | reference/papers--hil-serl.md |
+| UMI | Universal Manipulation Interface | 손에 쥐는 그리퍼로 로봇 없이 현장 시연을 모으는 데이터 수집 방식 | reference/papers--umi.md |
+| FVLMoE | Force-aware VLA Mixture-of-Experts | ForceVLA에서 힘 신호를 단계별로 융합하는 MoE 모듈 | reference/papers--forcevla.md |
+| 상대 향상 대 %p 향상 | Relative vs absolute (percentage points) improvement | "N% 향상"이 기준선의 N% 증가인지 성공률이 N%p 오른 것인지의 구분 | reference/papers--forcevla.md |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -40,6 +46,11 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 한국 빈 일자리는 2025년에 줄었다(미충원 101,000명, -22,000명). 한국 제조 인력난은 "외국인력 497,000명(제조 외국인 취업자 44.8%) 의존" 구조로 서술하고, ROI 프레임은 미충원 해소보다 외국인력 의존 리스크 완화가 후보다(`추정`) [reference/market--moel-vacancy-2025h2.md, reference/market--korea-foreign-workers-2025.md]
 - 서비스 로봇 통계는 이동·운반·청소형 중심이고 손 조작 업무는 따로 잡히지 않는다. RX의 미충족 영역은 통계가 아니라 공정 분해 인터뷰에서 찾는다 [reference/market--ifr-service-robots-2025.md]
 - 일본은 2025년 국내 로봇 출하 -8.9%, 신규 설치 -19%로 국내 수요가 약하다. 일본 고객에게는 "기존 FA 로봇으로 안 풀리는 잔여 인력"이 제안 포인트다(`추정`) [reference/market--jara-2025-stats.md, reference/market--ifr-industrial-robots-2026.md]
+- 촉각·힘을 VLA에 붙이는 시도는 RLDX-1(2026-05)보다 앞선 ForceVLA(2025-05)와 Tactile-VLA(2025-07)에서 이미 나왔다. RLDX-1의 차별점은 촉각 유무가 아니라 고자유도 손, 현장 데이터 파이프라인, 독립 검증 가능성으로 잡는다(본 문서의 해석) [reference/papers--forcevla.md, reference/papers--tactile-vla-arxiv-listing.md]
+- 산업 시나리오(케이블 하니스, 커넥터 삽입, 기어박스)를 명시한 공개 평가는 구성당 48회 시행 수준이고 78% 대 36%는 가동률이 아니다. B1 와이어 하니스 후보의 근거는 "확장 단계" 참고로만 쓴다 [reference/papers--industrial-dexterity-benchmark.md]
+- 일본에서는 GR00T 계열 PoC(ABEJA×村田製作所, 기사 기준)와 대형 로봇 3사의 VTLA 내재화가 함께 보인다. 일본 고객 제안에서 경쟁 또는 내재화 변수로 본다 [reference/tech--robotstart-abeja-murata.md, reference/tech--xtech-visuotactile-japan.md]
+- NVIDIA GR00T N1.7(2026-04)이 EgoScale과 같은 20,854시간 에고센트릭 데이터로 공개됐다. RLDX-1 벤치마크의 비교 상대(N1.6)는 이보다 한 세대 앞서므로 N1.7에는 적용되지 않는다 [reference/competitors--nvidia-groot-n17.md, A6 fact-check]
+- WebFetch 요약 모델은 초록에 근거가 없어도 "상대/%p"를 단정한다(같은 ForceVLA 23.2%를 페이지별로 상반되게 답함). 구분은 논문 표의 절대값으로만 확정한다 [A6 fact-check]
 - IFR World Robotics는 매년 9월 말에 나온다. 시장 문서 최신성은 이 시점을 기준으로 점검한다. 통계는 집계 범위(회원사만 vs 회원+비회원)가 섞이기 쉬우니 성장률 역산으로 대조한다 [A5 fact-check]
 
 ## 열린 질문
@@ -59,3 +70,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 한국 피지컬 AI 실증 사업(2027년 500곳 이상)의 기획예산처 1차 자료와 PoC 참여 조건은? (A5, B4)
 - [ ] 손 조작 로봇/RFM 전용 시장 규모 소스가 있는가? 없다면 상향식 SAM 계산 방식은? (A5, B3)
 - [ ] IFR 2026판 기준 2025년 로봇 밀도에서 한국이 1위를 유지했는가? (A5)
+- [ ] 川崎重工·FANUC·安川電機 VTLA 협력의 1차 소스(발표 자료)와 벤처 기업명, 일정은? (A6, A3에서 확인)
+- [ ] GR00T N1.7은 촉각·힘 입력을 쓰는가? NVIDIA 블로그에는 언급 없음. 기존 π0, π0.5 질문과 함께 확인 (A6)
+- [ ] ForceVLA 23.2%와 EgoScale 54%는 본문 표에서 상대 향상인가 %p 향상인가? (A6)
+- [ ] ForceVLA 이후 RLDX-1의 Physics 모듈을 같은 조건(ALLEX 또는 동일 작업)에서 비교한 결과가 있는가? (A6)
+- [ ] Industrial Dexterity Benchmark v3(2026-09-21) 개정에서 수치가 바뀌었는가? (A6)
