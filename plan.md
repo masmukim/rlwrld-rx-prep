@@ -2,7 +2,7 @@
 
 | ID | 작업 | 담당 | 상태 | 선행 작업 | 산출물 |
 |----|------|------|------|-----------|--------|
-| A1 | RLWRLD 회사 리서치 (회사, 투자, 인물, RLDX-1) | - | 대기 | - | research/company.md |
+| A1 | RLWRLD 회사 리서치 (회사, 투자, 인물, RLDX-1) | researcher | 완료 | - | research/company.md |
 | A2 | 기술 리서치 (RFM/VLA, 모방학습, 텔레오퍼레이션, 데이터 수집) | - | 대기 | - | research/tech.md |
 | A3 | 경쟁사 비교표 | - | 대기 | A2 | research/competitors.md |
 | A4 | 하드웨어·센서 동향 (로봇 손, 그리퍼, 촉각·비전 센서) | - | 대기 | A2 | research/hardware.md |
