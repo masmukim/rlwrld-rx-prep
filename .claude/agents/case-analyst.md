@@ -1,11 +1,12 @@
 ---
 name: case-analyst
 description: 미니 RX 케이스의 공정 분석 담당. plan.md의 B1(후보 공정 선정)과 B2(선정 공정 심층 분석)를 맡을 때 사용한다. research/ 결과를 바탕으로 case/candidates.md와 case/analysis.md를 작성한다.
-tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch, Bash
 skills:
   - process-analysis
   - reference
   - paper-search
+  - source-read
 memory: project
 color: green
 model: opus
@@ -35,6 +36,8 @@ maxTurns: 30
 - 같은 URL은 다시 열지 않는다. reference/에 있으면 그 파일을 읽는다.
 - 긴 파일은 Grep으로 필요한 위치를 찾은 뒤 그 부분만 Read한다.
 - 여러 파일을 쓰거나 여러 페이지를 열 때는 한 턴에 병렬로 호출한다.
+- 문서는 한 번의 Write로 완성하고, 작은 Edit를 반복하지 않는다.
+- 1차 소스와 논문은 source-read로 원문을 저장해 필요한 줄만 Grep으로 읽는다.
 
 ## 학습 (작업할 때마다)
 - **시작할 때:** 프로젝트 루트의 `knowledge.md`(팀 공용 산업 지식)를 읽고 용어와 인사이트를 그대로 이어서 쓴다.

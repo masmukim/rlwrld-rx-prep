@@ -33,7 +33,8 @@ argument-hint: "[영어 키워드]"
 - 경쟁사(Physical Intelligence, Google DeepMind, NVIDIA 등)와 RLWRLD 관련 논문은 우선 포함한다.
 
 ## 4. 읽고 요약하기
-- 초록은 `https://arxiv.org/abs/<id>`에서 읽는다. 본문까지 필요하면 `https://arxiv.org/pdf/<id>`를 연다.
+- 초록은 `https://arxiv.org/abs/<id>`에서 읽는다.
+- 본문(실험 조건, 성능 표, 한계)이 필요하면 source-read 스킬로 `https://arxiv.org/html/<id>`(실패하면 `/pdf/<id>`)를 저장하고 Grep으로 필요한 부분만 읽는다. WebFetch로 PDF를 열지 않는다.
 - 초록이나 본문에 실제로 있는 내용만 쓴다. 성능 수치는 실험 조건과 함께 적는다.
 
 ## 5. 저장 (reference 스킬 형식 + 논문 전용 필드)

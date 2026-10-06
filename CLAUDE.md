@@ -84,7 +84,9 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 
 **공통 절약 규칙** (각 에이전트 파일의 `토큰 절약` 섹션)
 - reference/를 먼저 찾아 같은 소스를 다시 열지 않는다.
-- WebFetch는 페이지 전체를 읽으므로 비용이 여는 페이지 수에 비례한다. 리서치 작업당 15개 안팎으로 한다.
+- WebFetch는 페이지 전체를 요약 모델이 읽으므로 비용이 여는 페이지 수에 비례하고, 수치와 인용이 부정확할 수 있다. **2차 소스에만** 쓰고 작업당 15개 안팎으로 한다.
+- **1차 소스, 논문, 인용할 수치는 `source-read`로 원문을 `reference/raw/`에 저장하고 Grep으로 필요한 줄만 읽는다.** `reference/raw/`는 저작권 때문에 커밋하지 않는다.
+- 문서는 한 번의 Write로 완성하고, 수정 모드는 SendMessage가 아니라 새 에이전트로 띄운다.
 - 여러 파일 쓰기와 페이지 열기는 한 턴에 병렬로 호출한다.
 - 이 프로젝트에서는 ponytail 플러그인을 끈다 (`.claude/settings.json`의 `enabledPlugins`). 코딩용 지침이라 리서치에 맞지 않는다.
 
@@ -93,8 +95,9 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 |------|-------------|------|-----------|------|
 | A1 단독 | $2.09 | 7분 26초 | Opus 메인 33%, Sonnet 42%, Haiku 25% | 기준값 |
 | A2+A5 병렬 | $2.42 | 9분 32초 (2개) | Opus 메인 29%, Sonnet 48%, Haiku 23% | 커맨드 model 설정이 첫 턴에만 적용됨, 메인이 직접 40회 수정 |
+| A3+A4+A6 병렬 | $2.87 | 12분 (3개) | Sonnet 74%, Haiku 26%, Opus 0% | 기본 모델 sonnet 적용 성공. 수정 모드를 SendMessage로 원래 에이전트에 이어 맡겨 researcher당 Edit 23~32회, 누적 읽기 150만~230만 토큰 |
 
-다음 목표: 기본 모델 sonnet과 수정 모드 적용 후 리서치 작업당 약 $1.6~1.8 (추정).
+다음 목표: 문서 한 번에 쓰기, 새 에이전트로 수정 모드, source-read 적용 후 리서치 작업당 $2 미만 (추정).
 - 결과물 품질이 부족하면 모델을 올리기 전에 effort부터 올린다.
 
 ## 에이전트, 커맨드, 스킬
@@ -123,6 +126,7 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 |------|------|
 | reference | `reference/` 조사 자료 찾기·저장 (`/reference find 키워드`로 직접 호출도 가능) |
 | paper-search | 영어 논문 검색 (arXiv, OpenAlex, Semantic Scholar), 요약, reference 저장 |
+| source-read | 원문(웹, PDF, arXiv 전문)을 reference/raw/에 저장하고 Grep으로 필요한 줄만 읽기 |
 | research-format | 리서치 문서 템플릿, 출처 규칙, 주제별 본문 구성 |
 | process-analysis | 후보 공정 점수표, 작업 동작 분해, RFM 적합성 판단 |
 | roi-model | ROI 엑셀 시트 구성, 계산식, 민감도 |
@@ -139,6 +143,7 @@ knowledge.md         # 팀 공용 산업 지식: 용어집, 인사이트, 열린
   agents/            # 서브에이전트 정의
   agent-memory/      # 에이전트별 노하우 (MEMORY.md, 커밋함)
   skills/            # 커맨드(rx-*)와 방법론 스킬
+reference/raw/       # source-read로 저장한 원문 텍스트 (커밋 안 함)
 reference/           # 조사 원자료. 소스 1건당 파일 1개 (<태그>--<슬러그>.md)
 requirements.txt     # Python 패키지 (.venv에 설치, .venv는 커밋 제외)
 research/            # A. 리서치 결과 (reference를 종합한 결론)
