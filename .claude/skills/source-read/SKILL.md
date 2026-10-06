@@ -20,6 +20,8 @@ WebFetch는 작은 모델이 페이지를 **요약한 결과**만 돌려준다. 
    ```
    .venv/bin/python .claude/skills/source-read/fetch.py <URL> reference/raw/<reference 파일과 같은 슬러그>.txt
    ```
+   - **명령은 위 형태 그대로 쓴다.** 상대 경로 `.venv/bin/python`으로 시작하고, `cd`, `mkdir`, `&&`, `for` 반복문을 붙이지 않는다. 이 형태만 권한 허용 목록에 있어서 다른 형태는 거부된다 (B1 테스트에서 반복문과 절대 경로가 거부됨). 저장 폴더는 스크립트가 만든다.
+   - 원문이 여러 개면 한 턴에 Bash 호출을 여러 개 **병렬로** 보낸다.
    - 출력은 `OK <경로> <줄 수> lines` 또는 `FAIL <이유>` 한 줄뿐이다.
    - 논문은 `https://arxiv.org/html/<id>`(HTML 전문)를 먼저 쓰고, 실패하면 `https://arxiv.org/pdf/<id>`를 쓴다. PDF도 텍스트로 변환된다.
 2. **파일 전체를 Read하지 않는다.** Grep으로 필요한 수치나 키워드가 있는 줄만 찾고(`-C 2`로 앞뒤 2줄), 그 부분만 읽는다. 논문은 4,000줄이 넘는다.

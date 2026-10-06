@@ -5,6 +5,7 @@ Prints only a short status line; read the file with Grep/Read afterwards.
 """
 import datetime
 import io
+import os
 import re
 import sys
 import urllib.request
@@ -61,6 +62,7 @@ def main(url, out):
     if len(text) < 500:
         print(f"FAIL {url} only {len(text)} chars (JS-rendered or blocked page)")
         return 1
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write(f"URL: {url}\nFETCHED: {datetime.date.today()}\n\n{text}\n")
     print(f"OK {out} {text.count(chr(10)) + 1} lines {len(text)} chars")

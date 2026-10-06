@@ -17,7 +17,8 @@
       "Bash(git push)",
       "Bash(git push *)",
       "Bash(date *)",
-      "Bash(.venv/bin/python *)"
+      "Bash(.venv/bin/python *)",
+      "Bash(/Users/mansukim/rlwrld-rx-prep/.venv/bin/python *)"
     ]
   },
   "enabledPlugins": {

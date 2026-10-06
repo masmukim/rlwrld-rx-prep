@@ -95,6 +95,7 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 |------|-------------|------|-----------|------|
 | A1 단독 | $2.09 | 7분 26초 | Opus 메인 33%, Sonnet 42%, Haiku 25% | 기준값 |
 | A2+A5 병렬 | $2.42 | 9분 32초 (2개) | Opus 메인 29%, Sonnet 48%, Haiku 23% | 커맨드 model 설정이 첫 턴에만 적용됨, 메인이 직접 40회 수정 |
+| B1 (사용자 결정 전까지) | $2.99 | 10분 | Opus case-analyst 75%, Sonnet 19%, Haiku 6% | 새 에이전트 수정 모드 성공 (5턴, 누적 읽기 16만). source-read는 권한 거부로 미사용 → 수정함 |
 | A3+A4+A6 병렬 | $2.87 | 12분 (3개) | Sonnet 74%, Haiku 26%, Opus 0% | 기본 모델 sonnet 적용 성공. 수정 모드를 SendMessage로 원래 에이전트에 이어 맡겨 researcher당 Edit 23~32회, 누적 읽기 150만~230만 토큰 |
 
 다음 목표: 문서 한 번에 쓰기, 새 에이전트로 수정 모드, source-read 적용 후 리서치 작업당 $2 미만 (추정).
