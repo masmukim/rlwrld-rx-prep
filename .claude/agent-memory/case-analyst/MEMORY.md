@@ -1,0 +1,3 @@
+- [소스와 접근](sources-and-access.md) — 통한 검색어, 403 사이트(MDPI→기관 저장소), Bash 거부 시 WebFetch 대체
+- [B1 점수화 방식](b1-scoring-practice.md) — 민감도 표, 그리퍼 대 손 분리, 인력 점수는 산업 지표+추정, 생산 거점 확인
+- [인용 정확도](citation-precision.md) — arXiv totalResults, 1차 소스로 경쟁 과장 금지, 비중 분모 확인, 논문 버전 표기

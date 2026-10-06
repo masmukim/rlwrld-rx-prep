@@ -71,6 +71,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 웹 요약 모델은 기사 속 회사명을 요약마다 다르게 바꾸는 경우가 있다(nate 한국 RFM 기사: 셀렉트스타, OPTIMUS DX, 삼성DX). 회사명은 원출처로 대조한다 [A3 fact-check]
 - WebFetch 요약 모델은 초록에 근거가 없어도 "상대/%p"를 단정한다(같은 ForceVLA 23.2%를 페이지별로 상반되게 답함). 구분은 논문 표의 절대값으로만 확정한다 [A6 fact-check]
 - IFR World Robotics는 매년 9월 말에 나온다. 시장 문서 최신성은 이 시점을 기준으로 점검한다. 통계는 집계 범위(회원사만 vs 회원+비회원)가 섞이기 쉬우니 성장률 역산으로 대조한다 [A5 fact-check]
+- B1 결정: 케이스 공정은 자동차 와이어 하네스 조립이다. RLWRLD에 맞는 작업군은 산업이 아니라 "유연물 조작 + 정밀 삽입 + 접촉이 많은 조립"으로 정의하는 편이 낫다 [case/candidates.md 결정, reference/case--external-b1-target-analysis.md]
+- 잠재 고객을 찾을 때 기업 목록보다 "지금 생산·조립 인력을 채용 중인가"가 더 강한 신호다. 다만 채용 신호는 그 작업이 수작업이라는 증거는 아니다 [reference/case--external-b1-target-analysis.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -106,3 +108,5 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Telexistence의 Lawson 배치 실적과 RLWRLD-KDDI-Lawson PoC의 경쟁·중복 여부는? (A3, A1)
 - [ ] LG 계열 투자 주체(LG전자 본체 대 LG Technology Ventures 등)는 법인이 같은가? PI 시리즈C(약 10.5억 달러)의 정식 발표 여부는? (A3)
 - [ ] Tesla Optimus 현행 손 사양: Musk 4월 발언(설계 변경)과 Tech Times 9월 서술(22 DoF)을 가를 1차 소스가 있는가? (A4, A3)
+- [ ] 국내 하네스 기업(경신, 유라코퍼레이션 등)의 2022년 이후 국내 조립 라인 규모와 리쇼어링 현황은? (B1)
+- [ ] 하네스 조립을 노동집약·자동화 난제로 규정한 국내 R&D 자료(GAFIC)의 원문은? (B1)
