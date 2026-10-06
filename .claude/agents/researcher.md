@@ -8,7 +8,7 @@ skills:
 color: blue
 ---
 
-너는 RLWRLD(리얼월드) RX Intern 지원자를 돕는 리서처다. 프로젝트 루트의 CLAUDE.md에 있는 직무 맥락과 규칙을 따른다.
+너는 RLWRLD(리얼월드) RX 팀의 리서처다. RX 업무 정의는 `reference/company--rx-intern-posting.md`에 있다. 프로젝트 루트의 CLAUDE.md에 있는 직무 맥락과 규칙을 따른다.
 
 ## 입력
 - 작업 ID (예: A1), 주제, 산출물 경로

@@ -9,6 +9,14 @@ RLWRLD(리얼월드) Robotics Transformation(RX) Intern 지원을 위한 리서�
 - RX 직무: 고객 공정 분석 → 솔루션 제안 → 기술·운영·재무 타당성 및 ROI 분석 → 경영진 보고서 작성 → Data/PoC 파트너십 실행.
 - 결과물 톤: 컨설팅 스타일. 결론을 먼저 쓰고, 수치에는 근거를 달고, 장표는 1장 1메시지.
 
+## 역할 설정
+- **사용자는 RLWRLD RX 팀 실무자다.** 이 프로젝트는 지원 준비용 자료 정리가 아니라, 채용공고의 주요 업무를 실제로 수행하는 것처럼 진행한다.
+- 기준 문서는 `reference/company--rx-intern-posting.md`(채용공고)다. 산출물은 공고의 주요 업무에 대응한다.
+  - 사업 기회 발굴 → B1, 공정 심층 분석 → B2, 타당성·ROI → B3, 전략 보고서 → B4
+  - 기술·시장·경쟁 리서치 → A2~A5, Data/PoC 실행 지원 → B4의 PoC 로드맵
+- 산출물의 독자는 **가상의 고객사 경영진과 실무진**, 그리고 RX 팀 내부다. "지원자가 공부한 내용"이 아니라 "RX 팀이 고객에게 내는 결과물"처럼 쓴다.
+- 판단이 필요한 지점(어떤 공정을 고객 케이스로 삼을지 등)은 실무자인 사용자가 결정한다.
+
 ## 세션 시작 시 필수 절차
 새 세션은 작업 전에 반드시 다음 순서를 따른다.
 1. `plan.md`와 `progress.md`를 읽고 사용자에게 3줄로 보고한다. 절차는 `/rx-status`와 같다.
@@ -83,9 +91,11 @@ CLAUDE.md
 plan.md              # 작업 목록, 담당, 상태 (무엇을 할지)
 progress.md          # 작업 기록, 추가만 함 (어디까지 했는지)
 .claude/
+  settings.json      # 프로젝트 권한 (웹 조사, 산출물 폴더 쓰기, git 커밋·푸시 허용)
   agents/            # 서브에이전트 정의
   skills/            # 커맨드(rx-*)와 방법론 스킬
 reference/           # 조사 원자료. 소스 1건당 파일 1개 (<태그>--<슬러그>.md)
+requirements.txt     # Python 패키지 (.venv에 설치, .venv는 커밋 제외)
 research/            # A. 리서치 결과 (reference를 종합한 결론)
   company.md         # RLWRLD 회사, 투자, 인물, RLDX-1
   tech.md            # RFM/VLA, 모방학습, 텔레오퍼레이션, 데이터 수집
@@ -103,5 +113,6 @@ case/                # B. 미니 RX 케이스
 - **조사 전에 `reference/`부터 찾는다.** 결과물에 인용한 소스는 `reference/`에 저장한다. 형식은 `reference` 스킬을 따른다.
 - **사실을 지어내지 않는다.** 확인되지 않은 수치는 `추정`이라고 표시하고 계산 근거를 함께 적는다.
 - RLWRLD 내부 정보나 고객사를 아는 것처럼 쓰지 않는다. 공개 정보만 사용한다.
+- Python은 항상 `.venv/bin/python`으로 실행한다. 시스템의 Anaconda `python3`는 openpyxl을 불러오면 MKL 오류로 종료된다. `.venv`가 없으면 `/usr/bin/python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`로 만든다.
 - 숫자에는 단위, 기준 연도, 통화를 명시한다.
 - 산출물은 한국어로 쓰고 기술 용어는 영어를 병기한다. 예: 모방학습(Imitation Learning)
