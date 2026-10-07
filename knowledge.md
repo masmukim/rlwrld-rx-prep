@@ -66,10 +66,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - RX는 영업 접점이자 데이터 확보 채널이다. 회사는 해자를 "모델이 아니라 현장 데이터와 적용 엔지니어링"으로 설명한다 [reference/company--tech42-rx-model.md]
 - "투자자 = 고객"으로 확인된 곳은 롯데호텔, CJ대한통운, KDDI/Lawson뿐이다. LG, SK, ANA, Mitsui 등은 투자 관계만 확인된다 [research/company.md 5절]
 - 롯데호텔의 "30~40% 대체 가능"은 연회 백오피스에 한정된 관계자 발언이다. ROI 자동화율 수치의 근거로 쓰지 말고 "100%는 아니다"라는 정성 근거로만 쓴다 [reference/company--irobotnews-lotte-hotel.md]
-- RLDX-1 벤치마크(ALLEX 86.8% vs 약 40%)는 자체 평가다. 2차 기사에는 수치 오류가 잦으므로(약 90% vs 30% 미만, 시드1 2,100만 달러 등) 1차 소스(보도자료, arXiv, GitHub)와 대조한다 [reference/papers--rldx1-tech-report.md]
+- RLDX-1 벤치마크(ALLEX 86.8% vs 39.1%·44.8%)는 자체 평가다. 2차 기사 수치가 1차와 어긋나는 일이 잦으므로(시드1 2,100만 달러 등. "약 90% vs 30% 미만"은 회사 블로그 서술문 자체가 원천, A11 정정) 1차 소스(보도자료, arXiv, GitHub)와 대조한다 [reference/papers--rldx1-tech-report.md]
 - 에고센트릭 인간 영상은 규모와 성능 사이에 log-linear 스케일링이 보고됐다(EgoScale, 20,854시간, 22-DoF 손). 고객 작업자 착용 카메라로 데이터를 모으는 RX 전략의 학술 근거다. "54% 향상"은 기준선 대비이며 상대/%p 구분은 미확인 [reference/papers--egoscale.md]
 - 공개된 최고 성공률은 80~90%대에 몰려 있다(ACT, 공유 자율, RLDX-1). 평가 조건이 서로 달라 ROI의 현장 가동률 근거로 쓰지 않는다 [research/tech.md 5절]
-- 강화학습·교정 개입 결합(π*0.6, 일본 언론 전망)이 다음 흐름인데, RLDX-1 공개 학습 설명에는 RL 단계가 확인되지 않는다. A3 경쟁 비교 포인트다 [reference/papers--pistar06-recap.md, reference/tech--xtech-il-rl.md]
+- 강화학습·교정 개입 결합(π*0.6, 일본 언론 전망)이 다음 흐름이다. RLDX-1도 post-training에 교정 데이터와 RECAP 기반 RL을 선택적으로 둔다(A11 정정, 효과 검증은 1과제) [reference/papers--pistar06-recap.md, reference/tech--xtech-il-rl.md]
 - arXiv 초록의 "N% 향상"은 상대인지 %p인지 구분되지 않는 경우가 많다. 본문 확인 전에는 "기준선 대비"까지만 쓴다 [A2 fact-check]
 - 한국 빈 일자리는 2025년에 줄었다(미충원 101,000명, -22,000명). 한국 제조 인력난은 "외국인력 497,000명(제조 외국인 취업자 44.8%) 의존" 구조로 서술하고, ROI 프레임은 미충원 해소보다 외국인력 의존 리스크 완화가 후보다(`추정`) [reference/market--moel-vacancy-2025h2.md, reference/market--korea-foreign-workers-2025.md]
 - 서비스 로봇 통계는 이동·운반·청소형 중심이고 손 조작 업무는 따로 잡히지 않는다. RX의 미충족 영역은 통계가 아니라 공정 분해 인터뷰에서 찾는다 [reference/market--ifr-service-robots-2025.md]
@@ -88,7 +88,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - (A11 정정) RLDX-1에는 교정 데이터와 RECAP 기반 RL이 있다. 다만 RL은 선택 사항이고 효과는 전구 돌리기 1과제의 자체 평가로만 확인된다. 위 "RL 단계가 확인되지 않는다"는 서술을 대체한다 [research/rldx1-tech.md, reference/papers--rldx1-tech-report.md]
 - 블로그 서술문("기준선 30% 미만, RLDX-1 거의 90%")은 블로그 Table 4(기준선 평균 39.1, 44.8)와 어긋나고, ALLEX 평균 86.8%에는 성공률이 아닌 진행 점수 과제 2개가 섞여 있다. 회사 수치는 논문 부록의 지표 정의와 시행 수를 확인한 뒤 쓴다 [research/rldx1-tech.md] (A11)
 - RLDX-1의 실세계 증거는 과제당 24회 시행, 과제별 시연 40~100개 fine-tune, 해당 모듈만 켠 모델이다. 촉각은 ALLEX가 아니라 Franka 그리퍼 플랫폼에서만 쓰였고, Plug Insertion은 8/24(33.3%, Wilson 95% 구간 약 18~53%, 계산)다. 하네스 PoC에 그리퍼 대조군과 완주율·단계 점수 분리가 필요한 근거다 [research/rldx1-tech.md] (A11)
-- Memory 모듈은 순서 추적을 맡고, 실수 복구는 post-training 교정 데이터가 맡는다. case/analysis.md 120행의 서술은 정정 필요하다 [research/rldx1-tech.md] (A11, 미반영)
+- Memory 모듈은 순서 추적을 맡고, 실수 복구는 post-training 교정 데이터가 맡는다. case/analysis.md 120행의 서술은 정정 필요하다 [research/rldx1-tech.md] (A11, 2026-10-07 반영 완료)
 - 정부 과제 예산은 컨소시엄 전체 금액이고 주관 기업별로 나뉘지 않는 경우가 많다(497억 원은 LG전자 컨소시엄 전체, KT 단독 아님) [reference/competitors--korea-msit-physical-ai-lg-kt.md]
 - 투자자 관계가 경쟁사에 걸쳐 있다(NVIDIA는 Figure와 Skild에, Mirae Asset은 RLWRLD 시드1과 Skild에 이름이 있음). 같은 법인인지는 미확인 [reference/competitors--figure-series-c.md, reference/competitors--skild-series-funding.md]
 - 웹 요약 모델은 기사 속 회사명을 요약마다 다르게 바꾸는 경우가 있다(nate 한국 RFM 기사: 셀렉트스타, OPTIMUS DX, 삼성DX). 회사명은 원출처로 대조한다 [A3 fact-check]
@@ -163,7 +163,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Telexistence × Physical Intelligence 음료 보충과 RLWRLD × KDDI 진열 PoC는 어떻게 다른가? (A7, A3)
 - [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? (A8, B2)
 - [ ] RLWRLD 하드웨어 파트너(레인보우, 원익, 로보티즈, 위로보틱스)가 Skild-ABB처럼 모델을 탑재해 판매하는 OEM 채널이 될 수 있는가? (A8)
-- [ ] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? 글로벌 오픈 벤치마크 8종은 무엇인가? (A1, B4)
+- [ ] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? (A1, B4)
+- [x] 글로벌 오픈 벤치마크 8종은 무엇인가? → 6개 스위트의 8개 점수 열로 추정 (research/rldx1-tech.md 9절 14번, A11)
 - [ ] CJ대한통운이 레인보우로보티즈와 협업을 종료한 사유, RLWRLD-CJ PoC의 KPI와 결과는? (A10)
 - [ ] Figure-BMW 최종 달성값(정확도, 개입 횟수)의 출처는? (A10)
 - [ ] Mujin PoC의 실제 기간·검증 절차 1차 소스(일본어)는? (A10)

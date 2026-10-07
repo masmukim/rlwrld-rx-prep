@@ -107,3 +107,9 @@
 - 산출물: research/rldx1-tech.md, 새 reference 3건(company--rlwrld-blog-14, papers--moss-physical-feedback, papers--hamlet-history-vla), reference/papers--rldx1-tech-report.md 갱신, knowledge.md(용어 7, 인사이트 4, 질문 5), 에이전트 메모리 1건
 - 다음: 없음(새 시작 가능 작업 없음). B2·B4에 정정 반영 필요(case/analysis.md 120행 Memory 서술, 합의서에 완주율과 단계 점수 분리). tech.md·company.md 정정은 `/rx-refresh`로 반영 가능
 - 이슈: fact-check 미실시(사용자 지시). 블로그 서술문과 표 충돌은 표와 논문 결론을 택함. 그림에만 있는 수치(OpenArm, 데이터 혼합 비율)와 논문 HTML 중복 렌더링 숫자(`추정` 표시)는 미확인. 기존 문서 정정은 research/rldx1-tech.md에만 표시하고 tech.md·company.md·analysis.md 본문은 아직 수정하지 않음
+
+## 2026-10-07 18:00 | main | A11 정정 반영
+- 한 일: research/rldx1-tech.md 9절 정정표 14건을 원본 문서에 반영. tech.md(RL 단계, Memory 역할, 슬립→무게 추정·접촉 감지, ALLEX 평가 조건, 데이터 수치 조건), company.md(모듈·속도·센서 행, ALLEX 표, GR-1 비교 기준, 8종 목록, 기사 수치 원천, Plug Insertion 33.3%), competitors.md(RLWRLD 증거·센서), case/analysis.md(Memory·Physics 매핑, 센서 서술, 성능 행), case/b4-proposal.md(5.2절 모듈 서술과 공개 근거 한계), knowledge.md(인사이트 2건, 열린 질문 해소 1건)
+- 산출물: 위 6개 문서. 각 위치에 "(2026-10-07 A11 정정)" 표시
+- 다음: B4 합의서에 완주율·단계 점수 분리, 시행 수 근거 보강(사용자 결정 대기)
+- 이슈: 메인 세션이 직접 수정함(사용자 요청, 소규모 정정). fact-check 미실시
