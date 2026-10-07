@@ -83,6 +83,9 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 하네스 자동화의 가장 큰 장벽은 기술보다 다품종 경제성이다. 업계 대응은 저임금 국가 이전, 설계 재설계(분할 하네스), 전용 셀 세 갈래이고, RFM 제안은 "다품종·소량" 영역으로 한정해야 방어할 수 있다 [reference/case--kyunglim-gyeongsan-robot.md, reference/case--ams-cellios-automated-harness.md] (B2, 미검증)
 - 최신 전용 셀도 시제품은 사람보다 느리다(4배 빨라져야 동등). 손 조작 RFM의 ROI는 성공률보다 속도비에서 먼저 갈린다 [reference/case--ams-cellios-automated-harness.md, case/analysis.md 7.5] (B2, 미검증)
 - 커넥터 삽입은 그리퍼 + 힘센서로 90% 이상이 보고된다. 다관절 손의 근거는 레이업(전선 훑기·걸기·분기 정리)에 있으므로, PoC에는 그리퍼 대조군을 넣는다 [reference/papers--bc-connector-assembly.md, reference/papers--dexterous-cable-taxonomy.md] (B2, 미검증)
+- RLWRLD는 PI·Skild와 같은 "지능 계층" 회사다. 하드웨어·센서·인프라는 생태계 파트너가 맡고, PoC는 자사 랩에서 고객 작업을 재현해 진행한다(KDDI 3개월) [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
+- 파트너십의 외부 가치: 고객 운영 데이터로 만든 모델을 RLWRLD와 함께 상업 제품으로 확장할 수 있다. 셀 구매가 부담인 중견 고객에게 "숙련을 제품으로" 제안할 근거 [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
+- 해외 사례의 첫 작업은 좁고 KPI가 숫자로 고정된 작업이다(Figure-BMW 판금 적재: 84초, 99% 이상, 개입 0회). 확산까지 1~3년 [research/rx-cases.md] (A7)
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -125,3 +128,5 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Cellios/TE 셀의 가격과 품번 전환 시간은? (B2, B3)
 - [ ] RLDX-1을 산업용 협동로봇과 손 조합으로 옮길 때 재학습 규모와 상용 라이선스 조건은? (B2, A1)
 - [ ] 2020년 중기부의 하네스 리쇼어링 자동화 지원(2년 최대 10억 원)은 지금도 이어지는가? (B2, B4)
+- [ ] RLWRLD RX 진단의 기간과 비용은? (A7)
+- [ ] Telexistence × Physical Intelligence 음료 보충과 RLWRLD × KDDI 진열 PoC는 어떻게 다른가? (A7, A3)

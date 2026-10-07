@@ -59,3 +59,9 @@
 - 산출물: case/deck-storyline.md
 - 다음: 실무자가 스토리라인 수정 → 장표 제작. B3 완료 후 ROI 장 수치 교체
 - 이슈: B2 fact-check 전이라 수치가 바뀔 수 있음. B3는 사용자 지시로 보류
+
+## 2026-10-07 14:10 | main | A7
+- 한 일: RLWRLD Business 페이지(RX, PoC, 파트너십, 생태계) 원문 확인, 해외 도입 사례 9개사(Figure, Agility, Apptronik, Boston Dynamics, Dexterity, Telexistence, Physical Intelligence, Skild AI, Sanctuary AI) 정리와 패턴 7개 도출
+- 산출물: research/rx-cases.md, reference/company--rlwrld-business-rx-poc-partnership.md
+- 다음: B4 스토리라인에 PoC 장소(RLWRLD 랩), RX 산출물 명칭, KPI(교대당 개입·자율률), 모델 상품화 옵션 반영 검토
+- 이슈: 사용자 요청으로 메인 세션이 직접 조사(researcher 미사용), fact-check 미실시. PI 파트너 페이지 원문 미열람(429). 기사 수치 다수 1차 미확인
