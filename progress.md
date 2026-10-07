@@ -71,3 +71,9 @@
 - 산출물: research/skild-pi-deep-dive.md, reference/raw 원문 6건
 - 다음: B4 스토리라인에 경쟁(Skild 하네스), 차별점(레이업), OEM 확산 경로 반영 검토
 - 이슈: 메인 세션 직접 조사, fact-check 미실시. rx-cases.md의 "Ultra 자율률 96.4%"가 원문 미확인으로 드러나 정정함. PI 원문(pi.website) 429로 미열람
+
+## 2026-10-07 15:45 | main | B4
+- 한 일: 사용자 지시로 장표 대신 md 제안서 작성. 스토리라인에 A7(RLWRLD RX 방식: 랩 PoC, 공동 모델 상품화)과 A8(Skild × 住友電装 하네스 경쟁) 반영. 10개 장 + 부록 3개. 경쟁 지형, 도입 구조 장 신설, PoC 통과 기준과 상용화 기준 분리, KPI에 교대당 개입 횟수 추가
+- 산출물: case/b4-proposal.md (deck-storyline.md는 이전 초안으로 남김)
+- 다음: 실무자 검토. B3 완료 후 6장 수치 교체. B2 fact-check 결과 반영
+- 이슈: Slides 아티팩트를 시작했다가 사용자 지시로 중단 (빈 아티팩트 1개 남음, 내용 미게시)

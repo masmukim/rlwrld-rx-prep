@@ -13,4 +13,4 @@
 | B1 | 후보 공정 3~5개 점수화 및 선정 | case-analyst | 완료 | A1, A4, A5 | case/candidates.md |
 | B2 | 선정 공정 심층 분석 (fact-check는 독립 세션에서 별도 진행) | case-analyst | 완료 | B1 | case/analysis.md |
 | B3 | ROI 모델 (가정, 계산, 민감도 시트) (사용자 지시로 보류) | - | 보류(사용자 지시, B2 fact-check 후 진행) | B2 | case/roi.xlsx |
-| B4 | 케이스 장표 8장 (스토리라인 초안 완료, 실무자 수정 중. ROI 장은 B3 후 교체) | main | 진행중 | B2, B3 | case/deck-storyline.md → case/deck |
+| B4 | 케이스 제안서 (md 문서로 작성, 장표는 만들지 않음. ROI 장은 B3 후 교체) | main | 진행중 | B2, B3 | case/b4-proposal.md |
