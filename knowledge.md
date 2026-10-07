@@ -92,6 +92,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 조달 규모: PI 약 21억 달러, Skild 20억 달러 이상, RLWRLD 4,100만 달러(약 50배 차이). LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
 - RLWRLD 경영진(CBO)의 프레임: "제조 자동화율 70~80%, 남은 20~30%가 손재주 작업". 경쟁력은 모델 코드가 아니라 숙련자 암묵지 데이터, 수집 방식, 배치 경험, 벤치마크(덱스벤치)다. B4 제안서의 "수작업 69%"와 같은 문제 정의 [reference/company--mk-cbo-interview-2026-10.md]
 - RLWRLD는 RLDX-1의 가중치·코드·문서를 공개하면서도(비상업 라이선스) 표준(덱스벤치)과 현장 데이터로 해자를 만든다. 오픈소스 + 표준 + 데이터 전략 [reference/company--mk-cbo-interview-2026-10.md]
+- 투자자 = 첫 RX 고객 구조는 회사 발표로 확인된다(2026-02 "한국·일본 다수 투자자와 PoC·RX 진행 중"). CJ대한통운 CFO는 목표를 "RFM 공동 고도화 + 물류센터 자율운영 전환"으로 말해, 파트너십의 공동 모델 구조와 일치한다 [reference/company--unicornfactory-seed2.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.

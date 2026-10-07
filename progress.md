@@ -83,3 +83,9 @@
 - 산출물: reference/company--mk-cbo-interview-2026-10.md, research/company.md(2절 인물, 4절 벤치마크, 6-1절 신설, 시사점, 출처 19), knowledge.md(용어 1, 인사이트 2, 열린 질문 1), case/b4-proposal.md(2장 문제 정의, 8장 평가 과제에 덱스벤치 연결)
 - 다음: dexbench.org 원문 확인
 - 이슈: A1의 BCG 직급 불일치(파트너 vs 매니징 디렉터)가 "MD & Partner"로 해소됨. fact-check 미실시
+
+## 2026-10-07 16:40 | main | A1 보강
+- 한 일: 유니콘팩토리 시드2 기사(2026-02-26) 분석. 금액·투자자는 기존과 일치, 투자자별 역할(Headline Asia 북미, ZVC 일본 실증), CJ대한통운 CFO 발언, "투자자와 PoC·RX 진행 중" 서술을 추가. "SI 중심" 표현의 한계(자산운용사 포함) 메모
+- 산출물: reference/company--unicornfactory-seed2.md, research/company.md(3·5·6절, 출처 20), knowledge.md(인사이트 1)
+- 다음: 없음
+- 이슈: fact-check 미실시
