@@ -17,6 +17,7 @@ Claude Code의 에이전트, 커맨드, 스킬로 리서치와 분석을 나눠 
 | [research/poc-playbook.md](research/poc-playbook.md) | 선도기업 PoC→배포 프로세스와 RLWRLD PoC 설계 체크리스트 |
 | [research/rx-cases.md](research/rx-cases.md) | RLWRLD RX 방식과 해외 9개사 도입 사례 |
 | [research/skild-pi-deep-dive.md](research/skild-pi-deep-dive.md) | Skild AI, Physical Intelligence 심층 비교 |
+| [research/rldx1-tech.md](research/rldx1-tech.md) | RLDX-1 아키텍처, 학습 3단계, 평가 조건, 한계, 하네스 케이스 근거 |
 | [research/](research/) | 기술(tech), 경쟁사(competitors), 하드웨어(hardware), 시장(market), 논문(papers) |
 
 ## 진행 현황
@@ -26,12 +27,13 @@ Claude Code의 에이전트, 커맨드, 스킬로 리서치와 분석을 나눠 
 | A1~A6 | 회사, 기술, 경쟁사, 하드웨어, 시장, 논문 리서치 | 완료 |
 | A7, A8 | RX 방식·해외 사례, Skild·PI 심층 | 완료 |
 | A10 | PoC→배포 플레이북 | 완료 (fact-check 미실시) |
+| A11 | RLDX-1 공식 기술 블로그 분석, 기존 문서 정정 14건 | 완료 (fact-check 미실시) |
 | B1 | 후보 공정 선정 → 와이어 하네스 조립 | 완료 |
 | B2 | 공정 심층 분석 | 완료 (fact-check 미실시) |
 | B3 | ROI 엑셀 모델 | 보류 |
 | B4 | 제안서 | 진행 중 (실무자 검토) |
 
-작업별 상세 상태는 [plan.md](plan.md), 작업 기록은 [progress.md](progress.md)를 본다.
+작업별 상세 상태는 [plan.md](plan.md), 작업 기록은 [progress.md](progress.md)를 본다. 공개 웹에서 확인하지 못해 직접 확인이 필요한 항목은 [manual-research.md](manual-research.md)에 정리했다.
 
 ## 폴더 구조
 
