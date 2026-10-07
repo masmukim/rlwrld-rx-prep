@@ -53,6 +53,13 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | RMAC | Robotics Metaplant Application Center | Hyundai 공장 안 상설 로봇 훈련·검증 시설. 시퀀싱 2028, 조립 2030 로드맵 | reference/case--poc-hyundai-ces2026-atlas.md |
 | 파일럿 정체 | Pilot purgatory | 데모는 되지만 운영으로 승격하지 못하는 상태 | research/poc-playbook.md 6절 |
 | 서비스 운영형 | Service-operated robotics | 로봇을 판매하지 않고 운영 서비스(원격 복구 포함)로 제공. Telexistence 방식 | reference/case--poc-tx-ghost-service.md |
+| 손재주 5영역 | Five Regimes of Dexterity | DexBench 분류. Grasp Diversity, Spatial Precision, Temporal Precision, Contact Precision, Context Awareness | reference/company--rlwrld-blog-14.md |
+| 인지 토큰 | Cognition tokens / Cognition Interface | VLM 입력에 붙인 학습 가능 토큰 64개. VLM 출력을 고정 크기로 압축하고 Memory의 단위로도 재사용 | reference/company--rlwrld-blog-14.md |
+| 진행 점수 | Progress score | 단계별 부분 점수(예: 0.33/0.66/1.0). 성공률과 다른 지표 | reference/papers--rldx1-tech-report.md |
+| 진행도 인지 RL | Progress-aware RL / VLM critic | 진행도 추정 VLM을 dense reward로 쓰는 RL. RLDX-1 논문은 RECAP 기반 텍스트 VLM critic | reference/papers--rldx1-tech-report.md |
+| 적응형 데이터 수집 | Adaptive data collection | 기본 시연으로 학습 후 실패 조건을 겨냥해 추가 시연을 모으는 반복. 블로그는 DAgger로 부름 | reference/papers--rldx1-tech-report.md |
+| 우아한 성능 저하 | Graceful degradation | 센서가 없으면 해당 스트림을 꺼서 vision-only로 동작 | reference/company--rlwrld-blog-14.md |
+| STSS | Spatio-Temporal Self-Similarity | 영상 특징의 시공간 자기유사도로 회전·속도를 포착. Motion Module의 한 부분 | reference/company--rlwrld-blog-14.md |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -78,6 +85,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 해외 경쟁사는 사업 방식이 갈린다: 모델 전문(PI), 풀스택 휴머노이드(Figure, Tesla), 산업용 로봇 내장(Skild), 오픈 모델·플랫폼(NVIDIA), 파트너 조기 접근(DeepMind). RLWRLD는 손 특화 모델과 고객 현장 데이터(RX)로 구분되나 자금은 크게 뒤진다(누적 4,100만 달러 대 Skild 단일 라운드 약 14억 달러, 약 34배, 계산) [research/competitors.md]
 - 에고센트릭 인간 영상 전략은 RLWRLD만의 것이 아니다(GR00T N1.7, 20,854시간, 22-DoF 손, 자체 주장). 해자는 데이터 방식이 아니라 고객 공정의 현장 데이터와 촉각·기억 통합으로 설명한다 [reference/competitors--nvidia-groot-n17.md]
 - DeepMind 블로그는 같은 로봇의 전구 끼우기 36%와 빼기 92%를 함께 보고한다. 손 조작 수치는 같은 작업군의 최고값과 최저값을 같이 적고, 고객에게는 "어떤 작업에서 몇 회 시행한 수치인지"를 먼저 묻는다 [reference/competitors--deepmind-gemini-robotics-2.md, A3 fact-check]
+- (A11 정정) RLDX-1에는 교정 데이터와 RECAP 기반 RL이 있다. 다만 RL은 선택 사항이고 효과는 전구 돌리기 1과제의 자체 평가로만 확인된다. 위 "RL 단계가 확인되지 않는다"는 서술을 대체한다 [research/rldx1-tech.md, reference/papers--rldx1-tech-report.md]
+- 블로그 서술문("기준선 30% 미만, RLDX-1 거의 90%")은 블로그 Table 4(기준선 평균 39.1, 44.8)와 어긋나고, ALLEX 평균 86.8%에는 성공률이 아닌 진행 점수 과제 2개가 섞여 있다. 회사 수치는 논문 부록의 지표 정의와 시행 수를 확인한 뒤 쓴다 [research/rldx1-tech.md] (A11)
+- RLDX-1의 실세계 증거는 과제당 24회 시행, 과제별 시연 40~100개 fine-tune, 해당 모듈만 켠 모델이다. 촉각은 ALLEX가 아니라 Franka 그리퍼 플랫폼에서만 쓰였고, Plug Insertion은 8/24(33.3%, Wilson 95% 구간 약 18~53%, 계산)다. 하네스 PoC에 그리퍼 대조군과 완주율·단계 점수 분리가 필요한 근거다 [research/rldx1-tech.md] (A11)
+- Memory 모듈은 순서 추적을 맡고, 실수 복구는 post-training 교정 데이터가 맡는다. case/analysis.md 120행의 서술은 정정 필요하다 [research/rldx1-tech.md] (A11, 미반영)
 - 정부 과제 예산은 컨소시엄 전체 금액이고 주관 기업별로 나뉘지 않는 경우가 많다(497억 원은 LG전자 컨소시엄 전체, KT 단독 아님) [reference/competitors--korea-msit-physical-ai-lg-kt.md]
 - 투자자 관계가 경쟁사에 걸쳐 있다(NVIDIA는 Figure와 Skild에, Mirae Asset은 RLWRLD 시드1과 Skild에 이름이 있음). 같은 법인인지는 미확인 [reference/competitors--figure-series-c.md, reference/competitors--skild-series-funding.md]
 - 웹 요약 모델은 기사 속 회사명을 요약마다 다르게 바꾸는 경우가 있다(nate 한국 RFM 기사: 셀렉트스타, OPTIMUS DX, 삼성DX). 회사명은 원출처로 대조한다 [A3 fact-check]
@@ -110,7 +121,12 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] RLDX-1 벤치마크를 독립적으로 검증한 결과가 있는가? (A1, A3에서 확인)
 - [ ] 정부 숙련 데이터 디지털화 사업(기사 표기 약 3,300만 달러)의 정확한 사업명과 규모는? A5에서도 못 찾음. 독파모(업스테이지 컨소시엄) 관련성은 1차 소스 필요 (A1, A5)
 - [ ] Lawson 진열 PoC는 계획인가 완료인가, 연도는 언제인가? CJ대한통운 MOU(2025-11)의 1차 소스는 무엇인가? (A1)
-- [ ] RLDX-1 학습에 RL이나 현장 교정 루프가 있는가? ALLEX 실세계 평가는 몇 개 작업, 몇 회 시행인가? 논문 본문 확인 필요 (A2)
+- [x] RLDX-1 학습에 RL이나 현장 교정 루프가 있는가? ALLEX 실세계 평가는 몇 개 작업, 몇 회 시행인가? → 있음(선택 사항), 과제당 24회. research/rldx1-tech.md (A2, A11)
+- [ ] RLDX-1의 Physics 모듈을 켠 경우와 끈 경우의 정량 차이는? 논문은 그림으로만 제시 (A11)
+- [ ] 기준선(pi0.5, GR00T N1.6)은 촉각·토크 입력을 받았는가? (A11)
+- [ ] 블로그의 DexBench 5영역과 CBO가 말한 18과제 DexBench의 관계는? 어느 실세계 벤치마크가 DexBench 과제인가? (A11, A1)
+- [ ] 전구 돌리기 RL(약 3배)의 프레임 속도와 시행 수는? 다른 과제에도 RL이 적용되었는가? (A11)
+- [ ] 사전학습 데이터 혼합 비율(Figure 6, Table 5)과 OpenArm 결과(Figure 16)는? 그림에만 있어 미확인 (A11)
 - [ ] 텔레오퍼레이션 "하루 50~200 시연"과 시스템 통합 비용 "하드웨어의 50~200%"의 1차 소스는? B3 ROI 가정에 필요 (A2)
 - [ ] π0, π0.5, GR00T N1.6은 촉각·힘 입력을 쓰는가? RLDX-1 차별성 판단에 필요 (A2, A3에서 확인)
 - [ ] EgoScale의 +54%는 상대 향상인가 %p 향상인가? KDDI "연 3,500시간 상당"의 단위는? (A2)

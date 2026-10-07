@@ -101,3 +101,9 @@
 - 산출물: case/b4-proposal.md
 - 다음: 실무자 검토. KPI 값은 RLWRLD 제안값(`추정`)이라 근거 보강 필요
 - 이슈: KPI 수치 다수가 공개 근거 없는 제안값
+
+## 2026-10-07 17:30 | researcher | A11
+- 한 일: RLDX-1 공식 기술 블로그 분석. 아키텍처, 3단계 학습(Pre/Mid/Post), 데이터, 벤치마크·평가 조건(과제당 24회, 시연 40~100개), 하드웨어, 한계, 경쟁 모델 대비 주장, 하네스 RX 시사점. 기존 문서 대비 정정 4건(tech.md의 RL 단계 미확인 등, company.md 센서 행의 촉각, case/analysis.md 120행 Memory 서술), 보완 8건, 해소 2건
+- 산출물: research/rldx1-tech.md, 새 reference 3건(company--rlwrld-blog-14, papers--moss-physical-feedback, papers--hamlet-history-vla), reference/papers--rldx1-tech-report.md 갱신, knowledge.md(용어 7, 인사이트 4, 질문 5), 에이전트 메모리 1건
+- 다음: 없음(새 시작 가능 작업 없음). B2·B4에 정정 반영 필요(case/analysis.md 120행 Memory 서술, 합의서에 완주율과 단계 점수 분리). tech.md·company.md 정정은 `/rx-refresh`로 반영 가능
+- 이슈: fact-check 미실시(사용자 지시). 블로그 서술문과 표 충돌은 표와 논문 결론을 택함. 그림에만 있는 수치(OpenArm, 데이터 혼합 비율)와 논문 HTML 중복 렌더링 숫자(`추정` 표시)는 미확인. 기존 문서 정정은 research/rldx1-tech.md에만 표시하고 tech.md·company.md·analysis.md 본문은 아직 수정하지 않음
