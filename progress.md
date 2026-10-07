@@ -89,3 +89,9 @@
 - 산출물: reference/company--unicornfactory-seed2.md, research/company.md(3·5·6절, 출처 20), knowledge.md(인사이트 1)
 - 다음: 없음
 - 이슈: fact-check 미실시
+
+## 2026-10-07 14:05 | researcher | A10
+- 한 일: 선도기업 PoC→배포 프로세스 심층 조사. 9개사 + Mujin 단계 표, 단계 모델 매핑, KPI 유형, 계약·가격 구조, 실패·중단·지연 사례(Walmart-Bossa Nova, 교촌, 현대차 노조 등), 일본·한국 보강(CJ대한통운-RLWRLD-로보티즈-에이딘, 교촌, 롯데글로벌로지스·한진), RLWRLD PoC 설계 체크리스트 14항목(G0~G3 게이트)
+- 산출물: research/poc-playbook.md, 새 reference 25건(case--poc-*), 기존 문서 정정(rx-cases.md의 Figure "달성"→"목표", Agility 6.5만 시간 미확인; knowledge.md Figure 표현)
+- 다음: B4 제안서 8장에 체크리스트 반영(KPI 목표·통과·중단 3종, 자율 성공 대 개입 후 성공 분리, 랩 PoC와 현장 파일럿 게이트 분리, 후속 계약 옵션 사전 제시). B3에 가격 임계 참고값(Mercedes "두 자릿수 천 달러", 교촌 설치 포함 4,000만 원)
+- 이슈: **fact-check 미실시 (사용자 지시로 중단)**. 계산치(Figure 4개월, CJ 약 12개월, Telexistence 9개월)와 검색 요약 전용 항목(Agility 월 8,500달러, Mujin 사례 등)이 우선 확인 대상. 비용 $3.55

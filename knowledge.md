@@ -49,6 +49,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 분할 하네스 | 分割ハーネス | 하네스를 4~5개 영역으로 나눠 적은 품번 조합으로 약 250품종을 만드는 住友電工 공법 | reference/case--netdenjd-sumitomo-split-harness.md |
 | 이동형 산업 | Migratory industry | 최저 인건비 국가로 생산이 계속 옮겨 가는 산업. 하네스의 별칭 | reference/case--ams-cellios-automated-harness.md |
 | 덱스벤치 | DexBench | RLWRLD가 고객 현장 워크플로 분석 데이터로 만든 18개 과제의 손재주 평가 벤치마크. NVIDIA Isaac Lab-Arena와 연결 | reference/company--mk-cbo-interview-2026-10.md |
+| 시간 제한 시험 | Time-boxed deployment | 기간과 범위를 정한 소규모 현장 시험. Boston Dynamics는 이를 상설 RMAC 훈련센터로 대체 | reference/case--poc-robotreport-rmac.md |
+| RMAC | Robotics Metaplant Application Center | Hyundai 공장 안 상설 로봇 훈련·검증 시설. 시퀀싱 2028, 조립 2030 로드맵 | reference/case--poc-hyundai-ces2026-atlas.md |
+| 파일럿 정체 | Pilot purgatory | 데모는 되지만 운영으로 승격하지 못하는 상태 | research/poc-playbook.md 6절 |
+| 서비스 운영형 | Service-operated robotics | 로봇을 판매하지 않고 운영 서비스(원격 복구 포함)로 제공. Telexistence 방식 | reference/case--poc-tx-ghost-service.md |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -86,13 +90,17 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 커넥터 삽입은 그리퍼 + 힘센서로 90% 이상이 보고된다. 다관절 손의 근거는 레이업(전선 훑기·걸기·분기 정리)에 있으므로, PoC에는 그리퍼 대조군을 넣는다 [reference/papers--bc-connector-assembly.md, reference/papers--dexterous-cable-taxonomy.md] (B2, 미검증)
 - RLWRLD는 PI·Skild와 같은 "지능 계층" 회사다. 하드웨어·센서·인프라는 생태계 파트너가 맡고, PoC는 자사 랩에서 고객 작업을 재현해 진행한다(KDDI 3개월) [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
 - 파트너십의 외부 가치: 고객 운영 데이터로 만든 모델을 RLWRLD와 함께 상업 제품으로 확장할 수 있다. 셀 구매가 부담인 중견 고객에게 "숙련을 제품으로" 제안할 근거 [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
-- 해외 사례의 첫 작업은 좁고 KPI가 숫자로 고정된 작업이다(Figure-BMW 판금 적재: 84초, 99% 이상, 개입 0회). 확산까지 1~3년 [research/rx-cases.md] (A7)
+- 해외 사례의 첫 작업은 좁고 KPI가 숫자로 고정된 작업이다(Figure-BMW 판금 적재: 목표 84초, 99% 초과, 개입 0회. 달성값은 미공개). 확산까지 1~3년 [research/rx-cases.md] (A7, A10에서 "목표"로 정정)
 - Skild AI가 住友電装(Sumitomo Wiring Systems)의 와이어 하네스 조립을 자동화하고 있다. B1·B2의 하네스 케이스에서 RLWRLD의 차별점은 "시연으로 새 품번 적응"(Skild S1도 주장)이 아니라 손이 꼭 필요한 레이업 단계에 있다 [research/skild-pi-deep-dive.md] (A8)
 - 지능 계층 회사의 두 갈래: PI는 연구 주도·소수 파트너·일부 가중치 공개·매출 비공개, Skild는 배포 주도·로봇 제조사(ABB, UR) 탑재·ARR 1억 달러. RLWRLD의 RX는 깊지만 느린 세 번째 길 [research/skild-pi-deep-dive.md] (A8)
 - 조달 규모: PI 약 21억 달러, Skild 20억 달러 이상, RLWRLD 4,100만 달러(약 50배 차이). LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
 - RLWRLD 경영진(CBO)의 프레임: "제조 자동화율 70~80%, 남은 20~30%가 손재주 작업". 경쟁력은 모델 코드가 아니라 숙련자 암묵지 데이터, 수집 방식, 배치 경험, 벤치마크(덱스벤치)다. B4 제안서의 "수작업 69%"와 같은 문제 정의 [reference/company--mk-cbo-interview-2026-10.md]
 - RLWRLD는 RLDX-1의 가중치·코드·문서를 공개하면서도(비상업 라이선스) 표준(덱스벤치)과 현장 데이터로 해자를 만든다. 오픈소스 + 표준 + 데이터 전략 [reference/company--mk-cbo-interview-2026-10.md]
 - 투자자 = 첫 RX 고객 구조는 회사 발표로 확인된다(2026-02 "한국·일본 다수 투자자와 PoC·RX 진행 중"). CJ대한통운 CFO는 목표를 "RFM 공동 고도화 + 물류센터 자율운영 전환"으로 말해, 파트너십의 공동 모델 구조와 일치한다 [reference/company--unicornfactory-seed2.md]
+- 1차 보도자료도 KPI를 "목표"로만 쓰는 경우가 있다. 사례 수치는 목표와 달성값을 구분해 읽는다 (Figure-BMW 원문에는 달성값이 없음) [research/poc-playbook.md] (A10)
+- 확산 계획과 실적의 격차가 크다: 교촌 2023 청사진 1,300여 점 대 2026-07 25개 점·33대, CJ대한통운 "2026년부터 순차 적용" 대 2026-09 첫 투입 2대. PoC 제안은 확산 수량이 아니라 게이트(통과·중단 기준)로 표현한다 [research/poc-playbook.md] (A10, 해석)
+- CJ대한통운 2026-09 용인 투입에서 RLWRLD는 RFM 파트너로 명시됐고, 로보티즈(하드웨어)·에이딘로보틱스(핸드)와 함께 협업한다. RLWRLD 단독 성과는 미공개 [research/poc-playbook.md 7.2절] (A10)
+- 확산을 막는 요인은 기술 외적인 것이 많다: 값싼 대안(사람+소프트웨어, Walmart-Bossa Nova 5년 실험 종료), 신뢰성, 노사 수용성(현대차 노조 "노사합의 없이 1대도 안 된다") [research/poc-playbook.md 6절] (A10)
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -140,3 +148,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? (A8, B2)
 - [ ] RLWRLD 하드웨어 파트너(레인보우, 원익, 로보티즈, 위로보틱스)가 Skild-ABB처럼 모델을 탑재해 판매하는 OEM 채널이 될 수 있는가? (A8)
 - [ ] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? 글로벌 오픈 벤치마크 8종은 무엇인가? (A1, B4)
+- [ ] CJ대한통운이 레인보우로보티즈와 협업을 종료한 사유, RLWRLD-CJ PoC의 KPI와 결과는? (A10)
+- [ ] Figure-BMW 최종 달성값(정확도, 개입 횟수)의 출처는? (A10)
+- [ ] Mujin PoC의 실제 기간·검증 절차 1차 소스(일본어)는? (A10)
+- [ ] PoC 단계 대가(무상·유상·공동 부담)를 밝힌 로봇 사례가 있는가? RLWRLD RX·PoC 가격 구조는? (A10, A7)
