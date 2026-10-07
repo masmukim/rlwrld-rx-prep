@@ -48,6 +48,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 분기형 선형 변형체 | Branched DLO (BDLO) | 갈라지는 케이블 다발. 분기점에서 힘과 변형 전파가 복잡함 | reference/papers--deft-branched-dlo.md |
 | 분할 하네스 | 分割ハーネス | 하네스를 4~5개 영역으로 나눠 적은 품번 조합으로 약 250품종을 만드는 住友電工 공법 | reference/case--netdenjd-sumitomo-split-harness.md |
 | 이동형 산업 | Migratory industry | 최저 인건비 국가로 생산이 계속 옮겨 가는 산업. 하네스의 별칭 | reference/case--ams-cellios-automated-harness.md |
+| 덱스벤치 | DexBench | RLWRLD가 고객 현장 워크플로 분석 데이터로 만든 18개 과제의 손재주 평가 벤치마크. NVIDIA Isaac Lab-Arena와 연결 | reference/company--mk-cbo-interview-2026-10.md |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -89,6 +90,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - Skild AI가 住友電装(Sumitomo Wiring Systems)의 와이어 하네스 조립을 자동화하고 있다. B1·B2의 하네스 케이스에서 RLWRLD의 차별점은 "시연으로 새 품번 적응"(Skild S1도 주장)이 아니라 손이 꼭 필요한 레이업 단계에 있다 [research/skild-pi-deep-dive.md] (A8)
 - 지능 계층 회사의 두 갈래: PI는 연구 주도·소수 파트너·일부 가중치 공개·매출 비공개, Skild는 배포 주도·로봇 제조사(ABB, UR) 탑재·ARR 1억 달러. RLWRLD의 RX는 깊지만 느린 세 번째 길 [research/skild-pi-deep-dive.md] (A8)
 - 조달 규모: PI 약 21억 달러, Skild 20억 달러 이상, RLWRLD 4,100만 달러(약 50배 차이). LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
+- RLWRLD 경영진(CBO)의 프레임: "제조 자동화율 70~80%, 남은 20~30%가 손재주 작업". 경쟁력은 모델 코드가 아니라 숙련자 암묵지 데이터, 수집 방식, 배치 경험, 벤치마크(덱스벤치)다. B4 제안서의 "수작업 69%"와 같은 문제 정의 [reference/company--mk-cbo-interview-2026-10.md]
+- RLWRLD는 RLDX-1의 가중치·코드·문서를 공개하면서도(비상업 라이선스) 표준(덱스벤치)과 현장 데이터로 해자를 만든다. 오픈소스 + 표준 + 데이터 전략 [reference/company--mk-cbo-interview-2026-10.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -135,3 +138,4 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Telexistence × Physical Intelligence 음료 보충과 RLWRLD × KDDI 진열 PoC는 어떻게 다른가? (A7, A3)
 - [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? (A8, B2)
 - [ ] RLWRLD 하드웨어 파트너(레인보우, 원익, 로보티즈, 위로보틱스)가 Skild-ABB처럼 모델을 탑재해 판매하는 OEM 채널이 될 수 있는가? (A8)
+- [ ] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? 글로벌 오픈 벤치마크 8종은 무엇인가? (A1, B4)

@@ -77,3 +77,9 @@
 - 산출물: case/b4-proposal.md (deck-storyline.md는 이전 초안으로 남김)
 - 다음: 실무자 검토. B3 완료 후 6장 수치 교체. B2 fact-check 결과 반영
 - 이슈: Slides 아티팩트를 시작했다가 사용자 지시로 중단 (빈 아티팩트 1개 남음, 내용 미게시)
+
+## 2026-10-07 16:20 | main | A1 보강
+- 한 일: 매일경제 이강욱 CBO 인터뷰(2026-10) 분석. CBO 이력, 덱스벤치(18개 과제), 가중치·코드 공개, 경영진 전략 메시지 6개 정리
+- 산출물: reference/company--mk-cbo-interview-2026-10.md, research/company.md(2절 인물, 4절 벤치마크, 6-1절 신설, 시사점, 출처 19), knowledge.md(용어 1, 인사이트 2, 열린 질문 1), case/b4-proposal.md(2장 문제 정의, 8장 평가 과제에 덱스벤치 연결)
+- 다음: dexbench.org 원문 확인
+- 이슈: A1의 BCG 직급 불일치(파트너 vs 매니징 디렉터)가 "MD & Partner"로 해소됨. fact-check 미실시
