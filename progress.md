@@ -65,3 +65,9 @@
 - 산출물: research/rx-cases.md, reference/company--rlwrld-business-rx-poc-partnership.md
 - 다음: B4 스토리라인에 PoC 장소(RLWRLD 랩), RX 산출물 명칭, KPI(교대당 개입·자율률), 모델 상품화 옵션 반영 검토
 - 이슈: 사용자 요청으로 메인 세션이 직접 조사(researcher 미사용), fact-check 미실시. PI 파트너 페이지 원문 미열람(429). 기사 수치 다수 1차 미확인
+
+## 2026-10-07 14:50 | main | A8
+- 한 일: Skild AI와 Physical Intelligence 심층 분석(개요, 투자, 모델 계보, 배포 사례, 사업 방식, RLWRLD와 3자 비교, 비판적 시사점 7개). Skild × 住友電装 하네스 사례 발견
+- 산출물: research/skild-pi-deep-dive.md, reference/raw 원문 6건
+- 다음: B4 스토리라인에 경쟁(Skild 하네스), 차별점(레이업), OEM 확산 경로 반영 검토
+- 이슈: 메인 세션 직접 조사, fact-check 미실시. rx-cases.md의 "Ultra 자율률 96.4%"가 원문 미확인으로 드러나 정정함. PI 원문(pi.website) 429로 미열람

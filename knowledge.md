@@ -86,6 +86,9 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - RLWRLD는 PI·Skild와 같은 "지능 계층" 회사다. 하드웨어·센서·인프라는 생태계 파트너가 맡고, PoC는 자사 랩에서 고객 작업을 재현해 진행한다(KDDI 3개월) [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
 - 파트너십의 외부 가치: 고객 운영 데이터로 만든 모델을 RLWRLD와 함께 상업 제품으로 확장할 수 있다. 셀 구매가 부담인 중견 고객에게 "숙련을 제품으로" 제안할 근거 [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
 - 해외 사례의 첫 작업은 좁고 KPI가 숫자로 고정된 작업이다(Figure-BMW 판금 적재: 84초, 99% 이상, 개입 0회). 확산까지 1~3년 [research/rx-cases.md] (A7)
+- Skild AI가 住友電装(Sumitomo Wiring Systems)의 와이어 하네스 조립을 자동화하고 있다. B1·B2의 하네스 케이스에서 RLWRLD의 차별점은 "시연으로 새 품번 적응"(Skild S1도 주장)이 아니라 손이 꼭 필요한 레이업 단계에 있다 [research/skild-pi-deep-dive.md] (A8)
+- 지능 계층 회사의 두 갈래: PI는 연구 주도·소수 파트너·일부 가중치 공개·매출 비공개, Skild는 배포 주도·로봇 제조사(ABB, UR) 탑재·ARR 1억 달러. RLWRLD의 RX는 깊지만 느린 세 번째 길 [research/skild-pi-deep-dive.md] (A8)
+- 조달 규모: PI 약 21억 달러, Skild 20억 달러 이상, RLWRLD 4,100만 달러(약 50배 차이). LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -130,3 +133,5 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 2020년 중기부의 하네스 리쇼어링 자동화 지원(2년 최대 10억 원)은 지금도 이어지는가? (B2, B4)
 - [ ] RLWRLD RX 진단의 기간과 비용은? (A7)
 - [ ] Telexistence × Physical Intelligence 음료 보충과 RLWRLD × KDDI 진열 PoC는 어떻게 다른가? (A7, A3)
+- [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? (A8, B2)
+- [ ] RLWRLD 하드웨어 파트너(레인보우, 원익, 로보티즈, 위로보틱스)가 Skild-ABB처럼 모델을 탑재해 판매하는 OEM 채널이 될 수 있는가? (A8)

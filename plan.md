@@ -9,6 +9,7 @@
 | A5 | 시장 리서치 (산업별 자동화 수요, 인력난, 시장 규모) | researcher | 완료 | - | research/market.md |
 | A6 | 논문 리서치 (VLA, 로봇 손 조작, 촉각, 산업 적용 사례) | researcher | 완료 | A2 | research/papers.md |
 | A7 | RLWRLD RX 방식과 해외 선도기업 도입 사례 | main | 완료 | A1 | research/rx-cases.md |
+| A8 | Skild AI, Physical Intelligence 심층 분석 | main | 완료 | A3, A7 | research/skild-pi-deep-dive.md |
 | B1 | 후보 공정 3~5개 점수화 및 선정 | case-analyst | 완료 | A1, A4, A5 | case/candidates.md |
 | B2 | 선정 공정 심층 분석 (fact-check는 독립 세션에서 별도 진행) | case-analyst | 완료 | B1 | case/analysis.md |
 | B3 | ROI 모델 (가정, 계산, 민감도 시트) (사용자 지시로 보류) | - | 보류(사용자 지시, B2 fact-check 후 진행) | B2 | case/roi.xlsx |
