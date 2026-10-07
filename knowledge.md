@@ -41,6 +41,13 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 월드 파운데이션 모델 | World Foundation Model (WFM) | 물리 세계 변화를 예측하는 모델. 한국 과기정통부 과제에서 LG전자가 개발 담당 | reference/competitors--korea-msit-physical-ai-lg-kt.md |
 | Early Access | Early Access | 일반 공개 전에 파트너나 신청자에게만 모델을 제공하는 단계(GR00T N1.7, Gemini Robotics 2) | reference/competitors--nvidia-groot-n17.md |
 | 상대 향상 대 %p 향상 | Relative vs absolute (percentage points) improvement | "N% 향상"이 기준선의 N% 증가인지 성공률이 N%p 오른 것인지의 구분 | reference/papers--forcevla.md |
+| 프리블록 | Pre-block | 압착 단자를 도면에 따라 커넥터 캐비티에 손으로 꽂는 하네스 조립 첫 단계 | reference/case--easychair-harness-line-balancing.md |
+| 레이업 | Lay-up | 조립판에 서브 어셈블리를 배치하고 배선하며 남은 단자를 꽂는 단계. 참고 라인의 병목 | reference/case--easychair-harness-line-balancing.md |
+| 조립판 | Form board / routing board | 하네스 경로 지그가 달린 작업판 | reference/case--ams-cellios-automated-harness.md |
+| SMH | Standard Man Hour | 작업자 1명이 하네스 1개를 만드는 표준 공수. 참고 라인은 2.16시간 | reference/case--easychair-harness-line-balancing.md |
+| 분기형 선형 변형체 | Branched DLO (BDLO) | 갈라지는 케이블 다발. 분기점에서 힘과 변형 전파가 복잡함 | reference/papers--deft-branched-dlo.md |
+| 분할 하네스 | 分割ハーネス | 하네스를 4~5개 영역으로 나눠 적은 품번 조합으로 약 250품종을 만드는 住友電工 공법 | reference/case--netdenjd-sumitomo-split-harness.md |
+| 이동형 산업 | Migratory industry | 최저 인건비 국가로 생산이 계속 옮겨 가는 산업. 하네스의 별칭 | reference/case--ams-cellios-automated-harness.md |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -73,6 +80,9 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - IFR World Robotics는 매년 9월 말에 나온다. 시장 문서 최신성은 이 시점을 기준으로 점검한다. 통계는 집계 범위(회원사만 vs 회원+비회원)가 섞이기 쉬우니 성장률 역산으로 대조한다 [A5 fact-check]
 - B1 결정: 케이스 공정은 자동차 와이어 하네스 조립이다. RLWRLD에 맞는 작업군은 산업이 아니라 "유연물 조작 + 정밀 삽입 + 접촉이 많은 조립"으로 정의하는 편이 낫다 [case/candidates.md 결정, reference/case--external-b1-target-analysis.md]
 - 잠재 고객을 찾을 때 기업 목록보다 "지금 생산·조립 인력을 채용 중인가"가 더 강한 신호다. 다만 채용 신호는 그 작업이 수작업이라는 증거는 아니다 [reference/case--external-b1-target-analysis.md]
+- 하네스 자동화의 가장 큰 장벽은 기술보다 다품종 경제성이다. 업계 대응은 저임금 국가 이전, 설계 재설계(분할 하네스), 전용 셀 세 갈래이고, RFM 제안은 "다품종·소량" 영역으로 한정해야 방어할 수 있다 [reference/case--kyunglim-gyeongsan-robot.md, reference/case--ams-cellios-automated-harness.md] (B2, 미검증)
+- 최신 전용 셀도 시제품은 사람보다 느리다(4배 빨라져야 동등). 손 조작 RFM의 ROI는 성공률보다 속도비에서 먼저 갈린다 [reference/case--ams-cellios-automated-harness.md, case/analysis.md 7.5] (B2, 미검증)
+- 커넥터 삽입은 그리퍼 + 힘센서로 90% 이상이 보고된다. 다관절 손의 근거는 레이업(전선 훑기·걸기·분기 정리)에 있으므로, PoC에는 그리퍼 대조군을 넣는다 [reference/papers--bc-connector-assembly.md, reference/papers--dexterous-cable-taxonomy.md] (B2, 미검증)
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -110,3 +120,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Tesla Optimus 현행 손 사양: Musk 4월 발언(설계 변경)과 Tech Times 9월 서술(22 DoF)을 가를 1차 소스가 있는가? (A4, A3)
 - [ ] 국내 하네스 기업(경신, 유라코퍼레이션 등)의 2022년 이후 국내 조립 라인 규모와 리쇼어링 현황은? (B1)
 - [ ] 하네스 조립을 노동집약·자동화 난제로 규정한 국내 R&D 자료(GAFIC)의 원문은? (B1)
+- [ ] 국내 하네스 라인의 실제 인원, 교대, 택트, 품번 수와 외국인 비중은? 경신 국내 사업장 4곳은 하네스 조립 라인인가? (B2)
+- [ ] 住友의 자동화율 약 15%와 약 50%는 공수 기준인가, 공정 수 기준인가? (B2)
+- [ ] Cellios/TE 셀의 가격과 품번 전환 시간은? (B2, B3)
+- [ ] RLDX-1을 산업용 협동로봇과 손 조합으로 옮길 때 재학습 규모와 상용 라이선스 조건은? (B2, A1)
+- [ ] 2020년 중기부의 하네스 리쇼어링 자동화 지원(2년 최대 10억 원)은 지금도 이어지는가? (B2, B4)

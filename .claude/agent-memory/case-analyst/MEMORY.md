@@ -1,3 +1,4 @@
-- [소스와 접근](sources-and-access.md) — 통한 검색어, 403 사이트(MDPI→기관 저장소), Bash 거부 시 WebFetch 대체
+- [소스와 접근](sources-and-access.md) — 하네스 소스, 403 우회, Grep 없으면 bash grep, case/*.md Write 거부 시 전문 반환
 - [B1 점수화 방식](b1-scoring-practice.md) — 민감도 표, 그리퍼 대 손 분리, 인력 점수는 산업 지표+추정, 생산 거점 확인
+- [B2 분석 방식](b2-analysis-practice.md) — 요소 작업 우선순위 점수, 2트랙 PoC, 예비 회수 기간 표, 가중합 재검산
 - [인용 정확도](citation-precision.md) — arXiv totalResults, 1차 소스로 경쟁 과장 금지, 비중 분모 확인, 논문 버전 표기
