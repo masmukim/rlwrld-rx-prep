@@ -16,3 +16,7 @@
 | B2 | 선정 공정 심층 분석 (fact-check는 독립 세션에서 별도 진행) | case-analyst | 완료 | B1 | case/analysis.md |
 | B3 | ROI 모델 (가정, 계산, 민감도 시트) (사용자 지시로 보류) | - | 보류(사용자 지시, B2 fact-check 후 진행) | B2 | case/roi.xlsx |
 | B4 | 케이스 제안서 (md 문서로 작성, 장표는 만들지 않음. ROI 장은 B3 후 교체) | main | 진행중 | B2, B3 | case/b4-proposal.md |
+| Q1 | (fact-check 미실시, 사용자 지시) 국내 하네스 조립 라인의 실제 인원, 교대, 택트, 품번 수, 외국인 비중 (경신 국내 4개 사업장이 조립 라인인지 포함). 접근 불가·유료·내부 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | B2 | research/q1-harness-line-facts.md |
+| Q2 | (fact-check 미실시, 사용자 지시) Skild AI × 住友電装 하네스 프로젝트의 범위·결과·손 하드웨어 (다관절 손인가 그리퍼인가). 접근 불가 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | A8, B2 | research/q2-skild-sumitomo-harness.md |
+| Q4 | 타사 RFM·휴머노이드 기업(Figure, Skild, PI, Agility, Dexterity, Telexistence, Mujin 등)의 고객 심층 분석(고객 유형, 선정 이유, 계약 구조, 투자자=고객 여부) → 고객 선정 패턴 도출 → 한국·아시아 잠재 고객 후보 분석. case/candidates.md에 새 절로 추가 (기존 B1 결정은 유지) | case-analyst | 진행중 | A7, A8, A10, B1 | case/candidates.md |
+| Q3 | (fact-check 미실시, 사용자 지시) 住友電工·電装의 하네스 자동화율 약 15%와 약 50%의 정의(공수 기준 대 공정 수 기준)와 1차 소스. 접근 불가 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | B2 | research/q3-sumitomo-automation-rate.md |

@@ -119,3 +119,21 @@
 - 산출물: case/b4-proposal.md
 - 다음: 실무자 검토
 - 이슈: 없음
+
+## 2026-10-09 13:10 | researcher | Q1, Q2, Q3
+- 한 일: 열린 질문 중 B3·B4 핵심 3개를 병렬 조사. Q1 국내 하네스 라인 실측(라인 단위 수치 국내 없음, 유라 국내 생산직 668명·외국인 직접고용 1/2,080, 경신 4곳 중 하네스 확인은 경주 1곳), Q2 Skild × 住友電装(1차 소스는 2026-09-17 공동 개발 개시까지, 공정·손 하드웨어·성과 미공개, 기존 "이미 자동화하고 있다"는 기사 표현이 과함), Q3 住友 자동화율(15%는 "全工程の約15%", 50%는 모델 라인 한 곳에서 "높일 수 있다", 분모 미공개)
+- 산출물: research/q1-harness-line-facts.md, research/q2-skild-sumitomo-harness.md, research/q3-sumitomo-automation-rate.md, 새 reference 약 25건, manual-research.md 5절(피딩 요청 10개)
+- 다음: 기존 문서 정정(case/b4-proposal.md 45·80·84·309행, case/analysis.md 6·30·201·227~228행, case/deck-storyline.md 55행, research/skild-pi-deep-dive.md 3.2절, knowledge.md 105행·열린 질문 164행)은 Q4 완료 후 한 번에 반영. 사용자 피딩 자료 수령 시 reference/raw/에 저장 후 재분석
+- 이슈: fact-check 미실시(사용자 지시). Q1 에이전트는 40턴 한도에서 보고 없이 종료했으나 산출물은 완성 상태로 저장됨(메인이 문서를 읽고 확인). 15%·50%는 B3 ROI 입력값으로 쓰지 않음. B3 라인당 32명·2교대·311초는 여전히 모로코 참고값
+
+## 2026-10-09 14:20 | case-analyst | Q4
+- 한 일: 타사 RFM·휴머노이드 기업 고객 24건 심층 분석, 첫 고객 선정 패턴 8개와 점수 기준 7개, 한국·일본·아시아 잠재 고객 후보 점수화(矢崎 3.70, 경림테크형 3.40, 유라 3.30, 경신 3.10 vs 기존 투자자 고객 3.95~4.15), 피딩 요청 12건. 타사 첫 고객 24건 중 7건이 투자자·모회사·유통 파트너 겸 고객이고 RLWRLD 공개 고객 3곳도 같은 구조
+- 산출물: case/candidates.md Q4절 신설(기존 B1 점수표·결정 유지), 새 reference 18건, manual-research.md 6절
+- 다음: fact-check 실시 여부 사용자 결정 대기(점수 기준·가중치는 팀 제안 `추정`). 矢崎 REN, 2027 실증 공모 요강, RLWRLD 내부 RX 파이프라인 피딩 시 후보 점수 재계산
+- 이슈: case-analyst가 30턴 한도에서 쓰기 전에 멈춰 SendMessage로 이어서 완료. 검색 요약만 근거인 항목(Figure 2호 고객 UPS 보도, Jabil 파일럿, Lawson의 Telexistence 도입, SoftBank의 ABB 로보틱스 인수)은 `확인필요`로만 표기
+
+## 2026-10-09 14:25 | main | Q1~Q4 정정 반영
+- 한 일: Q1~Q3 결과를 기존 문서에 반영. case/b4-proposal.md(2·4·9·10장, 부록 B), case/analysis.md(결론, 0·1.1·5.2·6·7.1절, 확인하지 못한 항목, 출처 40~42), case/deck-storyline.md(2장), research/skild-pi-deep-dive.md(핵심 요약, 1·3.2·5절, 출처), knowledge.md(105행, 열린 질문 4건 갱신, 용어 9, 인사이트 8, 열린 질문 8 추가). 住友電装-Skild는 "이미 자동화"에서 "2026-09-17 공동 개발 개시, 범위·성과 미공개"로, 住友 15%·50%는 "정의 미공개, 50%는 모델 라인 한 곳에서 높일 수 있다"로 정정
+- 산출물: 위 문서 각 위치에 "(2026-10-09 Q 정정)" 표시
+- 다음: 범위 밖으로 남긴 3건 처리 여부 결정: (1) b4-proposal 4장 94행 "Skild가 사이클 타임과 배포 실적에서 앞서 있다" 근거 미확인, (2) b4 2장·deck 2장 출처 "[3] 住友電工"는 실제로 住友グループ広報委員会 페이지(住友電装 내용), (3) deck-storyline 6장 리스크 표에 "국내 소수 라인 PoC → 해외 거점" 미반영. skild-pi-deep-dive 5절 4번의 "住友電装·Mitsui" 단계 구분(Mitsui piloting)도 미정정. B3 착수 전 B2 fact-check 필요
+- 이슈: 정정은 메인이 지시하고 담당 에이전트가 수정(case-analyst, researcher). Q1~Q3 fact-check 미실시(사용자 지시)

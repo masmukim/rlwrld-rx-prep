@@ -3,14 +3,14 @@
 
 ## 핵심 요약
 - **둘 다 RLWRLD와 같은 "지능 계층" 회사지만 전략은 정반대다.** Physical Intelligence(PI)는 연구 주도형으로, 소수의 파트너와 깊게 일하고 일부 모델을 공개하며 공개된 매출이 없다. Skild AI는 배포 주도형으로, ABB·Universal Robots 같은 로봇 제조사(OEM)를 유통 채널로 삼아 상업 배포 10개월 만에 연 반복 매출(ARR) 1억 달러, 유료 고객 60곳 이상을 보고했다 [S2][P2][P5].
-- **우리 B2 케이스와 직접 겹친다.** Skild의 고객 중 하나가 **住友電装(Sumitomo Wiring Systems)의 와이어 하네스 조립 자동화**다. B2에서 업계 1위권 근거로 인용한 회사다. 또 Skild S1은 "영상 1개로 새 작업을 몇 분 안에 배운다"고 주장해, 우리가 RLWRLD의 강점으로 내세운 "시연 몇 개로 새 품번 적응"과 같은 영역을 노린다 [S2][S3].
+- **우리 B2 케이스와 직접 겹친다.** Skild는 B2에서 업계 1위권 근거로 인용한 **住友電装(Sumitomo Wiring Systems)와 2026-09-17 하네스 제조용 피지컬 AI 로봇 공동 개발을 시작**했다 [S6][S7]. 대상 공정, 로봇·핸드·센서, 일정, 성과는 미공개다. 기사(Humanoids Daily)의 "Automating"은 1차 소스("working towards deploying")보다 강한 표현이다 (2026-10-09 Q2 정정, research/q2-skild-sumitomo-harness.md). 또 Skild S1은 "영상 1개로 새 작업을 몇 분 안에 배운다"고 주장해, 우리가 RLWRLD의 강점으로 내세운 "시연 몇 개로 새 품번 적응"과 같은 영역을 노린다 [S2][S3].
 - **규모 격차가 크다.** PI는 약 21억 달러, Skild는 20억 달러 이상을 조달했다. RLWRLD 누적 4,100만 달러의 약 50배다. RLWRLD가 이길 곳은 범용성 경쟁이 아니라 **다섯 손가락 정밀 조작, 한국·일본 산업 데이터, RX 컨설팅의 깊이**로 좁혀야 한다 [P1][S4][A1].
 
 ## 1. 회사 개요
 
 | 항목 | Physical Intelligence (π) | Skild AI | (참고) RLWRLD |
 |------|---------------------------|----------|---------------|
-| 설립·본사 | 2024, 샌프란시스코 | 피츠버그 | 2024-07, 서울·샌프란시스코·도쿄 |
+| 설립·본사 | 2024, 샌프란시스코 | 피츠버그 (기존 표기). 住友電装 릴리스는 미국 캘리포니아주로 표기 [S6] — 불일치, 미해결 (2026-10-09 Q2 정정) | 2024-07, 서울·샌프란시스코·도쿄 |
 | 창업자 | Karol Hausman, Sergey Levine, Chelsea Finn, Brian Ichter 등 (Google DeepMind, Stanford, UC Berkeley 출신) [P1] | Deepak Pathak, Abhinav Gupta (CMU 출신) [S2] | 류중희 |
 | 투자 | 2024 4억 달러(기업가치 약 24억 달러), 2025-11 6억 달러(56억 달러, CapitalG 주도), 2026 10억 달러 규모 협상(110억 달러) 보도. 누적 약 21억 달러(보도) [P1][P6] | 2025 중반 기업가치 45억 달러, **2026-01 시리즈 C 14억 달러(140억 달러 이상, SoftBank 주도, NVIDIA, Bezos, Samsung, LG, Schneider, Salesforce Ventures 참여)**. 누적 20억 달러 이상 [S4] | 누적 4,100만 달러 (research/company.md) |
 | 정체성 | "로봇과 물리 장치를 제어하는 머신러닝 모델" 개발. 하드웨어를 만들지 않음 [P1] | "움직이는 모든 기계를 제어하는 통합 파운데이션 모델". 슬로건 "any robot, any task, one brain" [S1] | "Dexterity is Intelligence", 다섯 손가락 조작 특화 |
@@ -52,7 +52,7 @@
 | 고객 | 작업 | 공개 결과 | 근거 |
 |------|------|-----------|------|
 | **Foxconn + NVIDIA** (휴스턴) | Blackwell 서버 조립: 버스바 배치 → 리밋 블록 → 나사 16개 연속 체결 → 리밋 블록 제거. 양팔, 힘 제한 접촉 제어, 수 분짜리 장기 작업을 in-context 메모리로 수행 | 설계 변경을 재프로그래밍 없이 흡수한다고 주장. 정량 성공률 미공개 | [S1][S2] |
-| **住友電装 (Sumitomo Wiring Systems)** | **와이어 하네스 조립** (변형체 전선) | 결과 미공개 | [S2] |
+| **住友電装 (Sumitomo Wiring Systems)** | **하네스 제조용 피지컬 AI 로봇 공동 개발 개시 (2026-09-17)**. 1차 소스는 "S1 도입, 공동 개발"(住友電装)과 "working towards deploying"(Skild 블로그)이며 배포 완료가 아님. 대상 공정, 로봇·핸드·센서(end-effector 포함), 일정, 성과는 모두 미공개. 기사 [S2]의 "Automating"은 1차보다 강한 표현. 고객 배포 완료 사례로 분류하지 않음 (2026-10-09 Q2 정정) | 결과 미공개 | [S6][S7][S2] |
 | Mitsui & Co. (AIM Services) | 단체급식 접시 담기. AIM은 하루 약 140만 식 제공 | 결과 미공개 | [S2] |
 | G10 Fulfillment | 전자상거래 피킹·포장 | **시간당 50라인 → 130~140라인** (G10 COO 발언) | [S2] |
 | STN Inc. | 데이터센터 점검 | - | [S2] |
@@ -78,7 +78,7 @@
 
 ## 5. 비판적 시사점 (RLWRLD와 우리 케이스)
 
-1. **하네스 케이스의 차별점을 다시 세워야 한다.** Skild가 이미 住友電装에서 하네스 자동화를 하고 있다. B2 스토리라인의 "시연으로 새 품번을 배우는 범용 셀"은 Skild S1의 주장과 같다. RLWRLD만의 근거는 **다섯 손가락 + 촉각이 필요한 단계(레이업의 전선 훑기·분기 정리)**에 있고, 그래서 B2의 B트랙(손이 꼭 필요한지 검증)이 오히려 차별화의 핵심이 된다. 그리퍼 대조군에서 손이 이기지 못하면 RLWRLD는 Skild와 가격으로 경쟁하게 된다.
+1. **하네스 케이스의 차별점을 다시 세워야 한다.** Skild와 住友電装는 2026-09-17 하네스 로봇 공동 개발을 시작했다 (이미 자동화 중이라는 1차 근거는 없음, 2026-10-09 Q2 정정). B2 스토리라인의 "시연으로 새 품번을 배우는 범용 셀"은 Skild S1의 주장과 같다. Skild의 대상 공정과 end-effector가 미공개이므로 "레이업은 Skild가 못 하는 단계"라고 말할 수 없다. 다섯 손가락 + 촉각이 필요한 단계(레이업의 전선 훑기·분기 정리)는 RLWRLD의 가설이며, 우리가 그리퍼 대조군과 함께 검증하는 단계다. 그래서 B2의 B트랙(손이 꼭 필요한지 검증)이 핵심이 된다. 그리퍼 대조군에서 손이 이기지 못하면 RLWRLD는 Skild와 가격으로 경쟁하게 된다.
 2. **사이클 타임이 승부처라는 B2 결론은 Skild도 같은 말을 한다.** "99.9% 정확해도 10배 느리면 배포 불가." B2 ROI의 1순위 변수(속도비)와 일치한다. RLWRLD 공개 수치에는 사이클 타임이 없다. 고객 제안에서 이 공백을 먼저 채워야 한다.
 3. **유통 경로의 차이가 확장 속도를 가른다.** Skild는 ABB·UR 같은 로봇 제조사를 통해 이미 깔린 로봇에 들어간다. RLWRLD의 RX는 고객마다 진단부터 시작하므로 깊지만 느리다. RLWRLD도 하드웨어 파트너(레인보우로보틱스, 원익로보틱스, 로보티즈, 위로보틱스)를 **OEM 탑재 채널**로 쓸 수 있는지가 중요한 질문이다.
 4. **일본은 이미 경쟁 시장이다.** RLWRLD가 도쿄 거점과 KDDI로 공략하는 일본에서 Skild는 住友電装·Mitsui, PI는 Telexistence와 일한다. "한국 AI + 일본 제조 데이터"라는 RLWRLD의 서사는 독점이 아니다.
@@ -87,7 +87,7 @@
 7. **두 회사의 수치도 대부분 자체 발표다.** Skild의 ARR·고객 수, PI의 개입 50% 감소 모두 회사 발표나 언론 보도이고 독립 검증은 없다. RLWRLD의 86.8%를 "자체 평가"로 표시한 것과 같은 기준으로 다뤄야 한다.
 
 ## RX 관점 시사점
-- **B4 스토리라인에 반영 제안:** ① 경쟁 장에 "Skild × 住友電装 하네스"를 넣고 RLWRLD의 차별점을 레이업(손이 필요한 단계)으로 명확히 함 ② PoC KPI의 1순위를 사이클 타임(속도비)으로 유지 ③ 확산 시나리오에 하드웨어 파트너 탑재 경로 추가
+- **B4 스토리라인에 반영 제안:** ① 경쟁 장에 "Skild × 住友電装 하네스 공동 개발 개시(2026-09-17, 범위 미공개)"를 넣고, 레이업(손이 필요한 단계)은 차별점 주장이 아니라 그리퍼 대조군과 함께 검증할 가설로 둠 (2026-10-09 Q2 정정) ② PoC KPI의 1순위를 사이클 타임(속도비)으로 유지 ③ 확산 시나리오에 하드웨어 파트너 탑재 경로 추가
 - **면접에서:** "PI는 연구, Skild는 배포 속도로 앞서 있다. RLWRLD는 손 조작이 결정적인 공정과 아시아 산업 데이터로 좁혀야 하고, RX는 그 데이터를 확보하는 입구다."
 
 ## 확인하지 못한 항목
@@ -110,3 +110,5 @@
 - [P5] [Physical Intelligence Unveils π0.7](https://www.humanoidsdaily.com/news/physical-intelligence-unveils-0-7-the-rise-of-compositional-generalization-in-robotics) - Humanoids Daily, 2026-04, 기사(검색 요약), (en)
 - [P6] [Physical Intelligence is reportedly in talks to raise $1B, again](https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/) - TechCrunch, 2026-03-27, 기사(검색 요약), (en)
 - [A1] research/company.md (RLWRLD 누적 투자, 투자자)
+- [S6] [住友電装と米国 Skild AI、ワイヤーハーネス製造向けフィジカル AI ロボットの共同開発を開始](https://www.sws.co.jp/sws-news/docs/b19d54d9f74ad881f5f8aad4606784b9359d8ff2.pdf) - 住友電装, 2026-09-17, 1차, (ja) (reference/case--sws-skild-joint-dev-release.md) (2026-10-09 Q2 추가)
+- [S7] [The Hidden Pillar of Robotics](https://www.skild.ai/blogs/skild-crosses-100m-arr) - Skild AI, 2026-09-10, 1차, (en) (reference/competitors--skild-hidden-pillar.md) (2026-10-09 Q2 추가)

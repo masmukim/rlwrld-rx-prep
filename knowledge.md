@@ -60,6 +60,15 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 적응형 데이터 수집 | Adaptive data collection | 기본 시연으로 학습 후 실패 조건을 겨냥해 추가 시연을 모으는 반복. 블로그는 DAgger로 부름 | reference/papers--rldx1-tech-report.md |
 | 우아한 성능 저하 | Graceful degradation | 센서가 없으면 해당 스트림을 꺼서 vision-only로 동작 | reference/company--rlwrld-blog-14.md |
 | STSS | Spatio-Temporal Self-Similarity | 영상 특징의 시공간 자기유사도로 회전·속도를 포착. Motion Module의 한 부분 | reference/company--rlwrld-blog-14.md |
+| 투자자 겸 고객 | Investor-customer | 공급사에 지분을 투자한 기업이 첫 고객이 되는 구조. Schaeffler–Agility, Mercedes–Apptronik, Magna–Sanctuary | reference/case--agility-schaeffler.md |
+| 구매 의향 계약 | Intent-to-purchase agreement | 확정 발주가 아닌 "intends to purchase" 수준의 계약(Schaeffler 공장 100곳) | reference/case--agility-schaeffler.md |
+| 숙련공 데이터 | 熟練工のデータ | 정년 전 숙련공의 동작을 카메라·센서로 디지털화해 모방학습 자산으로 삼는 것(矢崎) | reference/case--yazaki-ren-kurumanews.md |
+| 상사 경유 진입 | Trading-house channel | 일본 종합상사가 투자, 독점 유통, 금융을 포함한 합작사로 해외 로봇사의 일본 채널이 되는 구조(住友商事–Dexterity) | reference/case--dexterity-sumitomo-jv.md |
+| セット工法 | Set operation | 절단·압착한 전선(切圧線)을 자동으로 세트해 리드타임을 줄이는 住友電装 공법 | reference/case--sei-id-v20-04-harness-casee.md |
+| e-STEALTH W/H | e-STEALTH Wire Harness | 플랫 구조(융착, 알루미늄 도체)의 차세대 하네스. 에어리어 하네스 간선용, 자동 조립에 유리 | reference/case--sei-id-v28-04-estealth.md |
+| 누적 단계별 성공률 | Cumulative per-step success rate | Skild S1 블로그 지표. 실패 시 사람이 개입해 복구하고 전 단계를 채점한 평균 | reference/competitors--skild-s1-blog.md |
+| 모델 라인 | Model line | 신공법을 먼저 적용한 특정 시범 라인. 이 라인의 수치는 전사 값이 아님(住友 50%) | reference/case--sumitomo-sws-local-automation.md |
+| 국소적 자동화 | 局部的な自動化 | 住友電装 사장이 자사 하네스 자동화 현황을 표현한 말. 50%를 전사 값으로 읽으면 안 된다는 근거 | reference/case--sei-id-v20-04-harness-casee.md |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -102,7 +111,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - RLWRLD는 PI·Skild와 같은 "지능 계층" 회사다. 하드웨어·센서·인프라는 생태계 파트너가 맡고, PoC는 자사 랩에서 고객 작업을 재현해 진행한다(KDDI 3개월) [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
 - 파트너십의 외부 가치: 고객 운영 데이터로 만든 모델을 RLWRLD와 함께 상업 제품으로 확장할 수 있다. 셀 구매가 부담인 중견 고객에게 "숙련을 제품으로" 제안할 근거 [reference/company--rlwrld-business-rx-poc-partnership.md] (A7)
 - 해외 사례의 첫 작업은 좁고 KPI가 숫자로 고정된 작업이다(Figure-BMW 판금 적재: 목표 84초, 99% 초과, 개입 0회. 달성값은 미공개). 확산까지 1~3년 [research/rx-cases.md] (A7, A10에서 "목표"로 정정)
-- Skild AI가 住友電装(Sumitomo Wiring Systems)의 와이어 하네스 조립을 자동화하고 있다. B1·B2의 하네스 케이스에서 RLWRLD의 차별점은 "시연으로 새 품번 적응"(Skild S1도 주장)이 아니라 손이 꼭 필요한 레이업 단계에 있다 [research/skild-pi-deep-dive.md] (A8)
+- (Q2 정정 2026-10-09) 住友電装는 2026-09-17 Skild와 하네스용 피지컬 AI 로봇 공동 개발을 시작했다(1차 소스). 대상 공정, 손 하드웨어, 일정, 성과는 미공개이고, 기존 "이미 자동화하고 있다"는 기사 표현이 1차보다 강했다. "레이업이 우리 차별점"은 Skild 범위가 미공개이므로 "우리가 그리퍼 대조군과 함께 검증하는 단계"로 쓴다 [research/q2-skild-sumitomo-harness.md, reference/case--sws-skild-joint-dev-release.md]
 - 지능 계층 회사의 두 갈래: PI는 연구 주도·소수 파트너·일부 가중치 공개·매출 비공개, Skild는 배포 주도·로봇 제조사(ABB, UR) 탑재·ARR 1억 달러. RLWRLD의 RX는 깊지만 느린 세 번째 길 [research/skild-pi-deep-dive.md] (A8)
 - 조달 규모: PI 약 21억 달러, Skild 20억 달러 이상, RLWRLD 4,100만 달러(약 50배 차이). LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
 - RLWRLD 경영진(CBO)의 프레임: "제조 자동화율 70~80%, 남은 20~30%가 손재주 작업". 경쟁력은 모델 코드가 아니라 숙련자 암묵지 데이터, 수집 방식, 배치 경험, 벤치마크(덱스벤치)다. B4 제안서의 "수작업 69%"와 같은 문제 정의 [reference/company--mk-cbo-interview-2026-10.md]
@@ -112,6 +121,14 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 확산 계획과 실적의 격차가 크다: 교촌 2023 청사진 1,300여 점 대 2026-07 25개 점·33대, CJ대한통운 "2026년부터 순차 적용" 대 2026-09 첫 투입 2대. PoC 제안은 확산 수량이 아니라 게이트(통과·중단 기준)로 표현한다 [research/poc-playbook.md] (A10, 해석)
 - CJ대한통운 2026-09 용인 투입에서 RLWRLD는 RFM 파트너로 명시됐고, 로보티즈(하드웨어)·에이딘로보틱스(핸드)와 함께 협업한다. RLWRLD 단독 성과는 미공개 [research/poc-playbook.md 7.2절] (A10)
 - 확산을 막는 요인은 기술 외적인 것이 많다: 값싼 대안(사람+소프트웨어, Walmart-Bossa Nova 5년 실험 종료), 신뢰성, 노사 수용성(현대차 노조 "노사합의 없이 1대도 안 된다") [research/poc-playbook.md 6절] (A10)
+- (Q4) 타사 첫 고객 24건 중 7건은 투자자·모회사·유통 파트너가 고객을 겸했고 RLWRLD 공개 고객 3곳도 같은 구조다. 첫 작업은 대부분 그리퍼로 되는 pick-and-place이며, 손 조작이 핵심인 첫 작업은 Foxconn 나사 체결과 住友電装 하네스(공동 개발 단계) 정도다 [case/candidates.md Q4.1]
+- (Q4) 첫 고객 점수 기준(제안) 7개로 매기면 관계 없는 하네스 신규 후보(矢崎 3.70, 경림테크형 3.40, 유라 3.30, 경신 3.10)는 기존 투자자 고객(3.95~4.15)보다 낮다. 관계가 없는 하네스사의 첫 유인은 정부 실증 재원, RLWRLD 랩 PoC, 숙련 데이터 권리 배분이다(모두 `추정`, 기준·가중치는 본 팀 제안) [case/candidates.md Q4.2~Q4.3]
+- (Q4) 矢崎는 "지금은 휴머노이드가 필요 없다, 도입 이유는 숙련공 데이터 수집"이라 공개 발언했고 2029~2030년 숙련공 재현 피지컬 AI를 로드맵에 넣었다. RLWRLD의 암묵지 논리와 같으나 데이터를 자사 경쟁력으로 보므로 데이터 권리가 협상 쟁점이다 [reference/case--yazaki-ren-kurumanews.md]
+- (Q4) 일본 하네스·유연물 영역은 住友電装–Skild, 安川×SoftBank(VLA 하네스 상자 수납 실증), FA 3사 VTLA 등 여러 진영이 이미 들어와 있다. 한국 하네스사는 공개된 RFM 협력이 없어 상대적으로 비어 있다(해석) [reference/case--yaskawa-softbank-harness.md]
+- (Q4) KDDI는 RLWRLD와 Telexistence에 모두 투자했고 Lawson 지분 50%를 가진다. 투자자가 그룹사 현장을 여러 로봇사에 동시에 여는 구조라 기존 고객 안에서도 경쟁이 있다 [reference/company--kddi-lawson-50pct.md]
+- (Q1) 국내 하네스사의 국내 생산 인력은 작다(유라 2023 국내 생산직 668명, 국내외 합계의 2.8%, 계산). "국내 라인 수천 개 확산"은 근거가 없고 "국내 소수 라인 PoC → 해외 거점 확산"이 방어 가능하다(`추정`). 외국인력 의존 완화 프레임은 이 업종에서 미검증 [research/q1-harness-line-facts.md]
+- (Q3) 업계 대형사의 "자동화율"에는 분모가 없다. 15%·50%는 방향성 근거로만 쓰고 ROI 입력값이나 "수작업 69%"(작업장 수 기준)와 병치하지 않는다. 고객 킥오프에서 분모(직접 공수 SMH, 작업장 수)를 먼저 합의한다 [research/q3-sumitomo-automation-rate.md]
+- (Q2·Q3) 기사가 1차 소스의 시제를 강하게 바꾸는 패턴이 반복된다(Humanoids Daily "Automating" 대 Skild "working towards deploying", 住友 영어판 "has been increased" 대 일본어 "高められる"). 경쟁사·고객 사례는 1차 문장의 시제와 원어판까지 확인한다 [research/q2-skild-sumitomo-harness.md, research/q3-sumitomo-automation-rate.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -154,14 +171,14 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Tesla Optimus 현행 손 사양: Musk 4월 발언(설계 변경)과 Tech Times 9월 서술(22 DoF)을 가를 1차 소스가 있는가? (A4, A3)
 - [ ] 국내 하네스 기업(경신, 유라코퍼레이션 등)의 2022년 이후 국내 조립 라인 규모와 리쇼어링 현황은? (B1)
 - [ ] 하네스 조립을 노동집약·자동화 난제로 규정한 국내 R&D 자료(GAFIC)의 원문은? (B1)
-- [ ] 국내 하네스 라인의 실제 인원, 교대, 택트, 품번 수와 외국인 비중은? 경신 국내 사업장 4곳은 하네스 조립 라인인가? (B2)
-- [ ] 住友의 자동화율 약 15%와 약 50%는 공수 기준인가, 공정 수 기준인가? (B2)
+- [ ] 국내 하네스 라인의 실제 인원, 교대, 택트, 품번 수와 외국인 비중은? 경신 국내 사업장 4곳은 하네스 조립 라인인가? → 라인 단위 국내 수치 없음, 경주만 하네스 확인, 유라 국내 직접고용 외국인 1/2,080. 현직자 인터뷰 필요 (B2, Q1)
+- [ ] 住友의 자동화율 약 15%와 약 50%는 공수 기준인가, 공정 수 기준인가? → 1차 소스 5건에 분모 없음, "全工程の約15%"라는 서술만 있어 공정 쪽 정황. 정의 미확정 (B2, Q3)
 - [ ] Cellios/TE 셀의 가격과 품번 전환 시간은? (B2, B3)
 - [ ] RLDX-1을 산업용 협동로봇과 손 조합으로 옮길 때 재학습 규모와 상용 라이선스 조건은? (B2, A1)
 - [ ] 2020년 중기부의 하네스 리쇼어링 자동화 지원(2년 최대 10억 원)은 지금도 이어지는가? (B2, B4)
 - [ ] RLWRLD RX 진단의 기간과 비용은? (A7)
 - [ ] Telexistence × Physical Intelligence 음료 보충과 RLWRLD × KDDI 진열 PoC는 어떻게 다른가? (A7, A3)
-- [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? (A8, B2)
+- [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? → 공개 1차 소스에 없음(공동 개발 개시까지). 영상·구상도·유료 기사 필요, manual-research.md 5절 (A8, B2, Q2)
 - [ ] RLWRLD 하드웨어 파트너(레인보우, 원익, 로보티즈, 위로보틱스)가 Skild-ABB처럼 모델을 탑재해 판매하는 OEM 채널이 될 수 있는가? (A8)
 - [ ] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? (A1, B4)
 - [x] 글로벌 오픈 벤치마크 8종은 무엇인가? → 6개 스위트의 8개 점수 열로 추정 (research/rldx1-tech.md 9절 14번, A11)
@@ -169,3 +186,11 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Figure-BMW 최종 달성값(정확도, 개입 횟수)의 출처는? (A10)
 - [ ] Mujin PoC의 실제 기간·검증 절차 1차 소스(일본어)는? (A10)
 - [ ] PoC 단계 대가(무상·유상·공동 부담)를 밝힌 로봇 사례가 있는가? RLWRLD RX·PoC 가격 구조는? (A10, A7)
+- [ ] 矢崎 REN의 휴머노이드 제조사와 숙련 데이터 수집 방식은? 외부 협업을 모집하는가? (Q4)
+- [ ] 2027 피지컬 AI 실증 공모의 중소제조 분야 수요기업·공급기업 조건은? (Q4)
+- [ ] 경신이 住友電装–Skild 성과를 도입할 계획이 있는가? (Q4, Q2)
+- [ ] Agility–Schaeffler 구매 의향은 실제 배치로 이어졌는가? Dexterity–住友商事 1,500대 목표는 달성됐는가? (Q4)
+- [ ] 유라의 "현대차·기아 하네스 독점 공급" 기사 표현과 2020년 점유율 48.2%는 어떻게 맞춰지는가? (Q4)
+- [ ] Skild 본사는 캘리포니아인가 피츠버그인가? (住友電装 릴리스와 기존 문서 불일치) (Q2)
+- [ ] 住友 분할 하네스(4~5모듈)와 e-STEALTH W/H 간선 하네스는 같은 개념인가? 2025 목표 이후 양산 상태는? (Q3)
+- [ ] 참고 라인의 작업장별 사이클 타임으로 "수작업 69%"를 공수 비중으로 환산하면 얼마인가? (논문 Fig. 7 필요) (Q3)
