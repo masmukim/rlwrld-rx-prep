@@ -48,7 +48,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 분기형 선형 변형체 | Branched DLO (BDLO) | 갈라지는 케이블 다발. 분기점에서 힘과 변형 전파가 복잡함 | reference/papers--deft-branched-dlo.md |
 | 분할 하네스 | 分割ハーネス | 하네스를 4~5개 영역으로 나눠 적은 품번 조합으로 약 250품종을 만드는 住友電工 공법 | reference/case--netdenjd-sumitomo-split-harness.md |
 | 이동형 산업 | Migratory industry | 최저 인건비 국가로 생산이 계속 옮겨 가는 산업. 하네스의 별칭 | reference/case--ams-cellios-automated-harness.md |
-| 덱스벤치 | DexBench | RLWRLD가 고객 현장 워크플로 분석 데이터로 만든 18개 과제의 손재주 평가 벤치마크. NVIDIA Isaac Lab-Arena와 연결 | reference/company--mk-cbo-interview-2026-10.md |
+| 덱스벤치 | DexBench | RLWRLD가 고객 현장 워크플로 분석 데이터로 만든 18개 과제의 손재주 평가 벤치마크. NVIDIA Isaac Lab-Arena와 연결 | reference/company--mk-cbo-interview-2026-10.md (2026-10-09 Q5: 사이트 기준 18과제 55케이스, 5영역은 분류축, 평가 프로토콜·리더보드·코드 비공개, Arena 통합은 Coming Soon, 2026-08 발표는 80케이스로 수치 불일치) |
+| OSC | Object State Complexity | DexBench의 난이도 6축 벡터(C_geom, C_force, C_contact, C_obs, C_deform, C_dyn) | reference/benchmark--dexbench-site.md |
+| 브레이크다운 커브 | Breakdown Curves | 성공률 대신 성능이 무너지는 파라미터 범위를 보는 DexBench 설계 원칙 | reference/benchmark--dexbench-site.md |
+| 서브태스크 술어 | Subtask Predicates | Isaac Lab-Arena 0.3의 단계별 마일스톤 추적 기능. 단계 점수 구현 후보 | reference/benchmark--arena-release-0-3.md |
 | 시간 제한 시험 | Time-boxed deployment | 기간과 범위를 정한 소규모 현장 시험. Boston Dynamics는 이를 상설 RMAC 훈련센터로 대체 | reference/case--poc-robotreport-rmac.md |
 | RMAC | Robotics Metaplant Application Center | Hyundai 공장 안 상설 로봇 훈련·검증 시설. 시퀀싱 2028, 조립 2030 로드맵 | reference/case--poc-hyundai-ces2026-atlas.md |
 | 파일럿 정체 | Pilot purgatory | 데모는 되지만 운영으로 승격하지 못하는 상태 | research/poc-playbook.md 6절 |
@@ -134,19 +137,25 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - (fact-check) B2 예비 회수(손 구성 셀 395,584,000원, 기본 시나리오)는 5.7년이 손 교체비 제외 값이다. 손 1개를 연 1회 교체하면 약 10.6년, 2개면 약 77년, 2개를 3년 주기로 교체하면 약 8.2년이다. 속도비 0.5는 PoC의 기술 가능성 게이트이며 ROI 성립 기준이 아니다(회수 15.9년, 교체비 포함 시 음수). 5년 회수에는 연 순절감 약 7,912만 원이 필요하다. 손 교체 주기가 B3의 핵심 변수다 [case/analysis.md 7.5절]
 - (fact-check) 기사 속 "업계 일반 단가"를 특정 기업의 구매가로 옮기지 않는다(교촌 조리 로봇 2,000만 원·설치 포함 4,000만 원은 A 제조사 기준 업계 단가이고 교촌 구매가는 미공개). "N개월 내" 기간은 상한이라 두 값의 차이는 실제 간격이 아니다(Figure 4개월은 최대 약 4개월). 계획("300점 확대")을 달성으로 쓰지 않는다(Telexistence-FamilyMart) [research/poc-playbook.md, research/rx-cases.md]
 - (fact-check) 표의 비율값을 시행 수로 나눠 정수가 되는지 검산하면 원문 내부 모순을 잡는다(Egg PnP 61.1%는 24회로 불가). 한편 검증 에이전트(haiku)가 이미지 캡션을 놓쳐 "근거 없음"으로 잘못 판정한 사례가 있다(Skild 슬로건, FR3 카메라). "확인불가" 판정은 raw 재확인 후 반영한다 [research/rldx1-tech.md]
+- (Q5) DexBench의 현재 실체는 과제 정의 문서다. 사이트(Documentation v1.0)에는 18과제·55케이스·5영역·OSC 6축·케이스별 초기/목표 상태와 실패 조건만 있고, 리더보드·시행 수·점수 산식·제출 절차·하드웨어·라이선스·코드 링크가 없다. RLWRLD GitHub(7개 저장소)·HF(모델 11개, 데이터셋 0개)에도 DexBench 코드·데이터가 없다(2026-10-09 스냅샷). 인용은 "18과제, 사이트 기준 55케이스"로 시점을 붙인다 [research/q5-dexbench.md]
+- (Q5) DexBench의 개발 주체는 RLWRLD다(사이트 푸터 "Published by RLWRLD", RLDX-1 논문 기여자 절). NVIDIA는 Arena 통합 협력사이고 롯데·CJ·ANA·Mitsui 같은 파트너는 RLWRLD 투자자·고객 관계가 있어 독립성의 근거가 못 된다. DexBench는 하드웨어 비종속("두 손가락 그리퍼가 5지 손보다 능숙할 수 있다")이라 B4 그리퍼 대조군과 같은 쪽이다 [research/q5-dexbench.md]
+- (Q5) 사이트의 영역 태그는 사이트가 제시한 병목 규칙으로 재현되지 않는 경우가 있다(Task 3의 E5, Task 7의 E3). 영역 태그를 정량 근거로 쓰지 않는다. 일부 케이스는 앞 케이스의 결과를 시작 상태로 쓴다(4-A는 3-D, 13-B는 12-A) [research/q5-dexbench.md]
+- (Q6) 住友電装는 자사 중기계획 자료(일·영)에 "グローバルシェアNo.1"과 자동차용 하네스 세계 점유율 21%(2025년도)를 적었다. 자사 표기이고 No.1의 연도는 불확정이며 제3자 확인은 없다. "업계 1위권은 근거 없음" 정정은 1차 소스 Grep 없이 한 것이라 틀렸고, "자사 자료 기준 세계 점유율 1위(2025년도 21%, 제3자 미확인)"로 쓴다 [research/q6-sws-pdf.md, reference/case--sws-midterm-plan-2028-en.md]
+- (Q6) 사용자 제공 영문 PDF는 2026-09-17 Skild 공동 개발 릴리스의 영어판이며 일본어판과 정보가 같다. 대상 공정·로봇·핸드·센서·일정·성과·자동화율 정의는 없다. 서술 강도는 일본어 기준 "개시/도입한다/추진한다/목표한다"까지이고 영어판이 약간 강하다("This will enable robots to…"). 중기계획 발표일은 2026-07-16이고 수치 목표 슬라이드에 자동화율 목표는 없다 [research/q6-sws-pdf.md]
+- (Q6) 같은 회사 자료의 "모델 라인"이 두 맥락에 쓰인다: 자동화율 50% 문장의 세트 공법·분할 하네스 모델 라인, 중기계획 2027-2028 스마트 팩토리 모델 라인. 같은 라인이라는 근거가 없으므로 구분한다 [research/q6-sws-pdf.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
 (형식: `- [ ] 질문 (발견한 작업 ID)`, 해결하면 `- [x]`로 바꾸고 답이 있는 파일을 적는다)
 - [ ] RLDX-1 가중치의 비상업 라이선스(RLWRLD Model License v1.0) 아래에서 상용 PoC를 어떻게 계약하는가? (A1)
 - [ ] RLWRLD의 공개 고객 중 제조업(자동차, 전자) 사례가 있는가? (A1)
-- [ ] RLDX-1 벤치마크를 독립적으로 검증한 결과가 있는가? (A1, A3에서 확인)
+- [ ] RLDX-1 벤치마크를 독립적으로 검증한 결과가 있는가? (A1, A3에서 확인) → DexBench는 RLWRLD 자체 벤치마크이고 공개 리더보드·코드·데이터가 없어 독립 검증 근거가 못 된다(2026-10-09 기준). 그 밖의 독립 검증도 못 찾음 (Q5)
 - [ ] 정부 숙련 데이터 디지털화 사업(기사 표기 약 3,300만 달러)의 정확한 사업명과 규모는? A5에서도 못 찾음. 독파모(업스테이지 컨소시엄) 관련성은 1차 소스 필요 (A1, A5)
 - [ ] Lawson 진열 PoC는 계획인가 완료인가, 연도는 언제인가? CJ대한통운 MOU(2025-11)의 1차 소스는 무엇인가? (A1)
 - [x] RLDX-1 학습에 RL이나 현장 교정 루프가 있는가? ALLEX 실세계 평가는 몇 개 작업, 몇 회 시행인가? → 있음(선택 사항), 과제당 24회. research/rldx1-tech.md (A2, A11)
 - [ ] RLDX-1의 Physics 모듈을 켠 경우와 끈 경우의 정량 차이는? 논문은 그림으로만 제시 (A11)
 - [ ] 기준선(pi0.5, GR00T N1.6)은 촉각·토크 입력을 받았는가? (A11)
-- [ ] 블로그의 DexBench 5영역과 CBO가 말한 18과제 DexBench의 관계는? 어느 실세계 벤치마크가 DexBench 과제인가? (A11, A1)
+- [x] 블로그의 DexBench 5영역과 CBO가 말한 18과제 DexBench의 관계는? → 5영역은 분류축, 18과제는 과제이며 한 과제에 영역이 2~4개 중복 태그된다. 같은 벤치마크의 다른 층이다. 다만 RLDX-1 논문의 실세계 과제는 DexBench 케이스로 표기되지 않았다. research/q5-dexbench.md (A11, A1, Q5)
 - [ ] 전구 돌리기 RL(약 3배)의 프레임 속도와 시행 수는? 다른 과제에도 RL이 적용되었는가? (A11)
 - [ ] 사전학습 데이터 혼합 비율(Figure 6, Table 5)과 OpenArm 결과(Figure 16)는? 그림에만 있어 미확인 (A11)
 - [ ] 텔레오퍼레이션 "하루 50~200 시연"과 시스템 통합 비용 "하드웨어의 50~200%"의 1차 소스는? B3 ROI 가정에 필요 (A2)
@@ -185,7 +194,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Telexistence × Physical Intelligence 음료 보충과 RLWRLD × KDDI 진열 PoC는 어떻게 다른가? (A7, A3)
 - [ ] Skild의 住友電装 하네스 프로젝트 범위·결과와 사용하는 손 하드웨어(다관절 손인가 그리퍼인가)는? → 공개 1차 소스에 없음(공동 개발 개시까지). 영상·구상도·유료 기사 필요, manual-research.md 5절 (A8, B2, Q2)
 - [ ] RLWRLD 하드웨어 파트너(레인보우, 원익, 로보티즈, 위로보틱스)가 Skild-ABB처럼 모델을 탑재해 판매하는 OEM 채널이 될 수 있는가? (A8)
-- [ ] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? (A1, B4)
+- [x] 덱스벤치 18개 과제 목록과 하네스·커넥터 삽입 유사 과제가 있는가? → 목록 확보(사이트 기준 18과제 55케이스). 유사 과제는 Task 3의 3-B(USB-A)·3-C(110V 플러그)와 Task 10의 10-A·10-B이고 하네스 직결 과제는 없다. research/q5-dexbench.md (A1, B4, Q5)
 - [x] 글로벌 오픈 벤치마크 8종은 무엇인가? → 6개 스위트의 8개 점수 열로 추정 (research/rldx1-tech.md 9절 14번, A11)
 - [ ] CJ대한통운이 레인보우로보티즈와 협업을 종료한 사유, RLWRLD-CJ PoC의 KPI와 결과는? (A10)
 - [ ] Figure-BMW 최종 달성값(정확도, 개입 횟수)의 출처는? (A10)
@@ -196,7 +205,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 경신이 住友電装–Skild 성과를 도입할 계획이 있는가? (Q4, Q2)
 - [ ] Agility–Schaeffler 구매 의향은 실제 배치로 이어졌는가? Dexterity–住友商事 1,500대 목표는 달성됐는가? (Q4)
 - [ ] 유라의 "현대차·기아 하네스 독점 공급" 기사 표현과 2020년 점유율 48.2%는 어떻게 맞춰지는가? (Q4)
-- [ ] Skild 본사는 캘리포니아인가 피츠버그인가? (住友電装 릴리스와 기존 문서 불일치) (Q2)
+- [ ] Skild 본사는 캘리포니아인가 피츠버그인가? (住友電装 릴리스와 기존 문서 불일치) (Q2) → 住友電装 일본어 릴리스와 영문 릴리스 모두 "California"로 같다. 같은 발행처의 번역본이라 독립 확인은 아니며 불일치는 그대로 (Q6)
 - [ ] 住友 분할 하네스(4~5모듈)와 e-STEALTH W/H 간선 하네스는 같은 개념인가? 2025 목표 이후 양산 상태는? (Q3)
 - [ ] 참고 라인의 작업장별 사이클 타임으로 "수작업 69%"를 공수 비중으로 환산하면 얼마인가? (논문 Fig. 7 필요) (Q3)
 - [ ] RLDX-1 논문 FR3 Egg PnP의 실제 시행 수(24회인가 72회인가)와 Spin Tracking 96회·Pong Game 54회의 출처 위치는? (A11)
@@ -208,3 +217,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 롯데그룹 국책 과제(롯데글로벌로지스)가 호텔 연회 백오피스 PoC의 정부 재원으로 이어지는가? 법인이 달라 C5 4점이 과대일 수 있다 (Q4)
 - [ ] Telexistence와 PI의 관계는 무엇인가? 편의점 영역에서 겹치는가? (Q4)
 - [ ] 매일경제 CBO 인터뷰의 실제 게재일은? raw 입력 표기는 2026-09-08 (A1)
+- [ ] DexBench 평가 프로토콜(시행 수, 채점, 합격 기준, 제출·검증)은 비공개 문서에 있는가? 55케이스(사이트)와 80케이스(2026-08 발표)의 차이는? (Q5)
+- [ ] NVIDIA Isaac Lab-Arena의 DexBench 통합은 언제 공개되는가? RLWRLD/IsaacLab-Arena의 dexbench 브랜치 재확인 (Q5)
+- [ ] DexBench 파트너 표기 "Fuji Electric"(사이트)과 링크 fuji.co.jp, 8월 발표 "Fuji"는 같은 회사인가? (Q5)
+- [ ] RLDX-1 GitHub 저장소는 Apache-2.0으로 표기되는데 가중치 비상업 라이선스(RLWRLD Model License v1.0)와의 관계는 코드와 가중치의 구분인가? (Q5, A1)
+- [ ] 住友電装의 "Global Market Share No.1"은 어느 연도·어느 기준이며 제3자 자료로 확인되는가? 중기계획의 2027-2028 모델 라인과 자동화율 50%의 모델 라인은 같은 라인인가? (Q6)

@@ -32,4 +32,4 @@ lang: ko
 - 경영진 본인 발언이라 회사 전략의 1차 신호로 쓰되, 성능 주장(SOTA 8종)은 자체 평가로 다룬다.
 - research/company.md 2절의 "BCG 직급 불일치"(보도자료 "전 BCG 파트너" vs 데모데이 "BCG 매니징 디렉터")는 이 기사의 "MD & Partner" 표기로 둘 다 맞는 것으로 정리된다.
 - "가중치 공개"는 공개는 했으나 비상업 라이선스(research/company.md 4절)라는 점과 함께 읽는다.
-- 덱스벤치 사이트: https://dexbench.org (RLWRLD 홈페이지 링크, 미열람).
+- 덱스벤치 사이트: https://dexbench.org (RLWRLD 홈페이지 링크, 열람 완료: research/q5-dexbench.md, 2026-10-09 Q5/Q6 정정).

@@ -111,6 +111,7 @@
   - 약점도 안다고 말한다: 자금 규모 약 34배 격차(Skild 라운드 대비), 벤치마크 비교 대상이 구 버전, 비상업 라이선스, 한국·일본 대기업의 다중 투자 구조.
 
 ## 확인하지 못한 항목
+- RLWRLD의 DexBench와 경쟁사 모델 비교 (2026-10-09 Q5/Q6 정정): DexBench는 RLWRLD 자체 벤치마크이고 2026-10-09 기준 공개 리더보드·코드·데이터가 없어 경쟁사 점수 비교가 불가능하다. 사이트 기준 18과제 55케이스(2026-08 발표는 80케이스로 수치 불일치), NVIDIA Isaac Lab-Arena 통합은 Coming Soon (reference/benchmark--dexbench-site.md, reference/benchmark--arena-readme.md, research/q5-dexbench.md).
 - π0.7, GR00T N1.7, Gemini Robotics 2의 촉각·힘 입력 사용 여부(열람한 자료에 언급 없음). 열린 질문 "π0, π0.5, GR00T N1.6은 촉각·힘 입력을 쓰는가"에 대한 답은 이번에도 미확정.
 - RLDX-1과 최신 모델(π0.7, GR00T N1.7)의 동일 조건 비교, 독립 검증.
 - PI 누적 조달(시리즈C 이전 약 10.7억 달러 `추정` / 시리즈C 포함 약 21억 달러 `추정`)과 라운드별 금액, Figure 누적 조달(약 19억 달러)은 모두 2차 집계(검색 요약) 수준.

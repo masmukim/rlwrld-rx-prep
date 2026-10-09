@@ -151,3 +151,9 @@
 - 산출물: research/ 6개(skild-pi-deep-dive, rx-cases, competitors, poc-playbook, rldx1-tech, company, papers), case/ 4개(candidates, analysis, b4-proposal, deck-storyline), reference 정정 4건·신규 1건, knowledge.md
 - 다음: B3 착수 가능(B2 fact-check 완료). 입력은 case/analysis.md 7절(손 교체비 반영 후). 사용자 피딩 자료(manual-research.md 5·6절)가 들어오면 가정값 갱신. 남은 `확인필요`: 레이업 lay-up 4 해석, 손 교체 주기, 2027 최저임금, 住友電装 C5 점수 재검토, 롯데 C5 4점 과대 여부
 - 이슈: haiku 검증 에이전트가 이미지 캡션을 놓친 오판 2건(Skild 슬로건, FR3 카메라)이 있어 정정 단계에서 raw 재확인으로 걸러냄. A11 검증과 Q1 조사 에이전트가 턴 한도에서 멈춰 SendMessage로 이어서 완료. A2~A6 fact-check는 이전에 완료
+
+## 2026-10-09 18:20 | researcher | Q5, Q6
+- 한 일: manual-research 1순위 덱스벤치(Q5)와 사용자 제공 住友電装 영문 PDF(Q6) 분석. Q5: dexbench.org가 JS 렌더링이라 홈 HTML이 부르는 /data/contents_en|kr|jp.json 3종을 직접 저장해 18과제·55케이스·5영역·OSC 6축 확보. 리더보드·시행 수·점수 산식·제출 절차·코드·라이선스는 사이트·GitHub·HF 어디에도 없음(2026-10-09). 주체는 RLWRLD(독립 검증 근거 아님), 하네스 직결 과제 없음(근접: 3-B USB-A, 3-C 110V 플러그, 10-A, 10-B), B4 8.3절은 "덱스벤치 호환"이 아니라 케이스 카드 형식 준수와 인접 과제 표기로 낮추도록 제안. Q6: 사용자 PDF는 2026-09-17 Skild 릴리스의 영어판으로 일본어판과 정보 동일, Q2·Q3 결론 유지. 중기계획 발표일 2026-07-16 확인, 자사 자료에 "グローバルシェアNo.1"·하네스 세계 점유율 21%(2025년도) 발견 → 앞선 "업계 1위권은 근거 없음" 정정이 틀렸음을 확인하고 "자사 자료 기준 세계 점유율 1위(2025년도 21%, 제3자 미확인)"로 재정정
+- 산출물: research/q5-dexbench.md, research/q6-sws-pdf.md, 새 reference 11건, manual-research.md 7절, knowledge.md(용어 3, 인사이트 6, 열린 질문 2건 해소 1건 보완 5건 추가)
+- 다음: 정정 반영(case/b4-proposal.md 8.3절·"1위권" 표기 5곳, research/ 6곳, reference 2곳)은 담당 에이전트 진행. 하네스 케이스 카드 초안(단자-하우징 삽입, 당김 확인, 분기 케이블 레이업)을 B4에 넣을지 사용자 결정. DexBench 평가 프로토콜 문의 여부는 사용자 판단
+- 이슈: fact-check 미실시. Q5 에이전트가 40턴 한도와 세션 한도(429)로 두 번 중단되어 SendMessage로 이어서 완료. 읽지 못한 raw 6건은 피딩 목록. "1위권 근거 없음"은 haiku fact-check 판정을 1차 Grep 없이 반영한 오류였음

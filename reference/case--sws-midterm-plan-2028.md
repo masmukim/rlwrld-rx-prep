@@ -2,7 +2,7 @@
 title: 住友電装グループ 2030ビジョン 中期経営計画2028 (회사 설명 자료)
 url: https://www.sws.co.jp/resource/pdf/corporation-strategy_jp.pdf
 publisher: 住友電装株式会社
-published: unknown (2026년도 계획. 자료 내 "2026年3月期 現在" 수치 포함. 발표 월 미확인)
+published: unknown (2026년도 계획. 자료 내 "2026年3月期 現在" 수치 포함. 영문 중기계획 릴리스는 2026-07-16 (2026-10-09 Q5/Q6 정정, reference/case--sws-midterm-release-en.md). 이 설명 자료 PDF 자체의 날짜는 미확인)
 fetched: 2026-10-09
 tags: [case, sumitomo, wire-harness, smart-factory, roadmap]
 source_type: 1차
@@ -14,7 +14,7 @@ lang: ja
 - 구성 요소 정의: AI 에이전트(현장 노하우를 학습해 최적 생산 계획·이상 예지를 자율 판단·지시), 피지컬 AI 로봇("최신 AI 두뇌를 갖고 기존의 단조로운 기계가 아니라 사람과 협업해 유연하게 작업하는 차세대 로봇").
 - 로드맵: **2025-2026 기반 확립·현장 실증** (도쿄·나고야에 새 개발 거점, 선단 기술 흡수와 인재 확보, "현장에서 AI 로봇 실증 실험 시작") → **2027-2028 모델 라인 구축** (국내에서 차세대 스마트 팩토리 모델 라인 가동) → **2030 글로벌 전역 전개**.
 - 기반 사업(저압 하네스) 슬라이드: 에어리어 하네스(e-STEALTH W/H)는 **간선: e-STEALTH W/H, 지선(枝線): 종래 공법**으로 표시. ①전선 플랫화 ②알루미늄 도체 ③하네스 구조 단순화로 생산 공정의 자동화를 실현한다고 서술.
-- 자동화율의 수치 목표는 확인한 범위(텍스트 추출)에서 찾지 못했다.
+- 영문판 중기계획 자료의 수치 목표 슬라이드(30V·28M numerical targets)에 자동화율 목표는 없다(research/q6-sws-pdf.md). 17쪽 이미지 확인은 미완 (2026-10-09 Q5/Q6 정정).
 
 ## 원문 발췌
 > 2025-2026 基盤確立・現場実証 / 現場でのAIロボット実証実験開始 (raw: reference/raw/case--sws-2030vision-midterm-plan.txt, 573-577행)

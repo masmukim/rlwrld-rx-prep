@@ -27,6 +27,6 @@ lang: ja
 (raw: reference/raw/case--sumitomo-sws-local-automation.txt) — 같은 페이지가 "工数"(공수)와 "工程"(공정)을 구분해 쓴다. 15%는 "全工程の"로 서술된다.
 
 ## 메모
-- B2 핵심 근거: 업계 1위권 제조사가 "자동화율 = 고임금 지역 생산 가능성"으로 본다.
+- B2 핵심 근거: 자사 자료 기준 세계 점유율 1위(2025년도 21%, 제3자 미확인)인 제조사가 "자동화율 = 고임금 지역 생산 가능성"으로 본다 (2026-10-09 Q5/Q6 정정).
 - 자동화율의 정의(공수 기준인지 공정 수 기준인지)는 페이지에 없다. 정의 조사는 research/q3-sumitomo-automation-rate.md.
 - 영어판 URL: https://sumitomo.gr.jp/english/act/social-issue/sws (2026-10-09 열람).

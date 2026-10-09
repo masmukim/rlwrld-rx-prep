@@ -5,4 +5,5 @@
 - [PoC 사례 조사 노하우](poc-research-notes.md) — 열린/막힌 사이트, 검색 요약 주장 주의, KPI "목표 vs 달성" 확인
 - [Skild·住友電装 조사 노하우](skild-sumitomo-research-notes.md) — 일본 보도자료 PDF 찾기, WebSearch 요약 오류, 막힌 소스
 - [일본 기업 수치·정의 조사](japan-corporate-research-notes.md) — 住友 id 매거진·SEBN 시트 열림, 일영판 시제 불일치, 404/405 사이트
+- [住友電装 PDF 조사](sws-pdf-research-notes.md) — 일·영 짝 문서 해시 다름, 안내 HTML, qlmanage로 PDF 렌더, 영어판 중기계획
 - [논문·블로그 대조 읽기](paper-deep-read-notes.md) — arXiv html 저장, find.py 패턴, 렌더링 깨짐, 서술문 vs 표 불일치, 진행 점수 혼합
