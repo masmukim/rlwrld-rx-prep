@@ -2,3 +2,12 @@
 - [Competitor doc check method](feedback_competitor-check-method.md) — cherry-picked rates, budget scope, funding sum check
 - [Paper check method](feedback_paper-check-method.md) — arXiv abs fetch works; summarizer %p/relative verdicts unreliable
 - [Hardware doc check method](feedback_hardware-check-method.md) — citation-number vs spec mismatch, reseller price drift, pages that open
+- [Tech blog vs paper check method](feedback_tech-blog-paper-check-method.md) — k/n integer test, appendix trial counts, find.py 20-line cap
+- [Analysis tail check method](feedback_analysis-check-method.md) — payback formula omits consumable cost, find.py truncates long lines, no Grep tool
+- [Skild/PI check method](feedback_skild-pi-check-method.md) — sum only confirmed rounds, article-vs-blog subject swaps, same-raw price conflicts
+- [Cases check method](feedback_cases-check-method.md) — plan-vs-achieved, unsaved cited URLs, search-summary numbers, no-web raw check
+- [PoC case check method](feedback_poc-check-method.md) — generic price attributed to a customer, "within N months" upper bounds, quote and reference gaps
+- [Interview check method](feedback_interview-check-method.md) — conditional quotes flattened, quote trimming, article narration called "company announced"
+- [Customer table check method](feedback_customer-table-check-method.md) — investor≠customer count, citation-number mismatch, Grep tool missing, zsh echo pitfall
+- [Scoring check method](feedback_scoring-check-method.md) — weighted sums right but score vs criterion mismatch; zsh `===` and --include pitfalls
+- [Harness check method](feedback_harness-check-method.md) — arXiv version drift (v1 vs v3), datacenter-vs-harness board, duplicate source numbers, cut find.py lines

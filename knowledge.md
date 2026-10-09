@@ -80,11 +80,11 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 공개된 최고 성공률은 80~90%대에 몰려 있다(ACT, 공유 자율, RLDX-1). 평가 조건이 서로 달라 ROI의 현장 가동률 근거로 쓰지 않는다 [research/tech.md 5절]
 - 강화학습·교정 개입 결합(π*0.6, 일본 언론 전망)이 다음 흐름이다. RLDX-1도 post-training에 교정 데이터와 RECAP 기반 RL을 선택적으로 둔다(A11 정정, 효과 검증은 1과제) [reference/papers--pistar06-recap.md, reference/tech--xtech-il-rl.md]
 - arXiv 초록의 "N% 향상"은 상대인지 %p인지 구분되지 않는 경우가 많다. 본문 확인 전에는 "기준선 대비"까지만 쓴다 [A2 fact-check]
-- 한국 빈 일자리는 2025년에 줄었다(미충원 101,000명, -22,000명). 한국 제조 인력난은 "외국인력 497,000명(제조 외국인 취업자 44.8%) 의존" 구조로 서술하고, ROI 프레임은 미충원 해소보다 외국인력 의존 리스크 완화가 후보다(`추정`) [reference/market--moel-vacancy-2025h2.md, reference/market--korea-foreign-workers-2025.md]
+- 한국 빈 일자리는 2025년에 줄었다(미충원 101,000명, -22,000명). 한국 제조 인력난은 "제조업 외국인 취업자 497,000명(전체 외국인 취업자 대비 44.8%, 기사 인용·1차 미확인)" 구조로 서술하고, ROI 프레임은 미충원 해소보다 외국인력 의존 리스크 완화가 후보다(`추정`, 하네스 업종에서는 Q1이 미검증으로 판정) [reference/market--moel-vacancy-2025h2.md, reference/market--korea-foreign-workers-2025.md]
 - 서비스 로봇 통계는 이동·운반·청소형 중심이고 손 조작 업무는 따로 잡히지 않는다. RX의 미충족 영역은 통계가 아니라 공정 분해 인터뷰에서 찾는다 [reference/market--ifr-service-robots-2025.md]
 - 일본은 2025년 국내 로봇 출하 -8.9%, 신규 설치 -19%로 국내 수요가 약하다. 일본 고객에게는 "기존 FA 로봇으로 안 풀리는 잔여 인력"이 제안 포인트다(`추정`) [reference/market--jara-2025-stats.md, reference/market--ifr-industrial-robots-2026.md]
 - 촉각·힘을 VLA에 붙이는 시도는 RLDX-1(2026-05)보다 앞선 ForceVLA(2025-05)와 Tactile-VLA(2025-07)에서 이미 나왔다. RLDX-1의 차별점은 촉각 유무가 아니라 고자유도 손, 현장 데이터 파이프라인, 독립 검증 가능성으로 잡는다(본 문서의 해석) [reference/papers--forcevla.md, reference/papers--tactile-vla-arxiv-listing.md]
-- 산업 시나리오(케이블 하니스, 커넥터 삽입, 기어박스)를 명시한 공개 평가는 구성당 48회 시행 수준이고 78% 대 36%는 가동률이 아니다. B1 와이어 하니스 후보의 근거는 "확장 단계" 참고로만 쓴다 [reference/papers--industrial-dexterity-benchmark.md]
+- 산업 시나리오를 명시한 공개 평가(Industrial Dexterity Benchmark)는 구성당 48회 시행 수준이고, v3(2026-09-21) 기준 76% 대 36%(v1 초록은 78%)는 데이터센터 케이블 청소 보드(Board #1) 한 과제의 결과다. 자동차 하네스 보드(Board #2)는 설계만 있고 성능 결과가 없으며, 이 수치는 가동률이 아니다. B1 와이어 하니스 후보의 근거는 "확장 단계" 참고로만 쓴다 [reference/papers--industrial-dexterity-benchmark.md] (2026-10-09 fact-check 정정)
 - 일본에서는 GR00T 계열 PoC(ABEJA×村田製作所, 기사 기준)와 대형 로봇 3사의 VTLA 내재화가 함께 보인다. 일본 고객 제안에서 경쟁 또는 내재화 변수로 본다 [reference/tech--robotstart-abeja-murata.md, reference/tech--xtech-visuotactile-japan.md]
 - NVIDIA GR00T N1.7(2026-04)이 EgoScale과 같은 20,854시간 에고센트릭 데이터로 공개됐다. RLDX-1 벤치마크의 비교 상대(N1.6)는 이보다 한 세대 앞서므로 N1.7에는 적용되지 않는다 [reference/competitors--nvidia-groot-n17.md, A6 fact-check]
 - 다관절 손은 가격과 DoF가 비례하지 않고(20 DoF급에서 Allegro 약 $15,000 대 Shadow 약 $65,000~110,000, 모두 `추정`), 내구성 수치는 대부분 제조사 자체 시험이다. PoC 시험 항목에 "연속 N시간 가동"을 넣고 B3 ROI에서는 손·겔 교체 주기 비용을 변수로 둔다 [research/hardware.md, reference/papers--orca-hand.md]
@@ -96,7 +96,7 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - DeepMind 블로그는 같은 로봇의 전구 끼우기 36%와 빼기 92%를 함께 보고한다. 손 조작 수치는 같은 작업군의 최고값과 최저값을 같이 적고, 고객에게는 "어떤 작업에서 몇 회 시행한 수치인지"를 먼저 묻는다 [reference/competitors--deepmind-gemini-robotics-2.md, A3 fact-check]
 - (A11 정정) RLDX-1에는 교정 데이터와 RECAP 기반 RL이 있다. 다만 RL은 선택 사항이고 효과는 전구 돌리기 1과제의 자체 평가로만 확인된다. 위 "RL 단계가 확인되지 않는다"는 서술을 대체한다 [research/rldx1-tech.md, reference/papers--rldx1-tech-report.md]
 - 블로그 서술문("기준선 30% 미만, RLDX-1 거의 90%")은 블로그 Table 4(기준선 평균 39.1, 44.8)와 어긋나고, ALLEX 평균 86.8%에는 성공률이 아닌 진행 점수 과제 2개가 섞여 있다. 회사 수치는 논문 부록의 지표 정의와 시행 수를 확인한 뒤 쓴다 [research/rldx1-tech.md] (A11)
-- RLDX-1의 실세계 증거는 과제당 24회 시행, 과제별 시연 40~100개 fine-tune, 해당 모듈만 켠 모델이다. 촉각은 ALLEX가 아니라 Franka 그리퍼 플랫폼에서만 쓰였고, Plug Insertion은 8/24(33.3%, Wilson 95% 구간 약 18~53%, 계산)다. 하네스 PoC에 그리퍼 대조군과 완주율·단계 점수 분리가 필요한 근거다 [research/rldx1-tech.md] (A11)
+- RLDX-1의 실세계 증거는 ALLEX 4과제 과제당 24회 시행(FR3는 24회가 기본이나 일부 과제는 96회·54회 상호작용, Egg PnP 61.1%는 24회로 정수가 안 되어 시행 수 불명확), 과제별 시연 40~100개 fine-tune, 해당 모듈만 켠 모델이다. 촉각은 ALLEX가 아니라 Franka 그리퍼 플랫폼에서만 쓰였고, Plug Insertion은 8/24(33.3%, Wilson 95% 구간 약 18~53%, 계산)다. 하네스 PoC에 그리퍼 대조군과 완주율·단계 점수 분리가 필요한 근거다 [research/rldx1-tech.md] (A11)
 - Memory 모듈은 순서 추적을 맡고, 실수 복구는 post-training 교정 데이터가 맡는다. case/analysis.md 120행의 서술은 정정 필요하다 [research/rldx1-tech.md] (A11, 2026-10-07 반영 완료)
 - 정부 과제 예산은 컨소시엄 전체 금액이고 주관 기업별로 나뉘지 않는 경우가 많다(497억 원은 LG전자 컨소시엄 전체, KT 단독 아님) [reference/competitors--korea-msit-physical-ai-lg-kt.md]
 - 투자자 관계가 경쟁사에 걸쳐 있다(NVIDIA는 Figure와 Skild에, Mirae Asset은 RLWRLD 시드1과 Skild에 이름이 있음). 같은 법인인지는 미확인 [reference/competitors--figure-series-c.md, reference/competitors--skild-series-funding.md]
@@ -113,22 +113,27 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - 해외 사례의 첫 작업은 좁고 KPI가 숫자로 고정된 작업이다(Figure-BMW 판금 적재: 목표 84초, 99% 초과, 개입 0회. 달성값은 미공개). 확산까지 1~3년 [research/rx-cases.md] (A7, A10에서 "목표"로 정정)
 - (Q2 정정 2026-10-09) 住友電装는 2026-09-17 Skild와 하네스용 피지컬 AI 로봇 공동 개발을 시작했다(1차 소스). 대상 공정, 손 하드웨어, 일정, 성과는 미공개이고, 기존 "이미 자동화하고 있다"는 기사 표현이 1차보다 강했다. "레이업이 우리 차별점"은 Skild 범위가 미공개이므로 "우리가 그리퍼 대조군과 함께 검증하는 단계"로 쓴다 [research/q2-skild-sumitomo-harness.md, reference/case--sws-skild-joint-dev-release.md]
 - 지능 계층 회사의 두 갈래: PI는 연구 주도·소수 파트너·일부 가중치 공개·매출 비공개, Skild는 배포 주도·로봇 제조사(ABB, UR) 탑재·ARR 1억 달러. RLWRLD의 RX는 깊지만 느린 세 번째 길 [research/skild-pi-deep-dive.md] (A8)
-- 조달 규모: PI 약 21억 달러, Skild 20억 달러 이상, RLWRLD 4,100만 달러(약 50배 차이). LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
-- RLWRLD 경영진(CBO)의 프레임: "제조 자동화율 70~80%, 남은 20~30%가 손재주 작업". 경쟁력은 모델 코드가 아니라 숙련자 암묵지 데이터, 수집 방식, 배치 경험, 벤치마크(덱스벤치)다. B4 제안서의 "수작업 69%"와 같은 문제 정의 [reference/company--mk-cbo-interview-2026-10.md]
+- (2026-10-09 fact-check 정정) 조달 비교는 기준을 밝힌다. RLWRLD 누적 4,100만 달러 대 Skild 단일 라운드 약 14억 달러 = 약 34배(계산). 누적은 Skild 확인 하한 약 17억 달러(2024 시리즈A 3억 + 2026 시리즈C 14억, `추정`), PI 확정 라운드 합 약 10.7억 달러(미발표 시리즈C 포함 약 21억, `추정`)이며 확정 라운드만 합치면 Skild가 PI보다 크다. "약 50배", "Skild 20억 이상"은 폐기. LG는 RLWRLD와 Skild 모두에 투자했다 [research/skild-pi-deep-dive.md] (A8)
+- RLWRLD 경영진(CBO)의 프레임: "제조 현장 자동화율이 70~80% 수준이라고 보면 나머지 20~30%에 손재주 작업이 남는다"는 가정형 발언이며 통계가 아니다(분모·출처 없음, 69%와 병치하지 않는다). 경쟁력은 모델 코드가 아니라 숙련자 암묵지 데이터, 수집 방식, 배치 경험, 벤치마크(덱스벤치)다. 인터뷰 게재일은 raw 입력 표기 2026-09-08(확정 보류) [reference/company--mk-cbo-interview-2026-10.md] (2026-10-09 fact-check 정정)
 - RLWRLD는 RLDX-1의 가중치·코드·문서를 공개하면서도(비상업 라이선스) 표준(덱스벤치)과 현장 데이터로 해자를 만든다. 오픈소스 + 표준 + 데이터 전략 [reference/company--mk-cbo-interview-2026-10.md]
-- 투자자 = 첫 RX 고객 구조는 회사 발표로 확인된다(2026-02 "한국·일본 다수 투자자와 PoC·RX 진행 중"). CJ대한통운 CFO는 목표를 "RFM 공동 고도화 + 물류센터 자율운영 전환"으로 말해, 파트너십의 공동 모델 구조와 일치한다 [reference/company--unicornfactory-seed2.md]
+- 2026-02 기사 서술에 따르면 RLWRLD는 한국·일본 다수 투자자와 PoC·RX 프로젝트를 진행 중이었다(기자 서술). "투자자 = 첫 RX 고객" 구조는 본 팀 해석이다. CJ대한통운 CFO(이종훈)는 "물류 현장에 바로 적용 가능한 로봇 파운데이션 모델을 공동으로 고도화하고 물류센터의 AI 기반 자율운영 전환을 가속화해 나가겠다"고 말했다 [reference/company--unicornfactory-seed2.md] (2026-10-09 fact-check 정정)
 - 1차 보도자료도 KPI를 "목표"로만 쓰는 경우가 있다. 사례 수치는 목표와 달성값을 구분해 읽는다 (Figure-BMW 원문에는 달성값이 없음) [research/poc-playbook.md] (A10)
 - 확산 계획과 실적의 격차가 크다: 교촌 2023 청사진 1,300여 점 대 2026-07 25개 점·33대, CJ대한통운 "2026년부터 순차 적용" 대 2026-09 첫 투입 2대. PoC 제안은 확산 수량이 아니라 게이트(통과·중단 기준)로 표현한다 [research/poc-playbook.md] (A10, 해석)
 - CJ대한통운 2026-09 용인 투입에서 RLWRLD는 RFM 파트너로 명시됐고, 로보티즈(하드웨어)·에이딘로보틱스(핸드)와 함께 협업한다. RLWRLD 단독 성과는 미공개 [research/poc-playbook.md 7.2절] (A10)
 - 확산을 막는 요인은 기술 외적인 것이 많다: 값싼 대안(사람+소프트웨어, Walmart-Bossa Nova 5년 실험 종료), 신뢰성, 노사 수용성(현대차 노조 "노사합의 없이 1대도 안 된다") [research/poc-playbook.md 6절] (A10)
-- (Q4) 타사 첫 고객 24건 중 7건은 투자자·모회사·유통 파트너가 고객을 겸했고 RLWRLD 공개 고객 3곳도 같은 구조다. 첫 작업은 대부분 그리퍼로 되는 pick-and-place이며, 손 조작이 핵심인 첫 작업은 Foxconn 나사 체결과 住友電装 하네스(공동 개발 단계) 정도다 [case/candidates.md Q4.1]
-- (Q4) 첫 고객 점수 기준(제안) 7개로 매기면 관계 없는 하네스 신규 후보(矢崎 3.70, 경림테크형 3.40, 유라 3.30, 경신 3.10)는 기존 투자자 고객(3.95~4.15)보다 낮다. 관계가 없는 하네스사의 첫 유인은 정부 실증 재원, RLWRLD 랩 PoC, 숙련 데이터 권리 배분이다(모두 `추정`, 기준·가중치는 본 팀 제안) [case/candidates.md Q4.2~Q4.3]
+- (Q4, 2026-10-09 fact-check 정정) 타사 표 24행(공급사 기준, 고객 미공개 행 포함) 중 투자자·모회사가 고객인 경우는 확인 4건(Schaeffler–Agility, Mercedes–Apptronik, Hyundai 그룹–Boston Dynamics, Magna–Sanctuary), 유통 채널 1건(住友商事–Dexterity), 관계 추정 1건(KDDI–Telexistence)으로 최대 6건이다(NVIDIA는 투자자일 뿐 고객이 아님). RLWRLD 공개 고객 3곳(롯데, CJ대한통운, KDDI/Lawson)도 투자자·그룹사 구조다. 첫 작업은 대부분 그리퍼로 되는 pick-and-place이며, 손 조작이 결정적인 작업 사례는 Foxconn 나사 체결과 住友電装 하네스(공동 개발 단계) 정도다 [case/candidates.md Q4.1]
+- (Q4, 2026-10-09 fact-check 정정) 첫 고객 점수 기준(제안) 7개로 매기면 관계 없는 하네스 신규 후보(矢崎 3.70, 경림테크형·유라 3.30, 경신 3.10)는 기존 투자자 고객(KDDI 4.15, 롯데 4.10, CJ 3.95)보다 낮다. C1(투자 관계)을 빼면 矢崎(4.38)만 기존 고객보다 앞서고 경림·유라(3.88)는 롯데와 동점으로 KDDI(3.94)보다 낮다(이전 "경림 4.00이 KDDI보다 앞선다"는 폐기). C1 5점=투자자이면서 현장 접근 공개, 4점=투자만 있음. 첫 유인은 정부 실증 재원, RLWRLD 랩 PoC, 숙련 데이터 권리 배분이다(모두 `추정`, 기준·가중치는 본 팀 제안) [case/candidates.md Q4.2~Q4.3]
 - (Q4) 矢崎는 "지금은 휴머노이드가 필요 없다, 도입 이유는 숙련공 데이터 수집"이라 공개 발언했고 2029~2030년 숙련공 재현 피지컬 AI를 로드맵에 넣었다. RLWRLD의 암묵지 논리와 같으나 데이터를 자사 경쟁력으로 보므로 데이터 권리가 협상 쟁점이다 [reference/case--yazaki-ren-kurumanews.md]
 - (Q4) 일본 하네스·유연물 영역은 住友電装–Skild, 安川×SoftBank(VLA 하네스 상자 수납 실증), FA 3사 VTLA 등 여러 진영이 이미 들어와 있다. 한국 하네스사는 공개된 RFM 협력이 없어 상대적으로 비어 있다(해석) [reference/case--yaskawa-softbank-harness.md]
-- (Q4) KDDI는 RLWRLD와 Telexistence에 모두 투자했고 Lawson 지분 50%를 가진다. 투자자가 그룹사 현장을 여러 로봇사에 동시에 여는 구조라 기존 고객 안에서도 경쟁이 있다 [reference/company--kddi-lawson-50pct.md]
+- (Q4) KDDI는 RLWRLD와 Telexistence(시리즈 B)에 모두 투자했고 Lawson 의결권 50%(三菱商事와 각 50%)를 가진다. 투자자가 그룹사 현장을 여러 로봇사에 동시에 여는 구조라 기존 고객 안에서도 경쟁이 있다 [reference/company--kddi-lawson-50pct.md]
 - (Q1) 국내 하네스사의 국내 생산 인력은 작다(유라 2023 국내 생산직 668명, 국내외 합계의 2.8%, 계산). "국내 라인 수천 개 확산"은 근거가 없고 "국내 소수 라인 PoC → 해외 거점 확산"이 방어 가능하다(`추정`). 외국인력 의존 완화 프레임은 이 업종에서 미검증 [research/q1-harness-line-facts.md]
 - (Q3) 업계 대형사의 "자동화율"에는 분모가 없다. 15%·50%는 방향성 근거로만 쓰고 ROI 입력값이나 "수작업 69%"(작업장 수 기준)와 병치하지 않는다. 고객 킥오프에서 분모(직접 공수 SMH, 작업장 수)를 먼저 합의한다 [research/q3-sumitomo-automation-rate.md]
 - (Q2·Q3) 기사가 1차 소스의 시제를 강하게 바꾸는 패턴이 반복된다(Humanoids Daily "Automating" 대 Skild "working towards deploying", 住友 영어판 "has been increased" 대 일본어 "高められる"). 경쟁사·고객 사례는 1차 문장의 시제와 원어판까지 확인한다 [research/q2-skild-sumitomo-harness.md, research/q3-sumitomo-automation-rate.md]
+- (fact-check) Skild 매출은 조작(manipulation) 약 90%, Mobility 10%이다(회사 블로그 1차). "86%"는 폐기 [reference/competitors--skild-hidden-pillar.md]
+- (fact-check) Skild 고객 단계: Mitsui & Co.는 piloting(상업 주방 시범), 住友電装는 working towards deploying이다. 둘 다 배포 완료가 아니며 기사 표현 "Automating"은 1차보다 강하다 [reference/competitors--skild-hidden-pillar.md]
+- (fact-check) B2 예비 회수(손 구성 셀 395,584,000원, 기본 시나리오)는 5.7년이 손 교체비 제외 값이다. 손 1개를 연 1회 교체하면 약 10.6년, 2개면 약 77년, 2개를 3년 주기로 교체하면 약 8.2년이다. 속도비 0.5는 PoC의 기술 가능성 게이트이며 ROI 성립 기준이 아니다(회수 15.9년, 교체비 포함 시 음수). 5년 회수에는 연 순절감 약 7,912만 원이 필요하다. 손 교체 주기가 B3의 핵심 변수다 [case/analysis.md 7.5절]
+- (fact-check) 기사 속 "업계 일반 단가"를 특정 기업의 구매가로 옮기지 않는다(교촌 조리 로봇 2,000만 원·설치 포함 4,000만 원은 A 제조사 기준 업계 단가이고 교촌 구매가는 미공개). "N개월 내" 기간은 상한이라 두 값의 차이는 실제 간격이 아니다(Figure 4개월은 최대 약 4개월). 계획("300점 확대")을 달성으로 쓰지 않는다(Telexistence-FamilyMart) [research/poc-playbook.md, research/rx-cases.md]
+- (fact-check) 표의 비율값을 시행 수로 나눠 정수가 되는지 검산하면 원문 내부 모순을 잡는다(Egg PnP 61.1%는 24회로 불가). 한편 검증 에이전트(haiku)가 이미지 캡션을 놓쳐 "근거 없음"으로 잘못 판정한 사례가 있다(Skild 슬로건, FR3 카메라). "확인불가" 판정은 raw 재확인 후 반영한다 [research/rldx1-tech.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -194,3 +199,12 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] Skild 본사는 캘리포니아인가 피츠버그인가? (住友電装 릴리스와 기존 문서 불일치) (Q2)
 - [ ] 住友 분할 하네스(4~5모듈)와 e-STEALTH W/H 간선 하네스는 같은 개념인가? 2025 목표 이후 양산 상태는? (Q3)
 - [ ] 참고 라인의 작업장별 사이클 타임으로 "수작업 69%"를 공수 비중으로 환산하면 얼마인가? (논문 Fig. 7 필요) (Q3)
+- [ ] RLDX-1 논문 FR3 Egg PnP의 실제 시행 수(24회인가 72회인가)와 Spin Tracking 96회·Pong Game 54회의 출처 위치는? (A11)
+- [ ] Skild 2025년 라운드(시리즈B) 금액과 누적 총액은? (A8)
+- [ ] Dexterity–FedEx 협력의 시작 시점(2023 주장 미확인)과 Figure-BMW 시험·본 라인 투입의 정확한 월은? (A7, A10)
+- [ ] 참고 라인의 "lay-up 4"는 작업장이 늘어난 것인가 작업자만 늘어난 것인가? (논문 Figure 9, 11 필요) (B2)
+- [ ] 다관절 손의 현장 교체 주기와 유지보수비 중 손 교체 비중은? B3 회수 계산의 핵심 변수 (B2, B3)
+- [ ] 2027년 최저임금 고시 값은? 하한 시나리오 갱신에 필요 (B2)
+- [ ] 롯데그룹 국책 과제(롯데글로벌로지스)가 호텔 연회 백오피스 PoC의 정부 재원으로 이어지는가? 법인이 달라 C5 4점이 과대일 수 있다 (Q4)
+- [ ] Telexistence와 PI의 관계는 무엇인가? 편의점 영역에서 겹치는가? (Q4)
+- [ ] 매일경제 CBO 인터뷰의 실제 게재일은? raw 입력 표기는 2026-09-08 (A1)

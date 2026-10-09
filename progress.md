@@ -137,3 +137,17 @@
 - 산출물: 위 문서 각 위치에 "(2026-10-09 Q 정정)" 표시
 - 다음: 범위 밖으로 남긴 3건 처리 여부 결정: (1) b4-proposal 4장 94행 "Skild가 사이클 타임과 배포 실적에서 앞서 있다" 근거 미확인, (2) b4 2장·deck 2장 출처 "[3] 住友電工"는 실제로 住友グループ広報委員会 페이지(住友電装 내용), (3) deck-storyline 6장 리스크 표에 "국내 소수 라인 PoC → 해외 거점" 미반영. skild-pi-deep-dive 5절 4번의 "住友電装·Mitsui" 단계 구분(Mitsui piloting)도 미정정. B3 착수 전 B2 fact-check 필요
 - 이슈: 정정은 메인이 지시하고 담당 에이전트가 수정(case-analyst, researcher). Q1~Q3 fact-check 미실시(사용자 지시)
+
+## 2026-10-09 17:30 | main | fact-check 일괄 (A1 보강, A7, A8, A10, A11, B2, Q4)
+- 한 일: fact-check가 밀린 7건을 haiku fact-checker 9개로 병렬 검증(보고만) 후 담당 에이전트(case-analyst, researcher, sonnet)가 정정. Q1~Q3는 사용자 지시로 제외. 주요 정정:
+  - 조달 비교: "약 50배", "PI 21억(보도)", "Skild 20억 이상" 폐기. 단일 라운드 약 34배(계산), 누적은 Skild 하한 약 17억·PI 확정 약 10.7억(`추정`). 확정 라운드만 합치면 Skild가 PI보다 큼
+  - Skild 매출 86%→약 90%(1차). Mitsui는 piloting, 住友電装는 working towards deploying
+  - B2 7.5절 회수에 손 교체비 누락: 기본 5.7년은 교체비 제외 값, 손 1개 연 1회 교체 시 약 10.6년, 2개 약 77년. 속도비 0.5는 기술 가능성 게이트이며 ROI 기준 아님
+  - 산업 벤치마크 78%→v3 76%, 데이터센터 케이블 청소 보드(Board #1) 결과이며 하네스 보드는 성능 결과 없음
+  - Q4: "투자자 겸 고객 7건"→확인 4+유통 1+추정 1(최대 6건). C1·C5 기준 확정 후 재채점(롯데 4.10, LG 3.35, 경림테크형 3.30). C1 제외 시 경림이 KDDI보다 앞선다는 결론 폐기
+  - A1 보강: CFO 인용 원문화, Headline Asia 역할 추론 삭제, CBO 70~80%는 가정형 발언(통계 아님), CBO 인터뷰 게재일 raw 입력 2026-09-08
+  - A10: 교촌 4,000만 원은 업계 단가(교촌 구매가 아님). Figure 4개월은 상한, CJ 약 11~12개월. 검색 요약 전용 항목 수치 삭제
+  - A11: Mid-training 가중치 서술, Egg PnP 61.1% 시행 수 불명확, "과제당 24회"는 ALLEX 한정
+- 산출물: research/ 6개(skild-pi-deep-dive, rx-cases, competitors, poc-playbook, rldx1-tech, company, papers), case/ 4개(candidates, analysis, b4-proposal, deck-storyline), reference 정정 4건·신규 1건, knowledge.md
+- 다음: B3 착수 가능(B2 fact-check 완료). 입력은 case/analysis.md 7절(손 교체비 반영 후). 사용자 피딩 자료(manual-research.md 5·6절)가 들어오면 가정값 갱신. 남은 `확인필요`: 레이업 lay-up 4 해석, 손 교체 주기, 2027 최저임금, 住友電装 C5 점수 재검토, 롯데 C5 4점 과대 여부
+- 이슈: haiku 검증 에이전트가 이미지 캡션을 놓친 오판 2건(Skild 슬로건, FR3 카메라)이 있어 정정 단계에서 raw 재확인으로 걸러냄. A11 검증과 Q1 조사 에이전트가 턴 한도에서 멈춰 SendMessage로 이어서 완료. A2~A6 fact-check는 이전에 완료

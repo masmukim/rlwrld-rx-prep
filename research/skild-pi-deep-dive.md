@@ -1,10 +1,10 @@
 # 심층 분석: Skild AI와 Physical Intelligence
-조사일: 2026-10-07
+조사일: 2026-10-07 (2026-10-09 fact-check 정정 반영)
 
 ## 핵심 요약
-- **둘 다 RLWRLD와 같은 "지능 계층" 회사지만 전략은 정반대다.** Physical Intelligence(PI)는 연구 주도형으로, 소수의 파트너와 깊게 일하고 일부 모델을 공개하며 공개된 매출이 없다. Skild AI는 배포 주도형으로, ABB·Universal Robots 같은 로봇 제조사(OEM)를 유통 채널로 삼아 상업 배포 10개월 만에 연 반복 매출(ARR) 1억 달러, 유료 고객 60곳 이상을 보고했다 [S2][P2][P5].
-- **우리 B2 케이스와 직접 겹친다.** Skild는 B2에서 업계 1위권 근거로 인용한 **住友電装(Sumitomo Wiring Systems)와 2026-09-17 하네스 제조용 피지컬 AI 로봇 공동 개발을 시작**했다 [S6][S7]. 대상 공정, 로봇·핸드·센서, 일정, 성과는 미공개다. 기사(Humanoids Daily)의 "Automating"은 1차 소스("working towards deploying")보다 강한 표현이다 (2026-10-09 Q2 정정, research/q2-skild-sumitomo-harness.md). 또 Skild S1은 "영상 1개로 새 작업을 몇 분 안에 배운다"고 주장해, 우리가 RLWRLD의 강점으로 내세운 "시연 몇 개로 새 품번 적응"과 같은 영역을 노린다 [S2][S3].
-- **규모 격차가 크다.** PI는 약 21억 달러, Skild는 20억 달러 이상을 조달했다. RLWRLD 누적 4,100만 달러의 약 50배다. RLWRLD가 이길 곳은 범용성 경쟁이 아니라 **다섯 손가락 정밀 조작, 한국·일본 산업 데이터, RX 컨설팅의 깊이**로 좁혀야 한다 [P1][S4][A1].
+- **둘 다 RLWRLD와 같은 "지능 계층" 회사지만 전략은 정반대다.** Physical Intelligence(PI)는 연구 주도형으로, 소수의 파트너와 깊게 일하고 일부 모델을 공개하며 공개된 매출이 없다. Skild AI는 배포 주도형으로, ABB·Universal Robots 같은 로봇 제조사(OEM)를 유통 채널로 삼아 상업 배포 10개월 만에 연 반복 매출(ARR) 1억 달러, 유료 고객 60곳 이상을 보고했다(회사 주장, 독립 검증 없음) [S7][S2]. (2026-10-09 fact-check 정정: 출처를 Skild 1차 블로그 [S7]로 바꾸고 PI 기사 [P2][P5]는 제외)
+- **우리 B2 케이스와 직접 겹친다.** Skild는 B2에서 대형 제조사 사례로 인용한('업계 1위권'은 근거가 없어 고침, 2026-10-09 fact-check 정정) **住友電装(Sumitomo Wiring Systems)와 2026-09-17 하네스 제조용 피지컬 AI 로봇 공동 개발을 시작**했다 [S6][S7]. 대상 공정, 로봇·핸드·센서, 일정, 성과는 미공개다. 기사(Humanoids Daily)의 "Automating"은 1차 소스("working towards deploying")보다 강한 표현이다 (2026-10-09 Q2 정정, research/q2-skild-sumitomo-harness.md). 또 Skild S1은 "영상 1개로 새 작업을 몇 분 안에 배운다"고 주장해, 우리가 RLWRLD의 강점으로 내세운 "시연 몇 개로 새 품번 적응"과 같은 영역을 노린다 [S2][S3].
+- **규모 격차가 크다. 단, 배수는 기준을 밝혀야 한다 (2026-10-09 fact-check 정정).** RLWRLD 누적 4,100만 달러 대비 Skild 단일 라운드(2026-01 시리즈 C 14억 달러)는 약 34배(14억/0.41억, 계산)다. 누적 기준 Skild는 확인되는 하한이 약 17억 달러(2024 시리즈 A 3억 + 2026 시리즈 C 14억, 2025 라운드 미확인, `추정`)로 약 40배 이상(`추정`)이다. PI는 확정 라운드 합 약 10.7억 달러(`추정`), 미발표 시리즈 C 약 10.5억 달러를 포함하면 약 21억 달러(`추정`)이며, 확정 라운드만 합치면 Skild(약 17억 이상)가 PI(약 10.7억)보다 크다. RLWRLD가 이길 곳은 범용성 경쟁이 아니라 **다섯 손가락 정밀 조작, 한국·일본 산업 데이터, RX 컨설팅의 깊이**로 좁혀야 한다 [P1][S4][S5][A1].
 
 ## 1. 회사 개요
 
@@ -12,9 +12,9 @@
 |------|---------------------------|----------|---------------|
 | 설립·본사 | 2024, 샌프란시스코 | 피츠버그 (기존 표기). 住友電装 릴리스는 미국 캘리포니아주로 표기 [S6] — 불일치, 미해결 (2026-10-09 Q2 정정) | 2024-07, 서울·샌프란시스코·도쿄 |
 | 창업자 | Karol Hausman, Sergey Levine, Chelsea Finn, Brian Ichter 등 (Google DeepMind, Stanford, UC Berkeley 출신) [P1] | Deepak Pathak, Abhinav Gupta (CMU 출신) [S2] | 류중희 |
-| 투자 | 2024 4억 달러(기업가치 약 24억 달러), 2025-11 6억 달러(56억 달러, CapitalG 주도), 2026 10억 달러 규모 협상(110억 달러) 보도. 누적 약 21억 달러(보도) [P1][P6] | 2025 중반 기업가치 45억 달러, **2026-01 시리즈 C 14억 달러(140억 달러 이상, SoftBank 주도, NVIDIA, Bezos, Samsung, LG, Schneider, Salesforce Ventures 참여)**. 누적 20억 달러 이상 [S4] | 누적 4,100만 달러 (research/company.md) |
-| 정체성 | "로봇과 물리 장치를 제어하는 머신러닝 모델" 개발. 하드웨어를 만들지 않음 [P1] | "움직이는 모든 기계를 제어하는 통합 파운데이션 모델". 슬로건 "any robot, any task, one brain" [S1] | "Dexterity is Intelligence", 다섯 손가락 조작 특화 |
-| 상업화 | 공개된 상용 제품·매출 없음(보도) [P3] | **ARR 1억 달러(상업 배포 10개월), 유료 고객 60곳 이상**, 매출의 약 86%가 조작(manipulation) 작업 [S2] | 공개 매출 없음. RX → PoC → 파트너십 |
+| 투자 | 2024 4억 달러(기업가치 약 24억 달러), 2025-11 6억 달러(56억 달러, CapitalG 주도), 2026 10억 달러 규모 협상(110억 달러) 보도 [P1][P6]. **누적은 `추정`:** 확정 라운드 합 약 10.7억 달러(시드 약 0.7 + 시리즈 A 4 + 시리즈 B 6, 2차 집계), 미발표 시리즈 C 약 10.5억 달러를 포함하면 약 21억 달러 (research/competitors.md 3절; 2026-10-09 fact-check 정정: "(보도)" 표기 삭제, `추정` 표기) | 2024-07 시리즈 A 3억 달러(기업가치 15억 달러, Contrary 보고서 [S5]), **2026-01 시리즈 C 14억 달러(140억 달러 이상, SoftBank 주도, NVIDIA, Bezos, Samsung, LG, Schneider, Salesforce Ventures 참여)** [S4]. 누적은 확인되는 하한 약 17억 달러(시리즈 A + 시리즈 C, 2025 라운드와 시리즈 B 금액 미확인, `추정`). "2025 중반 기업가치 45억 달러"는 시리즈 C 보도의 "3배 상승"에서 역산한 `추정`이며 직접 근거가 없어 `확인필요` (2026-10-09 fact-check 정정) | 누적 4,100만 달러 (research/company.md) |
+| 정체성 | "로봇과 물리 장치를 제어하는 머신러닝 모델" 개발. 하드웨어를 만들지 않음 [P1] | "움직이는 모든 기계를 제어하는 통합 파운데이션 모델". 슬로건 "any robot, any task, one brain" (S1 블로그 원문에서 확인) [S1] | "Dexterity is Intelligence", 다섯 손가락 조작 특화 |
+| 상업화 | 공개된 상용 제품·매출 없음(보도) [P3] | **ARR 1억 달러(상업 배포 10개월), 유료 고객 60곳 이상**(회사 주장 [S7][S2]), 매출의 약 90%가 조작(manipulation), Mobility 10%(회사 블로그, 1차 [S7]) (2026-10-09 fact-check 정정: 기존 "약 86% [S2]") | 공개 매출 없음. RX → PoC → 파트너십 |
 
 ## 2. Physical Intelligence: 연구 주도형
 
@@ -22,15 +22,15 @@
 | 시기 | 모델 | 핵심 | 근거 |
 |------|------|------|------|
 | 2024-10 | π0 | VLM + flow matching, 다양한 로봇 데이터 | research/tech.md |
-| 2025-02 | openpi 공개 | π0 코드(Apache 2.0)와 가중치, 미세조정 도구 공개. π0.5 기본 가중치는 2025-09 공개, 그 이후 모델은 가중치 비공개 | [P3] |
+| 시기 `확인필요` | openpi 공개 | π0 코드와 가중치, 미세조정 도구 공개. 공개 날짜, 라이선스, π0.5 가중치 공개 시점, 이후 모델 가중치 비공개 여부는 검색 요약(Red Hat 분석)뿐이라 `확인필요(1차 미저장)` (2026-10-09 fact-check 정정: 기존 "2025-02, Apache 2.0, π0.5 가중치 2025-09" 삭제) | [P3] |
 | 2025-04 | π0.5 | 이종 데이터 공동 학습으로 처음 보는 가정에서 작업 | research/tech.md |
-| 2025-11 | π*0.6 (RECAP) | 시연 + 전문가 교정 + 자율 시도 강화학습. 어려운 작업에서 처리량 2배 이상, 실패 절반 이하. 에스프레소 18시간 연속, 새 세탁물 50벌, 공장 상자 59개 조립 | [P4] |
+| 2025-11 | π*0.6 (RECAP) | 시연 + 전문가 교정 + 자율 시도 강화학습. 가장 어려운 작업에서 처리량 2배 이상, 실패율 약 50% 감소(**저자 자체 평가**, 작업별 조건 미확인). 세부 시연 수치(에스프레소 연속 시간, 세탁물 벌 수, 상자 개수)는 reference 근거가 없어 삭제 (2026-10-09 fact-check 정정) | [P4] (reference/papers--pistar06-recap.md) |
 | 2026-02 | π0.6 배포 데이터 공개 | 파트너 하드웨어 위 실제 운영 데이터 (아래 2.2) | [P2] |
-| 2026-04-16 | **π0.7** | 5B 파라미터. **조합적 일반화**(배운 개념을 섞어 처음 보는 작업 수행), 셔츠 접기 데이터가 없던 양팔 UR5e에서 셔츠 접기, 말로 코칭해 새 가전 사용. 단일 모델이 RL로 특화한 π*0.6과 같거나 나은 성능 | [P5] |
+| 2026-04-16 | **π0.7** | **조합적 일반화**(서로 다른 맥락의 기술을 조합해 처음 보는 작업 수행). 기사 사례: 학습 에피소드가 2개뿐인 에어프라이어 작업을 단계별 말 지시로 성공. 한계(기사): 복합 다단계 작업은 자율 수행 못 하고, 외부 검증용 표준 벤치마크가 없으며, 프롬프트에 따라 성공률이 5%에서 95%까지 달라짐 (reference/competitors--pi-pi07-techcrunch.md). 파라미터 수(5B), 사용 로봇(UR5e), 셔츠 접기 사례, π*0.6 대비 성능은 reference 근거가 없어 `확인필요(1차 미저장)` (2026-10-09 fact-check 정정) | [P5] |
 
 ### 2.2 파트너 배포 (2026-02 공개)
-- **Weave Robotics (세탁물 개기, 7,999달러 고정형 기계 Isaac 0):** π0.5 → π0.6 전환으로 전체 시간 대비 자율 비율 증가. Weave 데이터를 사전학습에 넣자 집기 실패 42% 감소, 세탁물 1회분당 원격 조작자 개입 50% 감소 [P2].
-- **Ultra Robotics (전자상거래 포장, 양팔 고정형 OP1):** Ultra 데이터로 미세조정한 π0.6이 포장 처리량(시간당 품목 수)을 크게 높임. 작업을 하위 작업으로 나누고, 실패 상황에서 더 다양한 복구 전략을 고름 [P2].
+- **Weave Robotics (세탁물 개기, 고정형 기계 Isaac 0):** π0.5 → π0.6 전환으로 전체 시간 대비 자율 비율 증가. Weave 데이터를 사전학습에 넣자 집기 실패 42% 감소. 세탁물 1회분당 원격 조작자 개입 50% 감소는 **Weave 데이터로 특화 학습했을 때의 수치**이며, 42%(사전학습에 Weave 데이터 추가)와는 다른 조건이다. 둘 다 2차 기사(Humanoids Daily) 기준이다 [P2]. Isaac 0 가격은 같은 기사 안에서 7,999달러와 9,999달러가 충돌해 삭제한다 (2026-10-09 fact-check 정정).
+- **Ultra Robotics (전자상거래 포장, 양팔 고정형 OP1):** Ultra 데이터로 미세조정한 π0.6이 포장 처리량(시간당 품목 수)을 크게 높임(정량 미확인). 작업을 하위 작업으로 나누고, 실패 상황에서 더 다양한 복구 전략을 고름 [P2].
 - **Telexistence (일본 편의점 음료 보충):** 2025-06 파트너십 발표 (research/rx-cases.md).
 - 자체 시험: 샌프란시스코 단기 임대 숙소의 세탁물 개기, Dandelion Chocolate 백룸 상자 접기 [P1].
 
@@ -45,16 +45,16 @@
 - **Skild Brain:** 다양한 로봇 형태를 하나의 모델로 제어하는 "omni-bodied" 모델. 여러 로봇의 데이터를 한 모델에 모으는 데이터 플라이휠을 노린다 [S1].
 - **사전학습 데이터:** "인터넷 규모의 로봇 데이터가 없다"는 문제를 **인터넷 인간 영상 + 대규모 시뮬레이션**으로 푼다. NVIDIA Isaac Lab·Sim으로 물리 시뮬레이션, Cosmos로 합성 데이터 [S1].
 - **현장 적용:** 기본 모델을 적은 작업 데이터로 미세조정(post-training). 데이터가 "꼭 실로봇에서 나올 필요는 없다"고 밝힘 [S1].
-- **S1 (2026-08):** 가중치 업데이트 없이 **영상 1개를 보여 주면 몇 분 안에 새 공정을 수행**하는 시각적 in-context learning. 처음 보는 다단계 작업에서 단계 성공률 66%, 이는 텔레오퍼레이션 약 380회로 얻던 수준과 같다고 주장 [S2][S3].
+- **S1 (2026-08):** 가중치 업데이트 없이 **영상 1개를 보여 주면 몇 분 안에 새 공정을 수행**하는 시각적 in-context learning. 처음 보는 다단계 작업에서 단계 성공률 66%, 이는 텔레오퍼레이션 약 380회로 얻던 수준과 같다고 주장 [S2][S3]. 380회는 측정점 사이를 보간해 얻은 **회사의 보간 추정**이다 (Skild S1 블로그: "exact crossing was estimated by interpolating between measured points") (2026-10-09 fact-check 정정).
 - **"Physical RSI":** 현장에 배포 → 예외 상황 데이터 수집 → 특화 학습 결과를 기본 모델로 증류하는 순환 [S2].
 
 ### 3.2 고객과 배포
 | 고객 | 작업 | 공개 결과 | 근거 |
 |------|------|-----------|------|
-| **Foxconn + NVIDIA** (휴스턴) | Blackwell 서버 조립: 버스바 배치 → 리밋 블록 → 나사 16개 연속 체결 → 리밋 블록 제거. 양팔, 힘 제한 접촉 제어, 수 분짜리 장기 작업을 in-context 메모리로 수행 | 설계 변경을 재프로그래밍 없이 흡수한다고 주장. 정량 성공률 미공개 | [S1][S2] |
+| **Foxconn + NVIDIA** | Blackwell 서버 조립: 버스바 배치 → 리밋 블록 → 나사 16개 연속 체결 → 리밋 블록 제거. 양팔, 힘 제한 접촉 제어, 수 분짜리 장기 작업을 in-context 메모리로 수행 (2026-10-09 fact-check 정정: 근거 없는 "휴스턴" 삭제) | 설계 변경을 재프로그래밍 없이 흡수한다고 주장. 정량 성공률 미공개 | [S1][S2] |
 | **住友電装 (Sumitomo Wiring Systems)** | **하네스 제조용 피지컬 AI 로봇 공동 개발 개시 (2026-09-17)**. 1차 소스는 "S1 도입, 공동 개발"(住友電装)과 "working towards deploying"(Skild 블로그)이며 배포 완료가 아님. 대상 공정, 로봇·핸드·센서(end-effector 포함), 일정, 성과는 모두 미공개. 기사 [S2]의 "Automating"은 1차보다 강한 표현. 고객 배포 완료 사례로 분류하지 않음 (2026-10-09 Q2 정정) | 결과 미공개 | [S6][S7][S2] |
-| Mitsui & Co. (AIM Services) | 단체급식 접시 담기. AIM은 하루 약 140만 식 제공 | 결과 미공개 | [S2] |
-| G10 Fulfillment | 전자상거래 피킹·포장 | **시간당 50라인 → 130~140라인** (G10 COO 발언) | [S2] |
+| Mitsui & Co. (AIM Services 등 공급망) | 단체급식 주방에서 S1 기반 범용 로봇 **시범 운영(piloting, 1차 [S7])**. 하루 약 140만 식은 Mitsui 공급망 전체의 수치이며 로봇이 처리하는 양이 아님. 기사 [S2]는 "Automating ... plating lines"로 더 강하게 표현 (2026-10-09 fact-check 정정) | 결과 미공개 | [S7][S2] |
+| G10 Fulfillment | 전자상거래 피킹·포장 | **시간당 50라인 → 130~140라인** (G10 COO 발언). 단일 기사 [S2]에만 있고 1차 미확인, `확인필요` (2026-10-09 fact-check 정정) | [S2] |
 | STN Inc. | 데이터센터 점검 | - | [S2] |
 | ABB, Universal Robots, MiR (2026-03) | **로봇 제조사 포트폴리오에 Skild Brain 탑재** | 파트너십 단계 | [S1] |
 
@@ -72,19 +72,19 @@
 | 데이터 | 파트너 운영 데이터 + 자체 수집 | 인간 영상 + 시뮬레이션 + 고객 현장 | 에고센트릭 + 텔레오퍼레이션 + 합성, 고객 공동 데이터 |
 | 새 작업 적응 | 언어 코칭, 조합적 일반화 (π0.7) | 영상 1개 in-context (S1) | 소량 시연 미세조정 (회사 주장) |
 | 유통 | 소수 파트너 직접 협업 | **로봇 제조사 탑재** + 기업 직접 | **RX(컨설팅)** → 랩 PoC → 다년 파트너십 |
-| 일본·한국 | Telexistence(일본) | 住友電装, Mitsui(일본), 투자자 Samsung·LG | KDDI·Lawson(일본), 롯데·CJ·LG·SK(한국) |
-| 상업화 | 매출 비공개 | ARR 1억 달러 | 매출 비공개 |
-| 공개 정책 | π0, π0.5 가중치 공개 | 비공개 | 코드 공개, 가중치 비상업 라이선스 |
+| 일본·한국 | Telexistence(일본) | 住友電装(공동 개발 개시, "working towards deploying" 단계), Mitsui(S1 기반 시범 운영 piloting 단계), 투자자 Samsung·LG (2026-10-09 fact-check 정정: 단계 구분) | KDDI·Lawson(일본), 롯데·CJ·LG·SK(한국) |
+| 상업화 | 매출 비공개 | ARR 1억 달러 (회사 주장) | 매출 비공개 |
+| 공개 정책 | π0, π0.5 가중치 공개 (`확인필요`, 1차 미저장 [P3]) | 비공개 | 코드 공개, 가중치 비상업 라이선스 |
 
 ## 5. 비판적 시사점 (RLWRLD와 우리 케이스)
 
 1. **하네스 케이스의 차별점을 다시 세워야 한다.** Skild와 住友電装는 2026-09-17 하네스 로봇 공동 개발을 시작했다 (이미 자동화 중이라는 1차 근거는 없음, 2026-10-09 Q2 정정). B2 스토리라인의 "시연으로 새 품번을 배우는 범용 셀"은 Skild S1의 주장과 같다. Skild의 대상 공정과 end-effector가 미공개이므로 "레이업은 Skild가 못 하는 단계"라고 말할 수 없다. 다섯 손가락 + 촉각이 필요한 단계(레이업의 전선 훑기·분기 정리)는 RLWRLD의 가설이며, 우리가 그리퍼 대조군과 함께 검증하는 단계다. 그래서 B2의 B트랙(손이 꼭 필요한지 검증)이 핵심이 된다. 그리퍼 대조군에서 손이 이기지 못하면 RLWRLD는 Skild와 가격으로 경쟁하게 된다.
 2. **사이클 타임이 승부처라는 B2 결론은 Skild도 같은 말을 한다.** "99.9% 정확해도 10배 느리면 배포 불가." B2 ROI의 1순위 변수(속도비)와 일치한다. RLWRLD 공개 수치에는 사이클 타임이 없다. 고객 제안에서 이 공백을 먼저 채워야 한다.
 3. **유통 경로의 차이가 확장 속도를 가른다.** Skild는 ABB·UR 같은 로봇 제조사를 통해 이미 깔린 로봇에 들어간다. RLWRLD의 RX는 고객마다 진단부터 시작하므로 깊지만 느리다. RLWRLD도 하드웨어 파트너(레인보우로보틱스, 원익로보틱스, 로보티즈, 위로보틱스)를 **OEM 탑재 채널**로 쓸 수 있는지가 중요한 질문이다.
-4. **일본은 이미 경쟁 시장이다.** RLWRLD가 도쿄 거점과 KDDI로 공략하는 일본에서 Skild는 住友電装·Mitsui, PI는 Telexistence와 일한다. "한국 AI + 일본 제조 데이터"라는 RLWRLD의 서사는 독점이 아니다.
+4. **일본은 이미 경쟁 시장이다.** RLWRLD가 도쿄 거점과 KDDI로 공략하는 일본에서 Skild는 住友電装(공동 개발 개시 단계, "working towards deploying")·Mitsui(S1 기반 시범 운영 piloting 단계), PI는 Telexistence와 일한다. 두 일본 고객 모두 배포 완료가 아니라는 점을 구분한다 (2026-10-09 fact-check 정정). "한국 AI + 일본 제조 데이터"라는 RLWRLD의 서사는 독점이 아니다.
 5. **한국 대기업 관계도 독점이 아니다.** LG는 RLWRLD 시드 투자자이면서 Skild 시리즈 C에도 참여했다. Samsung도 Skild 투자자다.
-6. **규모 격차를 전제로 전략을 세워야 한다.** 조달액이 약 50배 차이다. 범용 모델 경쟁으로는 이기기 어렵고, 손 조작이 결정적인 공정과 한국·일본 현장 데이터를 깊게 쌓는 쪽이 현실적이다. 면접에서 이 격차를 알고 있다고 말하는 것 자체가 신뢰를 높인다.
-7. **두 회사의 수치도 대부분 자체 발표다.** Skild의 ARR·고객 수, PI의 개입 50% 감소 모두 회사 발표나 언론 보도이고 독립 검증은 없다. RLWRLD의 86.8%를 "자체 평가"로 표시한 것과 같은 기준으로 다뤄야 한다.
+6. **규모 격차를 전제로 전략을 세워야 한다.** 단일 라운드 기준 Skild 14억 달러는 RLWRLD 누적 0.41억 달러의 약 34배(계산)이고, 누적 하한 약 17억 달러 기준으로는 약 40배 이상(`추정`)이다. PI는 확정 라운드 합 약 10.7억 달러(`추정`) 또는 미발표 시리즈 C 포함 약 21억 달러(`추정`)로, 확정 라운드만 보면 Skild가 PI보다 크다 (2026-10-09 fact-check 정정: 기존 "약 50배" 삭제). 범용 모델 경쟁으로는 이기기 어렵고, 손 조작이 결정적인 공정과 한국·일본 현장 데이터를 깊게 쌓는 쪽이 현실적이다. 면접에서 이 격차를 알고 있다고 말하는 것 자체가 신뢰를 높인다.
+7. **두 회사의 수치도 대부분 자체 발표다.** Skild의 ARR·고객 수, PI의 개입 50% 감소(Weave 데이터로 특화 학습했을 때의 수치, 2차 기사) 모두 회사 발표나 언론 보도이고 독립 검증은 없다. RLWRLD의 86.8%를 "자체 평가"로 표시한 것과 같은 기준으로 다뤄야 한다.
 
 ## RX 관점 시사점
 - **B4 스토리라인에 반영 제안:** ① 경쟁 장에 "Skild × 住友電装 하네스 공동 개발 개시(2026-09-17, 범위 미공개)"를 넣고, 레이업(손이 필요한 단계)은 차별점 주장이 아니라 그리퍼 대조군과 함께 검증할 가설로 둠 (2026-10-09 Q2 정정) ② PoC KPI의 1순위를 사이클 타임(속도비)으로 유지 ③ 확산 시나리오에 하드웨어 파트너 탑재 경로 추가
@@ -96,19 +96,22 @@
 - Skild의 가격·계약 구조, 住友電装 프로젝트의 범위와 결과, Foxconn 셀의 성공률과 사이클 타임
 - Skild의 손 하드웨어 (다관절 손을 쓰는지, 그리퍼인지)
 - PI의 Series C 실제 체결 여부 (보도와 등기 기반 추정만 있음)
+- Skild 2025년 라운드(시리즈 B)의 금액과 2025 중반 기업가치 (2026-10-09 fact-check 정정: 누적 17억 달러는 하한)
+- openpi 공개 날짜·라이선스, π0.7의 파라미터 수·사용 로봇·셔츠 접기 사례 (1차 미저장)
+- G10 Fulfillment 처리량 50 → 130~140라인 (단일 기사)
 
 ## 출처
 - [S1] [The Reindustrial Revolution: Partnering with ABB Robotics, Universal Robots, and NVIDIA](https://www.skild.ai/blogs/reindustrial-revolution) - Skild AI, 2026-03-19, 1차, (en) (raw: reference/raw/competitors--skild-reindustrial.txt)
 - [S2] [Skild AI Crosses $100M ARR in 10 Months](https://www.humanoidsdaily.com/news/skild-ai-crosses-100m-arr-in-10-months-mounting-an-enterprise-assault-on-robotics-demo-culture) - Humanoids Daily, 2026-09, 기사(창업자 에세이 인용 포함), (en) (raw: reference/raw/competitors--skild-arr-humanoidsdaily.txt)
 - [S3] [Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video](https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/) - NVIDIA Blog, 2026, 기사, (en) (raw: reference/raw/competitors--skild-s1-nvidia.txt)
-- [S4] [Skild AI Raises $1.4B, Now Valued Over $14B](https://www.businesswire.com/news/home/20260114335623/en/Skild-AI-Raises-$1.4B-Now-Valued-Over-$14B) - Business Wire, 2026-01-14, 1차(보도자료, 검색 요약), (en)
+- [S4] [Skild AI Raises $1.4B, Now Valued Over $14B](https://www.businesswire.com/news/home/20260114335623/en/Skild-AI-Raises-$1.4B-Now-Valued-Over-$14B) - Business Wire, 2026-01-14, 1차(보도자료, 검색 요약), (en) (reference/competitors--skild-series-funding.md)
 - [S5] [Report: Skild AI Business Breakdown](https://research.contrary.com/company/skild-ai) - Contrary Research, 분석 보고서, (en) (raw: reference/raw/competitors--skild-contrary.txt)
 - [P1] [Physical Intelligence Inc.](https://en.wikipedia.org/wiki/Physical_Intelligence_Inc.) - Wikipedia, 2026-10-07 열람, (en) (raw: reference/raw/competitors--pi-wikipedia.txt)
 - [P2] [The API-fication of Robotics: PI Unveils Real-World Performance Data with Weave and Ultra](https://www.humanoidsdaily.com/news/the-api-fication-of-robotics-physical-intelligence-unveils-real-world-performance-data-with-weave-and-ultra) - Humanoids Daily, 2026-02, 기사, (en) (raw: reference/raw/competitors--pi-weave-ultra-humanoidsdaily.txt)
-- [P3] [Physical Intelligence platform intel](https://github.com/redhat-et/physical-ai-platform-intel/blob/main/deliverables/intel/companies/physical-intelligence.md) - Red Hat ET, 분석 문서(검색 요약), (en)
-- [P4] [π*0.6: a VLA That Learns From Experience](https://www.pi.website/download/pistar06.pdf) - Physical Intelligence, 2025-11, 1차(검색 요약), (en)
-- [P5] [Physical Intelligence Unveils π0.7](https://www.humanoidsdaily.com/news/physical-intelligence-unveils-0-7-the-rise-of-compositional-generalization-in-robotics) - Humanoids Daily, 2026-04, 기사(검색 요약), (en)
-- [P6] [Physical Intelligence is reportedly in talks to raise $1B, again](https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/) - TechCrunch, 2026-03-27, 기사(검색 요약), (en)
+- [P3] [Physical Intelligence platform intel](https://github.com/redhat-et/physical-ai-platform-intel/blob/main/deliverables/intel/companies/physical-intelligence.md) - Red Hat ET, 분석 문서(검색 요약), (en) (reference 미저장, `확인필요`)
+- [P4] [π*0.6: a VLA That Learns From Experience](https://arxiv.org/abs/2511.14759) - Physical Intelligence, arXiv 2025-11-18, 논문(초록 기준), (en) (reference/papers--pistar06-recap.md). 기존 표기 pi.website PDF는 reference에 없어 arXiv 초록 reference로 대체 (2026-10-09 fact-check 정정)
+- [P5] [Physical Intelligence Unveils π0.7](https://www.humanoidsdaily.com/news/physical-intelligence-unveils-0-7-the-rise-of-compositional-generalization-in-robotics) - Humanoids Daily, 2026-04, 기사(검색 요약, reference 미저장). π0.7 본문 서술의 근거는 TechCrunch 2026-04-16 (reference/competitors--pi-pi07-techcrunch.md)로 대체 (2026-10-09 fact-check 정정)
+- [P6] [Physical Intelligence is reportedly in talks to raise $1 billion, again](https://finance.yahoo.com/sectors/technology/articles/physical-intelligence-reportedly-talks-raise-235940073.html) - Yahoo Finance, 2026-03-28, 기사, (en) (reference/competitors--pi-funding-talks.md) (2026-10-09 fact-check 정정: 기존 "TechCrunch 2026-03-27" 표기를 실제 열람한 Yahoo Finance로 통일)
 - [A1] research/company.md (RLWRLD 누적 투자, 투자자)
 - [S6] [住友電装と米国 Skild AI、ワイヤーハーネス製造向けフィジカル AI ロボットの共同開発を開始](https://www.sws.co.jp/sws-news/docs/b19d54d9f74ad881f5f8aad4606784b9359d8ff2.pdf) - 住友電装, 2026-09-17, 1차, (ja) (reference/case--sws-skild-joint-dev-release.md) (2026-10-09 Q2 추가)
 - [S7] [The Hidden Pillar of Robotics](https://www.skild.ai/blogs/skild-crosses-100m-arr) - Skild AI, 2026-09-10, 1차, (en) (reference/competitors--skild-hidden-pillar.md) (2026-10-09 Q2 추가)
