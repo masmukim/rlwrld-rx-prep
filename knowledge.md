@@ -83,6 +83,12 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | 병목 규칙 | Bottleneck Rules (A~E) | 지배 OSC 축 조합에서 필요한 영역을 정하는 DexBench 규칙. 예: C_force + C_contact + C_obs → Contact Precision | reference/raw/benchmark--dexbench-contents-en.json |
 | 붕괴 지점 | Breakdown point (본 팀 정의) | 변수를 키울 때 완주율 점추정이 통과값 아래로 처음 내려가는 수준 | case/b4-proposal.md 8.3.3 |
 | 환경 변이 | Environment variations | Isaac Lab-Arena 0.3에서 조명, 배경, 카메라 파라미터, 물체 질량 등을 범위로 스윕하는 기능 | reference/benchmark--arena-release-0-3.md |
+| 올핸즈업 | All Hands Up! | RLWRLD가 2026-06-22 공개한 로봇 손 분석·URDF 시각화 사이트(allhandsup.org). 호환·지원 목록이 아님 | reference/hardware--allhandsup-gallery.md |
+| Type 1 / Type 2 손 | Type 1 (deployment) / Type 2 (data collection) | RLWRLD의 손 이원화 기준. Type 1은 현장 배포용(<205 mm, <600 g, 중간 역구동, 손끝 ≥15 N), Type 2는 학습 데이터 수집용(<220 mm, <900 g, 높은 역구동, 손끝 ≥12 N). 공통 목표 DoF ≥20, 훅 그립 ≥15 kg | reference/hardware--allhandsup-blog-part2.md |
+| 역구동성 / 힘 투명성 | Back-drivability / Force transparency | 외력에 관절이 밀리는 성질 / 액추에이터 쪽에서 손끝 힘을 정확히 감지·지령하는 성질. 감속비가 높으면 둘 다 떨어짐 | reference/hardware--allhandsup-blog-part1.md |
+| Kapandji 점수 | Kapandji scale | 엄지 대립의 11개 기준점 도달 수(0~11). 사이트 값은 URDF 시뮬레이션 | reference/hardware--allhandsup-gallery.md |
+| 평가 플랫폼 고정 | Fixed evaluation platform | 팔, 카메라, 추론 PC를 같게 두고 엔드이펙터만 바꿔 결과 차이를 손 효과로 돌리는 PoC 설계 | case/b4-proposal.md 8.3.5 |
+| 손 전환 재학습 시연 수 | Hand-swap re-adaptation demos | 손 모델을 바꾼 뒤 같은 카드의 완주율을 되돌리는 데 든 추가 시연 수와 GPU 시간 | case/b4-proposal.md 8.3.5 |
 
 ## 핵심 인사이트
 (작업이 끝날 때마다 추가. 형식: `- 인사이트 [근거]`)
@@ -165,6 +171,10 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - (B3·B5) 단순 회수가 5년 안이어도 5년 NPV는 음수일 수 있다(할인과 잔존가치 0). 경영진 보고에는 둘을 함께 쓴다. 3교대는 인건비를 2교대 평균으로 두고 야간 비율 변화를 반영하지 않아 낙관적이며, 로봇만 추가 가동하는 3교대는 인건비 절감이 아니라 증산 가치다 [case/analysis.md 7.5절]
 - (B6, 2026-10-12, fact-check 미실시) DexBench에서 가져올 수 있는 것은 케이스 기술 형식(초기 상태, 목표 상태, 실패 조건), 설계 원칙(State Transition, State-Based Judgment, Breakdown Curves), OSC 6축, 5영역 태그뿐이다. 과제별 지배 OSC 축 목록만 공개되고 축별 점수는 JSON에 없으므로 OSC는 수치 난이도가 아니라 정성 표기(`추정`)로만 쓴다. 판정은 카드 연쇄의 자율 완주율 하나, 단계 점수·개입 후 완주율·미검출률은 진단용이다 [case/b4-proposal.md 8.3.1~8.3.2]
 - (B6) 공칭 조건 성공률은 현장 가능성을 말해 주지 못한다. 성능이 무너지는 범위(붕괴 지점)에 고객 라인의 실측 변동 범위를 겹치면 "현장에서 된다 / 지그·공급 개선이 먼저"를 판정할 수 있고, 손 대 그리퍼 차이도 공칭값보다 붕괴 지점에서 드러날 가능성이 있다(본 팀 해석). 통과값 90%를 100회 시행 신뢰구간 하한(Wilson 95%)으로 판정하면 96/100 이상이 필요하다(계산)이므로, G0에서 판정 방식을 정하는 일이 KPI 값만큼 중요하다 [case/b4-proposal.md 8.3.2~8.3.3]
+- (Q9, 2026-10-12, fact-check 미실시) ALL HANDS UP 갤러리는 RLWRLD가 발행한 손 분석 아카이브이지 RLDX-1 호환·지원 목록이 아니다. "이 손을 학습·평가·지원한다"는 문장은 사이트·보도자료 어디에도 없고, 근거는 "10종 이상 직접 운용", "내부 평가 DB 유지", "손 제조사는 샘플을 보내라, 테스트 후 소개하겠다" 수준이다. 노출 약 18종(레지스트리 JSON 기준 추정)이고 RLDX-1 논문의 실로봇 결과와 겹치는 손은 Inspire RH56F1(OpenArm 실험) 하나뿐이다. 문서에서는 "RLWRLD가 공개 평가 서술을 가진 손"으로 쓴다 [research/q9-allhandsup.md]
+- (Q9) RLWRLD 블로그는 Tesollo DG-5F-S를 약 $7,500, SharpaWave를 약 $50,000이라 쓰고(DexBench 결과는 거의 같다는 자체 서술, 점수 비공개), 제품 DB는 DG-5F-S를 $23,000로 적는다(약 3배, 둘 다 공식 견적 아님). 단가만 $7,500으로 바꾸면 단순 회수가 약 4.5년에서 약 3.3년이 되고(Q9 근사, `추정`), 손이 그리퍼(Hand-E 약 $7,250)의 약 3.2배라는 비교는 약 1.03배로 무너진다. 견적 전까지 헤드라인에 반영하지 않고 민감도로 둔다 [research/q9-allhandsup.md 7절]
+- (Q9) RLWRLD 자체 기준으로 DG-5F-S(880 g)는 Type 2(데이터 수집)에 가깝고 Type 1(현장 배포, <600 g)은 아니며 훅 하중 12 kg은 목표 15 kg에 미달한다(스펙표 스크리닝). 5종(DG-5F-S, RH56F1, Wuji V1.1/V2, Sharpa) 안에 Type 1 목표를 모두 충족하는 손은 스펙표상 없다. 랩 PoC용 손과 배포용 손이 다를 수 있다 [research/q9-allhandsup.md, case/b4-proposal.md 8.3.5]
+- (B7, fact-check 미실시) 고자유도 손 + 촉각 조합의 RLDX-1 결과는 공개된 것이 없고 RH56F1 결과도 단순 집기·놓기 50.0%다. 하네스 PoC는 "검증된 조합을 쓴다"가 아니라 "그 조합의 첫 근거를 만든다"로 설명한다. 1단계 평가 플랫폼은 팔(OpenArm 양팔 기본안, 본 팀 판단), 카메라, 추론 PC를 같게 두고 엔드이펙터만 바꾸는 3구성 R(Inspire RH56F1)·H(DG-5F-S)·G(Hand-E)이며 산업용 협동로봇 이식은 2단계, 손을 바꿀 때의 재학습 규모는 미확인이다 [case/b4-proposal.md 8.3.5]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -252,3 +262,8 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 하네스 단자 유지력·삽입력 기준(당김 시험 힘 범위)은 K사 사내 규격인가, 업계 공통 규격이 있는가? 카드 H-1·H-2의 수치 한계에 필요 (B6)
 - [ ] RLDX-1 같은 VLA 정책은 실행 속도를 조절할 수 있는가(액션 청크 재생 속도 등)? 속도비 스윕 가능 여부를 가름 (B6)
 - [ ] 레이업 1구간의 리셋 시간(지그에서 풀고 다시 놓기)은 얼마인가? B트랙 시행 예산의 최대 불확실성 (B6)
+- [ ] DG-5F-S의 실제 구매가는 $7,500인가 $23,000인가? Tesollo 공식 견적 필요. B3 핵심 변수 (Q9)
+- [ ] RLDX-1은 손을 바꿀 때(예: Inspire RH56F1에서 DG-5F-S로) 재학습이 얼마나 필요한가? RLDX-1을 OpenArm에 DG-5F-S 또는 평행 그리퍼로 붙인 실적·인터페이스는 공개돼 있는가? (Q9, B7, A4)
+- [ ] RLWRLD 내부 평가 DB의 손별 DexBench 결과는 공개될 예정인가? 갤러리의 "지원" 정의는? partnership@rlwrld.ai 문의 필요 (Q9)
+- [ ] 갤러리의 촉각 "Yes" 플래그는 내장 센서인가 옵션(DG-5F-S의 XELA uSkin 통합판 등)인가? Wuji V2가 V1.1의 충격 파손 문제를 해결했는가? Wuji·RH56F1의 공개 가격은? (Q9, B7)
+- [ ] 하네스 프리블록에서 하우징을 지그에 고정하는가, 작업자가 손에 드는가? 상용 셀의 팔 대수(1대 가능성)와 B3 투자비를 가르는 질문 (B7)

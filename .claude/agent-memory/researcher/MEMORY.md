@@ -9,3 +9,4 @@
 - [논문·블로그 대조 읽기](paper-deep-read-notes.md) — arXiv html 저장, find.py 패턴, 렌더링 깨짐, 서술문 vs 표 불일치, 진행 점수 혼합
 - [손 수명·유지보수 조사](hand-durability-research-notes.md) — Yicai/36kr/Honda/arXiv 소스, 검색 요약 오류, 사이클 정의 불일치
 - [임금·보험료 조사](wage-research-notes.md) — 고용부/복지부/중기중앙회 1차 열림, 산재 1.47% 라벨 오류, 전선원 직종 함정, 경총 임금총액 정의
+- [RLWRLD SPA 사이트 수집](allhandsup-spa-notes.md) — allhandsup.org 데이터 JSON 경로, hidden 항목, sitemap 대체 응답 함정

@@ -1,4 +1,4 @@
 - [소스와 접근](sources-and-access.md) — 하네스 소스, 403 우회, Grep 없으면 bash grep, case/*.md Write 거부 시 전문 반환
 - [B1 점수화 방식](b1-scoring-practice.md) — 민감도 표, 그리퍼 대 손 분리, 인력 점수는 산업 지표+추정, 생산 거점 확인
 - [B2 분석 방식](b2-analysis-practice.md) — 우선순위 점수, 2트랙 PoC, 회수 표, roi.xlsx 수식 재계산, 가정 변경 시 전파·이력
-- [인용 정확도](citation-precision.md) — arXiv totalResults, 1차 소스로 경쟁 과장 금지, 비중 분모 확인, 논문 버전 표기
+- [인용 정확도](citation-precision.md) — arXiv totalResults, 경쟁 과장 금지, 분모 확인, 지시가 소스보다 강하면 낮추고 금지 표현 표
