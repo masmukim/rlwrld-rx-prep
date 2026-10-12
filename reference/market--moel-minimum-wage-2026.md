@@ -19,4 +19,4 @@ lang: ko
 (raw: reference/raw/market--moel-minimum-wage-2026.txt)
 
 ## 메모
-- B3 인건비 하한 시나리오. 검색 요약에 2027년 10,700원 의결 언급이 있으나 미확인.
+- B3 인건비 하한 시나리오. (2026-10-12 갱신) 2027년 10,700원(+380원, +3.7%), 월 환산 2,236,300원은 고용노동부 1차로 확인됨: reference/market--moel-minimum-wage-2027.md.
