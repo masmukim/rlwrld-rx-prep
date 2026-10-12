@@ -1,0 +1,2 @@
+- [LibreOffice 없이 재계산](reference_xlsx_recalc_without_libreoffice.md) — .venv의 formulas 패키지로 수식 검증, fullCalcOnLoad 설정
+- [roi.xlsx 구성 패턴](feedback_roi_model_build_pattern.md) — 시나리오 열 + 구 가정 재현 열 + Python 독립 검산

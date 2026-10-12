@@ -14,7 +14,8 @@
 | A11 | RLDX-1 공식 기술 블로그 분석 (https://www.rlwrld.ai/ko/insight/blog/14, 원문 저장됨: reference/raw/company--rlwrld-blog-14.txt): 아키텍처, 학습 단계, 데이터, 벤치마크·평가 조건, 하드웨어, 한계, 경쟁 모델 대비 주장, RX·하네스 케이스 시사점. 기존 research/company.md 4절·tech.md와 다른 점과 정정할 점 표시. fact-check 2026-10-09 haiku 검증·정정 완료 | researcher | 완료 | A1 | research/rldx1-tech.md |
 | B1 | 후보 공정 3~5개 점수화 및 선정 | case-analyst | 완료 | A1, A4, A5 | case/candidates.md |
 | B2 | 선정 공정 심층 분석 (fact-check 2026-10-09 haiku 검증·정정 완료. 7.5절 회수에 손 교체비 반영) | case-analyst | 완료 | B1 | case/analysis.md |
-| B3 | ROI 모델 (가정, 계산, 민감도 시트) (사용자 지시로 보류) | - | 보류(사용자 지시. 해제 조건인 B2 fact-check는 2026-10-09 완료, 착수 가능) | B2 | case/roi.xlsx |
+| B3 | ROI 모델 (가정, 계산, 민감도 시트). 2026-10-12 사용자 지시로 보류 해제, Q7·Q8 값을 analysis.md 7절 위에 덮어써서 작성. fact-check 미실시(사용자 지시) | roi-modeler | 완료 | B2, Q7, Q8 | case/roi.xlsx |
+| B5 | (fact-check 미실시) B3·Q7·Q8 결과를 기존 문서에 반영: case/analysis.md 7.2 임금총액 정정, 7.4 유지보수비에서 손 소모 분리, 7.5 회수 계산을 roi.xlsx 값으로 갱신, case/b4-proposal.md ROI 장(6장) 수치 교체. 수정 모드 | case-analyst | 완료 | B3, Q7, Q8 | case/analysis.md, case/b4-proposal.md |
 | B4 | 케이스 제안서 (md 문서로 작성, 장표는 만들지 않음. ROI 장은 B3 후 교체) | main | 진행중 | B2, B3 | case/b4-proposal.md |
 | Q1 | (fact-check 미실시, 사용자 지시) 국내 하네스 조립 라인의 실제 인원, 교대, 택트, 품번 수, 외국인 비중 (경신 국내 4개 사업장이 조립 라인인지 포함). 접근 불가·유료·내부 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | B2 | research/q1-harness-line-facts.md |
 | Q2 | (fact-check 미실시, 사용자 지시) Skild AI × 住友電装 하네스 프로젝트의 범위·결과·손 하드웨어 (다관절 손인가 그리퍼인가). 접근 불가 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | A8, B2 | research/q2-skild-sumitomo-harness.md |
