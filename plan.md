@@ -16,6 +16,8 @@
 | B2 | 선정 공정 심층 분석 (fact-check 2026-10-09 haiku 검증·정정 완료. 7.5절 회수에 손 교체비 반영) | case-analyst | 완료 | B1 | case/analysis.md |
 | B3 | ROI 모델 (가정, 계산, 민감도 시트). 2026-10-12 사용자 지시로 보류 해제, Q7·Q8 값을 analysis.md 7절 위에 덮어써서 작성. fact-check 미실시(사용자 지시) | roi-modeler | 완료 | B2, Q7, Q8 | case/roi.xlsx |
 | B5 | (fact-check 미실시) B3·Q7·Q8 결과를 기존 문서에 반영: case/analysis.md 7.2 임금총액 정정, 7.4 유지보수비에서 손 소모 분리, 7.5 회수 계산을 roi.xlsx 값으로 갱신, case/b4-proposal.md ROI 장(6장) 수치 교체. 수정 모드 | case-analyst | 완료 | B3, Q7, Q8 | case/analysis.md, case/b4-proposal.md |
+| B6 | (fact-check 미실시) DexBench 형식 반영: b4-proposal 8.3절에 하네스 케이스 카드 초안(단자-하우징 삽입, 당김 확인, 분기 케이블 레이업: 초기 상태·목표 상태·실패 조건·인접 DexBench 과제), 완주율·단계 점수·개입 후 완주율 매핑, 성능이 무너지는 범위(breakdown) 측정 파라미터, RLWRLD에 확인할 프로토콜 질문 목록. 공식 프로토콜은 비공개(Q5)라 공개된 형식만 반영. 수정 모드 | case-analyst | 완료 | Q5, B5 | case/b4-proposal.md |
+| Q9 | (fact-check 미실시) ALL HANDS UP(https://allhandsup.org/ko/#gallery) 갤러리 분석: RLWRLD가 지원·호환하는 로봇 손 하드웨어 목록(제조사, 모델, DoF, 촉각 유무, 가격·공개 사양), DexBench·RLDX-1과의 관계(어느 손이 RLDX-1 학습·평가에 쓰였는지, 호환 근거), 운영 주체와 갱신 시점, 하네스 PoC 후보 손(Tesollo DG-5F-S, Inspire 등)과의 매칭. JS 렌더링 가능성이 있으니 HTML이 부르는 데이터(JSON 등)를 찾아 reference/raw에 저장. 이 결과를 b4-proposal 평가 플랫폼 절(B6 후속)에 반영 | researcher | 진행중 | Q5, A4 | research/q9-allhandsup.md |
 | B4 | 케이스 제안서 (md 문서로 작성, 장표는 만들지 않음. ROI 장은 B3 후 교체) | main | 진행중 | B2, B3 | case/b4-proposal.md |
 | Q1 | (fact-check 미실시, 사용자 지시) 국내 하네스 조립 라인의 실제 인원, 교대, 택트, 품번 수, 외국인 비중 (경신 국내 4개 사업장이 조립 라인인지 포함). 접근 불가·유료·내부 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | B2 | research/q1-harness-line-facts.md |
 | Q2 | (fact-check 미실시, 사용자 지시) Skild AI × 住友電装 하네스 프로젝트의 범위·결과·손 하드웨어 (다관절 손인가 그리퍼인가). 접근 불가 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | A8, B2 | research/q2-skild-sumitomo-harness.md |
