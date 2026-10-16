@@ -21,5 +21,11 @@ lang: en
 > To ensure all steps are graded cumulatively, we use human intervention to recover from failures during policy rollouts. (raw: reference/raw/competitors--skild-s1-blog.txt, 232행)
 > A single demonstration in context is worth roughly 380 post-training examples (the exact crossing was estimated by interpolating between measured points). (raw: 같은 파일, 328행)
 
+## 데이터 엔진·통제 실험 (2026-10-17 추가, raw: reference/raw/competitors--skild-s1-blog.txt 72~124행, 228~240행)
+- "The Data Engine" 절: 데이터 출처는 세 축(하드웨어 근접성, 다양성, 확장성)에서 단일 출처가 다 이길 수 없어 "Skild has been scaling all of them in-house"라고 서술. 자체 표(그림 3): 로봇 텔레오퍼레이션 근접성 높음/다양성 낮음/확장성 낮음, UMI 모두 중간, 에고센트릭 영상 낮음/높음/높음, 시뮬레이션 중간/낮음/높음. 출처별 투입 비율·시간은 없음.
+- 품질 관리 서술: "For every dollar we spend on collecting data, we spend three on quality control." 사전학습에 들어가는 모든 데이터는 저수준 정밀도, 작업 일관성, 주석 충실도를 검사한다고 서술(회사 주장, 절차 비공개).
+- 통제 실험: 사전학습 풀의 "필터링된 부분집합"에서 1k~100k 시간으로 ICL 정책과 언어 조건 VLA를 같은 데이터·구조·연산으로 학습. 본 작업은 1k시간에서 언어 VLA 53% 대 ICL 43%, 스케일 후 ICL 96%. 처음 보는 작업은 100k시간에서 ICL 66% 대 VLA 9%. 비교 VLA는 Skild가 직접 학습한 기준선이며 PI 등 외부 모델이 아님.
+- 100k시간 풀의 출처 구성(인간 영상 vs 텔레오퍼레이션 vs 시뮬레이션)은 밝히지 않음.
+
 ## 메모
 - 66%는 하네스 성능이 아니다. 일반 장기 과제의 내부 벤치마크 값이고 사람 개입이 포함된 누적 단계 점수다.

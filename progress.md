@@ -187,3 +187,9 @@
 - 산출물: case/roi.xlsx, case/analysis.md, case/b4-proposal.md("(2026-10-12 B9 반영)" 각 15곳), knowledge.md(용어 1, 인사이트 3, 열린 질문 2), 에이전트 메모리
 - 다음: Tesollo 공식 견적(손 단가, 손끝 모듈 단가, 통합비 구조) 확정 후 기본 단가 교체. 후속 정정 후보: research/hardware.md 46·109행의 "손 약 3.2배" 조건 없음과 RH56F1·Type 1/2 프레임 반영(/rx-refresh), research/q9-allhandsup.md 7절의 "손 단가는 B3의 1~2순위 변수" 서술은 B8 결과(기본 폭 약 1.56억 원, 보수에서만 약 4.33억 원)와 맞지 않음, case/deck-storyline.md는 구 값 유지, roi.xlsx 팔 1대 축소 민감도 미반영, b4 5.3 데이터 계획 표에 구성 R 시연 규모 없음(G0 결정)
 - 이슈: **fact-check 미실시 (사용자 위임)**. B9 에이전트가 컴퓨터 절전(API 오류)으로 한 번 끊겼고 반영 표시 개수를 세어 남은 부분만 이어서 완료(중복 편집 없음). B8 에이전트 보고에 억 원 단위 오기("1,561억/4,630억")가 있어 B9 지시에서 정정, 두 문서에 오기 없음. 시행 예산 가용 시간 160시간, 손 전환 측정 4수준, 통합비율 100%·연동 구조, Hand-E 약 $7,250, 팔 1대 축소 가능성은 `추정`. roi.xlsx는 캐시 값이 없어 Excel에서 열면 재계산됨
+
+## 2026-10-17 | researcher | T1, T2
+- 한 일: 기술 이해 준비용 근거표 2건(비공개 준비, fact-check는 T5로 예정). T1은 Transformer 기반 LLM 능력의 구조적 근거를 1차 논문 29건으로 정리(주장 37개와 VLA 연결 4개에 [확립/가설/논쟁] 태그, 근거 수준 A/B/C, 구조가 필요조건이지 충분조건이 아니라는 지지·반박 증거표, 로봇 행동 표현에서 유추가 깨지는 지점). T2는 Skild AI 대 Physical Intelligence 데이터 파이프라인 비교(공개 수준 태그, 대비축 판정, 이분법 허수아비 검토, 장단점·리스크, RLWRLD 세 번째 기준점, 꼬리질문 10개)
+- 산출물: research/t1-llm-structure-evidence.md, research/t2-skild-pi-data-pipelines.md, 새 reference 약 34건(papers-- 약 24, competitors-- 약 7 등)과 기존 reference 갱신 9건, 에이전트 메모리 2건, knowledge.md(용어 10, 인사이트 5, 열린 질문 3)
+- 다음: 두 문서 fact-check(T5, 생략하지 않음). 우선 확인: π0 약 10,000시간 수치(처음 놓쳤다가 정정됨), π*0.6 상자 조립 600(본문 대 부록 불일치), EgoScale +54% 상대/%p, Skild S1 66% 대 9%의 비교 조건. research/skild-pi-deep-dive.md의 \"데이터가 꼭 실로봇에서 나올 필요는 없다\" 요약 정정
+- 이슈: T1은 창발 논쟁 후속·ICL 가설 반대 증거·상태공간 모델 비교·코드 생성 1차 논문을 읽지 않음(근거 수준 B는 초록·서론 위주). T2 에이전트는 40턴 한도에서 문서 작성 후 보고만 못 해 SendMessage로 보고시킴. 두 문서 모두 일반 기술 조사로만 쓰고 이번 작업의 목적 서술은 포함하지 않음

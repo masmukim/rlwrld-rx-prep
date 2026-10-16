@@ -30,3 +30,8 @@
 | Q6 | (fact-check 미실시) 住友電装 영문 PDF 분석 (https://www.sws.co.jp/en/sws-news/docs/bc866af8854aeec61a4d844ec2d41e56c747b051.pdf): 문서 정체(발표일, 주제), Skild 공동 개발·자동화율 15%/50%·모델 라인·로드맵과의 관계, 기존 Q2·Q3 결론(범위·손 하드웨어·성과 미공개, 자동화율 분모 미공개)에 새로 확정되거나 바뀌는 점. 사용자 제공 자료 | researcher | 완료 | Q2, Q3 | research/q6-sws-pdf.md |
 | Q7 | (fact-check 생략, 사용자 지시) 다관절 로봇 손의 현장 교체 주기와 유지보수비: 손·손가락·텐던·촉각 겔의 수명(MTBF, 사이클 수, 가동 시간), 제조사 자체 시험 대 현장 데이터, 연간 교체·수리 비용(손 가격 대비 %), 교체 소요 시간과 가동 중단. B3 회수 계산(손 교체 주기 연 0.5·1·2회 시나리오)의 입력값. 공개 수치가 없으면 범위 추정과 근거, 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | B2 | research/q7-hand-replacement.md |
 | Q8 | (fact-check 생략, 사용자 지시) B3 임금 입력: 2027년 최저임금 고시값(월·시급, 고용노동부 고시), 국내 자동차 와이어 하네스 생산직 임금(시급·월급, 외국인 인력 포함 여부), 사업주 부담 4대보험·퇴직금 등 간접비율, 교대 수당. 하한·기본·상한 시나리오 값 제안. 접근 불가 자료는 사용자 피딩 요청 목록으로 정리 | researcher | 완료 | B2 | research/q8-wage-inputs.md |
+| T1 | (비공개 준비, fact-check 필수) 기술 이해 준비 1: Transformer 기반 LLM의 구조적 강점(다음 토큰 예측이 다양한 능력으로 이어지는 이유) 1차 문헌 근거표. 확립된 사실 / 가설 / 논쟁 태깅, 로봇 기반 모델로의 연결 고리 | researcher | 완료 | - | research/t1-llm-structure-evidence.md |
+| T2 | (비공개 준비, fact-check 필수) 기술 이해 준비 2: Skild AI 대 Physical Intelligence 데이터 파이프라인 비교 근거표(데이터 소스, 수집 방식, 학습 철학, 공개 수준 태그, 장단점, 리스크, 수렴하는 지점). 기존 skild-pi-deep-dive와 reference 재사용, 부족한 1차 소스만 보강 | researcher | 완료 | A8 | research/t2-skild-pi-data-pipelines.md |
+| T3 | (비공개) 준비 초안: T1, T2 근거와 사용자 논지로 구조화된 답안 초안. 저장소에 커밋하지 않고 비공개 Artifact에 둔다 | case-analyst | 대기 | T1, T2 | 비공개 Artifact |
+| T4 | (비공개) 반론 검토와 예상 질의응답: T3 초안을 공격해 약점과 20분 질의응답 문답 생성 | case-analyst | 대기 | T3 | 비공개 Artifact |
+| T5 | (비공개) T1, T2 근거표와 T3 초안의 기술 주장·수치 fact-check | fact-checker | 대기 | T3 | 검증 보고(반환) |

@@ -89,6 +89,16 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 | Kapandji 점수 | Kapandji scale | 엄지 대립의 11개 기준점 도달 수(0~11). 사이트 값은 URDF 시뮬레이션 | reference/hardware--allhandsup-gallery.md |
 | 평가 플랫폼 고정 | Fixed evaluation platform | 팔, 카메라, 추론 PC를 같게 두고 엔드이펙터만 바꿔 결과 차이를 손 효과로 돌리는 PoC 설계 | case/b4-proposal.md 8.3.5 |
 | 손 전환 재학습 시연 수 | Hand-swap re-adaptation demos | 손 모델을 바꾼 뒤 같은 카드의 완주율을 되돌리는 데 든 추가 시연 수와 GPU 시간 | case/b4-proposal.md 8.3.5 |
+| 잔차 스트림 | Residual stream | 어텐션·MLP·임베딩이 읽고 쓰는 층 간 공용 통신 채널 | reference/papers--tc-mathematical-framework.md |
+| induction head | Induction head | [A][B]…[A]→[B] 패턴을 완성하는 어텐션 헤드. 인컨텍스트 학습의 원천 후보 | reference/papers--induction-heads.md |
+| 인컨텍스트 학습 | In-context learning (ICL) | 가중치 갱신 없이 프롬프트의 예시·지시만으로 과제를 수행 | reference/papers--gpt3-few-shot.md |
+| 컴퓨트 최적 | Compute-optimal | 같은 연산량에서 모델 크기와 토큰 수를 같은 비율로 키우는 배분(Chinchilla) | reference/papers--chinchilla.md |
+| 표현력 대 학습 가능성 | Expressivity vs learnability | 모델이 풀 수 있는가 대 학습으로 그 해를 찾는가. CoT 이론은 앞의 것만 증명 | reference/papers--cot-expressivity.md |
+| 테스트타임 연산 | Test-time compute | 추론 시점에 더 많은 연산(샘플링, 검증, 수정)을 쓰는 것. 난이도 의존 | reference/papers--snell-test-time-compute.md |
+| 행동 토큰화 | Action tokenization (binning, FAST) | 연속 행동을 이산 토큰으로 바꾸는 방식. 단순 binning은 고주파에서 약하고 DCT 압축(FAST)이 대안 | reference/papers--fast-tokenization.md |
+| 데이터 엔진 | Data Engine (Skild S1) | 데이터 출처를 하드웨어 근접성·다양성·확장성 3축으로 평가하는 Skild의 프레임 | reference/competitors--skild-s1-blog.md |
+| 물리 재귀 자기개선 | Physical RSI | 배치 → 컨텍스트 학습으로 적응 → 특화 → 여러 배치 데이터를 일반 모델로 환류하는 Skild의 순환. 환류량은 비공개 | reference/competitors--skild-hidden-pillar.md |
+| 사전학습 다양성 임계 | Diversity threshold (human-to-robot) | 로봇 사전학습 다양성이 충분해야 인간 영상 공동 학습의 이득이 나타남(PI 논문) | reference/papers--pi-human-to-robot.md |
 | 통합비 연동/비연동 | Integration cost linked / fixed | 손 단가 변화가 시스템 통합비에 비례해 전파되는지(연동, 현 roi.xlsx 구조) 통합비가 고정 금액인지(비연동)의 구분 | case/roi.xlsx 민감도 8절 |
 
 ## 핵심 인사이트
@@ -179,6 +189,11 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - (B8·B9, 2026-10-12, fact-check 미실시) DG-5F-S 단가 $7,500(블로그) 시나리오는 roi.xlsx 민감도 8절에 있고 기본은 $23,000 유지다. 기본 시나리오(f2·20%) 단순 회수/5년 NPV: $23,000 4.49년/-4,400만 원, $7,500 통합비 연동 2.93년/+1.12억 원, 비연동 3.34년/+6,870만 원. 손 교체 보수(f2·100%)는 회수 불가에서 4.30년(연동)·4.90년(비연동)이 되나 NPV는 여전히 음수다. 총 투자비 3.956억 원 → 연동 3.088억·비연동 3.522억 원. 두 단가 모두 공식 견적이 아니므로 Tesollo 견적 전까지 헤드라인에 반영하지 않는다 [case/roi.xlsx, case/analysis.md 7.5, case/b4-proposal.md 6.1]
 - (B8·B9) 손 단가의 기본 시나리오 NPV 폭은 약 1.56억 원으로 손 교체 방식(약 4.63억)·인건비(약 3.2억)·통합비율(약 3.0억)·속도비(약 2.4억)보다 작다. 그러나 손 전체 교체(보수)에서는 약 4.33억 원으로 커져 손 단가와 손 교체 방식은 곱으로 얽힌다. 견적은 손 단가와 손끝 모듈 단가를 함께 받는다. 손 단가가 $7,500이면 손 1개가 그리퍼(Hand-E $7,250 `추정`)와 1.03배, 셀 하드웨어 합계 1.04배가 되어 "손이 그리퍼의 약 3.2배"는 조건부 비교로만 쓴다. Q9의 근사 3.3년은 통합비 비연동 값이고 연동 값은 2.93년이다 [case/roi.xlsx 민감도 8절]
 - (B9) 평가 구성이 R(Inspire RH56F1)·H(DG-5F-S)·G(Hand-E) 3종이 되면 A트랙 시행 예산은 기본안 약 2,400회·40시간(R은 H-1 공칭 100회만), 상한안 약 3,450회·57.5시간(R도 스윕)이다. 본 평가 4주 가용 160시간(1교대, 플랫폼 1식)은 기본안에서 여유가 적고 상한안은 B트랙이 상단이면 넘친다. 모두 `추정`이며 G0에서 2교대나 플랫폼 2식을 정한다 [case/b4-proposal.md 8.3.3]
+- (T1) LLM 능력은 구조 단독이 아니라 구조·데이터·스케일·후훈련·추론 시간 연산의 조합이다. 같은 GPT-3 아키텍처에서 후훈련만 달리해 1.3B가 175B보다 사람 선호가 높았고(InstructGPT), ICL은 데이터 분포가 맞아야 생긴다(Chan 2022). 확립(손실의 멱법칙, 소형 모델 회로)과 가설(ICL의 경사하강 해석, 대형 모델의 induction head, 세계 모델)은 같은 논문 안에서도 갈린다. 창발 논쟁(Wei 2022 대 Schaeffer 2023)은 후속 문헌을 읽지 않아 논쟁으로 둔다 [research/t1-llm-structure-evidence.md]
+- (T1) 로봇 쪽 "다음 토큰 예측 유추"가 깨지는 곳은 목표 함수가 아니라 행동 표현일 가능성이 있다. RT-2는 256 bin 이산화로 1~3 Hz(55B), π0는 flow matching 50 Hz 청크, FAST는 DCT 압축 토큰화로 자기회귀 VLA가 π0 수준이라고 자체 보고한다. 다만 PI 계열 자체 비교라 독립 확인이 필요하다 [research/t1-llm-structure-evidence.md 10절]
+- (T2) Skild와 PI의 대비가 선명한 곳은 선언된 규모의 출처(Skild 출처별 비율 비공개 서술 대 PI 논문 수치: π0 약 10,000시간)와 사업 구조(OEM 탑재 목표·직접 미세조정 대 파트너 모델·API)뿐이다. "Skild=비로봇, PI=실로봇"은 허수아비 위험이 크다: Skild도 텔레오퍼레이션·장갑·UMI를 병행하고, PI도 에고센트릭 인간 데이터(합 14시간)와 웹 데이터를 쓰며, 배포 후 교정 루프(Skild Physical RSI, PI Recap)는 수렴한다. 양사 성능 수치는 자체 평가이고 조건이 달라 서로 비교할 수 없다 [research/t2-skild-pi-data-pipelines.md]
+- (T2) Skild의 "실로봇 데이터 1% 미만" 비판은 대상 회사를 지목하지 않아 PI에 대한 사실로 쓰면 안 된다. S1의 66% 대 9%는 Skild가 같은 데이터로 직접 학습한 VLA와의 내부 비교(사람 개입 포함 누적 단계 점수)다. OEM(ABB·UR) 경로의 데이터 환류 이점은 증거가 아니라 가설이다 [research/t2-skild-pi-data-pipelines.md]
+- (T2) PI도 인간 에고센트릭 데이터를 쓰나 수십 시간 규모이고 "로봇 사전학습 다양성이 선행되어야 전이가 난다"는 조건이 붙는다. EgoScale(20,854시간)과 GR00T N1.7은 인간 영상이 사전학습의 본체라 인간 영상의 역할은 회사마다 다르다. research/skild-pi-deep-dive.md의 "데이터가 꼭 실로봇에서 나올 필요는 없다"는 "비로봇 중심 선언 + 실로봇 병행"으로 고쳐 읽는다 [reference/papers--pi-human-to-robot.md]
 
 ## 열린 질문
 다음 리서치 후보. `/rx-status`가 이 목록을 보고 새 작업을 제안한다.
@@ -273,3 +288,6 @@ RX 팀이 작업하면서 배운 산업 지식을 쌓는 파일이다. 모든 �
 - [ ] 하네스 프리블록에서 하우징을 지그에 고정하는가, 작업자가 손에 드는가? 상용 셀의 팔 대수(1대 가능성)와 B3 투자비를 가르는 질문 (B7)
 - [ ] 실제 로봇 셀 통합 견적에서 통합비는 하드웨어 단가에 비례하는가, 공수 기반 고정 금액인가? RLWRLD 블로그의 DG-5F-S 약 $7,500은 어떤 구성(좌/우, 촉각 통합, 수량, 연구 할인) 기준인가? (B9)
 - [ ] 행동 차원이 다른 손 사이의 전환(6-DoF RH56F1 대 20-DoF DG-5F-S)을 RLDX-1에서 어떻게 대응시키는가(EmbodimentTag fine-tune만인가, 리타게팅이 필요한가)? (B9)
+- [ ] Skild 사전학습 풀의 출처별 비율과 인간 영상의 행동 라벨링 방법은? 배치 데이터 사용 조건("where permitted")과 환류량은? PI API·파트너 데이터의 소유·재사용 조건과 π0.6·π0.7의 1차 데이터 구성은? (T2)
+- [ ] RLDX-1에서 고객 현장 데이터가 성능에 기여한 정량 증거가 있는가(사전학습은 공개 데이터셋 기반, 현장 데이터는 mid-training으로 읽힘)? (T2)
+- [ ] 창발 논쟁(Wei 2022 대 Schaeffer 2023)의 후속 재반박, ICL 경사하강 가설의 반대 증거, 트랜스포머 외 구조의 ICL·추론 능력, VLA에서 사전학습 VLM 백본 기여를 분리한 대조 실험, 자기회귀 토큰화(FAST)와 flow matching VLA의 독립 비교는? (T1)

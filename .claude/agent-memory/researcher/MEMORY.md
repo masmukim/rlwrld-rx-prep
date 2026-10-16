@@ -10,3 +10,5 @@
 - [손 수명·유지보수 조사](hand-durability-research-notes.md) — Yicai/36kr/Honda/arXiv 소스, 검색 요약 오류, 사이클 정의 불일치
 - [임금·보험료 조사](wage-research-notes.md) — 고용부/복지부/중기중앙회 1차 열림, 산재 1.47% 라벨 오류, 전선원 직종 함정, 경총 임금총액 정의
 - [RLWRLD SPA 사이트 수집](allhandsup-spa-notes.md) — allhandsup.org 데이터 JSON 경로, hidden 항목, sitemap 대체 응답 함정
+- [데이터 파이프라인(Skild/PI) 조사 노하우](data-pipeline-research-notes.md) — skild.ai/pi.website 열림, 논문 시간 수치 Grep 누락 실수
+- [LLM 이론 논문 일괄 수집](llm-theory-research-notes.md) — arXiv pdf 20건 병렬 저장, find.py 15줄 한계, 표현력 vs 학습 가능성 구분

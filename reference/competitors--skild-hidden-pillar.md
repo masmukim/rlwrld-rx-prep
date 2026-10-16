@@ -20,5 +20,11 @@ lang: en
 > At Sumitomo Wiring Systems, we are working towards deploying S1 to automate processes in wire harness manufacturing that were considered “impossible” to automate. (raw: reference/raw/competitors--skild-hidden-pillar.txt, 16행)
 > A robot that is 99.9% accurate but ten times too slow is not almost deployable. It’s not deployable. (raw: 같은 파일, 52행)
 
+## Physical RSI 원문 (2026-10-17 추가, raw: reference/raw/competitors--skild-hidden-pillar.txt 86~104행)
+- 정의 순서: 여러 로봇·작업·구현체로 학습한 파운데이션 모델을 여러 응용에 배치 → 컨텍스트 학습으로 변화마다 재학습 없이 적응, 생산 수준의 속도·신뢰성이 필요하면 배치 데이터로 특화 → 여러 배치의 데이터를 일반 모델로 되돌려 다음 배치는 더 강한 모델에서 시작.
+- 배치 데이터에 대한 두 견해를 소개: "배치가 궁극의 데이터원이 된다"와 "배치 로봇은 같은 작업만 반복해 일반 모델 개선에는 좁다". 저자는 "둘 다 부분적으로 맞다"고 쓰고, 이미 숙달한 전문 시스템에 같은 동작 수천 건을 더해도 얻는 것이 적다고 서술. 가치는 "많은 전문 시스템의 학습을 일반 모델로 되돌릴 때" 생긴다고 주장.
+- 비유: 고등학생이 화학·물리·수학 박사를 병렬로 하고 그 전문 지식을 원래 학생으로 증류. 일반 지식의 일부는 잊을 수 있음을 인정.
+- 이 서술에는 되돌린 데이터의 양, 증류 방법, 고객 데이터 사용 권한이 없음(원문 미기재).
+
 ## 메모
 - 이 블로그에 "wire harness"가 나오는 곳은 이 한 문장뿐이다. 앞서 skild-pi-deep-dive가 인용한 humanoidsdaily 기사(고객 목록에 올림)는 이 문장을 "자동화하고 있다(Automating)"로 풀었다. 1차 소스의 시제는 "working towards deploying"이다.
